@@ -39,10 +39,16 @@ Each enriched entry has `entry.enrichment`:
 
 ## Automation
 
-The weekly trigger should run the same public command as humans:
+The weekly trigger should run the same sequence as humans:
 
 ```bash
+cd "$HAPA_SECOND_BRAIN_ROOT"
+python3 hapa_second_brain/second_brain.py import-ai-chats
+python3 hapa_second_brain/second_brain.py turn-profile --limit 20
+cd "$HAPA_GRAPHIFY_ROOT"
+.venv/bin/python scripts/run_hapa_narrative.py --start-date 2026-01-01 --end-date <current-date> --json
+.venv/bin/python scripts/generate_hapa_narrative_images.py --start-date 2026-01-01 --end-date <current-date> --json
 .venv/bin/python scripts/run_hapa_narrative_enrichment.py --json
 ```
 
-The automation should then run tests/privacy checks, commit public-safe generated changes, push, and report pass id, entry count, warnings, and Pages status.
+The automation should then run tests/privacy checks, commit public-safe generated changes, push, and report turn-mining counts, base narrative run id, image queue summary, enrichment pass id, entry count, warnings, and Pages status.

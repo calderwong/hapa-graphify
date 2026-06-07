@@ -7,20 +7,29 @@ description: Generate Hapa canon narrative blog entries from Hapa Second Brain, 
 
 ## Workflow
 
-1. Run source checks:
+1. Refresh Hapa Turns with `$hapa-turn-miner` so the weekly narrative includes the latest ChatGPT, Grok, Codex, Hermes, Gemini/NotebookLM, Windsurf, and Antigravity conversations:
+
+```bash
+cd "$HAPA_SECOND_BRAIN_ROOT"
+python3 hapa_second_brain/second_brain.py import-ai-chats
+python3 hapa_second_brain/second_brain.py turn-profile --limit 20
+python3 hapa_second_brain/second_brain.py turn-sources --limit 40
+```
+
+2. Run source checks:
 
 ```bash
 .venv/bin/python -m hapa_graphify health --deep --json
 .venv/bin/python -m hapa_graphify sources validate --json
 ```
 
-2. Generate or refresh entries:
+3. Generate or refresh entries. For recurring runs, use the current date as `--end-date`:
 
 ```bash
 .venv/bin/python scripts/run_hapa_narrative.py --start-date 2026-01-01 --end-date 2026-06-07 --json
 ```
 
-3. Generate local PNG illustrations and, if `OPENAI_API_KEY` is available and image generation is authorized, replace them with GPT-image outputs:
+4. Generate local PNG illustrations and, if `OPENAI_API_KEY` is available and image generation is authorized, replace them with GPT-image outputs:
 
 ```bash
 .venv/bin/python scripts/generate_hapa_narrative_images.py --start-date 2026-01-01 --end-date 2026-06-07 --json
@@ -28,13 +37,13 @@ description: Generate Hapa canon narrative blog entries from Hapa Second Brain, 
 
 Without `OPENAI_API_KEY`, the run still writes deterministic local PNG illustrations, GPT-image prompts, fallback SVG cards, and queued image telemetry.
 
-4. Run the enrichment pass when deeper weekly context is needed:
+5. Run the enrichment pass when deeper weekly context is needed:
 
 ```bash
 .venv/bin/python scripts/run_hapa_narrative_enrichment.py --json
 ```
 
-5. Review the static app:
+6. Review the static app:
 
 ```bash
 python3 -m http.server 8800 --bind 127.0.0.1 --directory docs
@@ -55,6 +64,7 @@ Open `http://127.0.0.1:8800/narrative/`.
 
 ## Evidence Rules
 
+- Run turn mining before the narrative generator; do not summarize the latest week from a stale `ai_chat_turns` table.
 - Prefer event time from `ai_chat_turns.turn_started_at`.
 - Use `wiki_articles.updated_at` or changed wiki/doc file mtimes for wiki evidence.
 - Run Hapa Graphify queries for top weekly topics/keywords and include match telemetry.

@@ -9,13 +9,28 @@ Use this skill after the base `hapa-narrative-weekly` run exists. The enrichment
 
 ## Workflow
 
-1. Confirm the base narrative exists:
+1. If this is a weekly or canonical refresh, run `$hapa-turn-miner` first and regenerate the base narrative before enriching. Enrichment is additive to `entries.json`, so it should see the freshest weekly evidence:
+
+```bash
+cd "$HAPA_SECOND_BRAIN_ROOT"
+python3 hapa_second_brain/second_brain.py import-ai-chats
+python3 hapa_second_brain/second_brain.py turn-profile --limit 20
+```
+
+Then return to this repo and run:
+
+```bash
+.venv/bin/python scripts/run_hapa_narrative.py --start-date 2026-01-01 --end-date <current-date> --json
+.venv/bin/python scripts/generate_hapa_narrative_images.py --start-date 2026-01-01 --end-date <current-date> --json
+```
+
+2. Confirm the base narrative exists:
 
 ```bash
 test -f docs/narrative/data/entries.json
 ```
 
-2. Run the enrichment pass:
+3. Run the enrichment pass:
 
 ```bash
 .venv/bin/python scripts/run_hapa_narrative_enrichment.py --json
@@ -27,14 +42,14 @@ Equivalent CLI:
 .venv/bin/python -m hapa_graphify narrative enrich --json
 ```
 
-3. Review the latest run:
+4. Review the latest run:
 
 ```bash
 cat docs/narrative/data/enrichment-run.json
 tail -1 docs/narrative/data/enrichment-log.ndjson
 ```
 
-4. Preview the static app:
+5. Preview the static app:
 
 ```bash
 python3 -m http.server 8800 --bind 127.0.0.1 --directory docs
@@ -52,6 +67,7 @@ Open `http://127.0.0.1:8800/narrative/`.
 ## Rules
 
 - Preserve the base technical and lore paragraphs unless explicitly asked to rewrite them.
+- For recurring weekly runs, never enrich against a stale turn store; run turn mining and base narrative refresh first.
 - Keep enrichment public-safe: source IDs, Hapa URIs, labels, counts, summaries, and redacted graph IDs are allowed; local absolute paths, credentials, raw private media paths, and full database rows are not.
 - Treat facts as bounded observations from configured stores. Label inferred continuity as `derived_or_inferred`.
 - Preserve pass history in `entry.enrichment.passes`; do not overwrite the append-only log.

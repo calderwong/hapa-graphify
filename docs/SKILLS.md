@@ -11,8 +11,8 @@ This repo exposes CLI/API/UI/MCP/Desktop access points, but agents should also u
 | `hapa-turn-miner` | Mining ChatGPT, NotebookLM, Gemini, or future AI exports into Second Brain turn cards. | Produces or refreshes conversation nodes that Hapa Graphify can ingest. |
 | `hapa-turn-result-lineage` | Tracing AI conversation turns into learned sources, applied skills, artifacts, and outcomes. | Adds lineage edges between turns, skills, docs, media, and node work. |
 | `hapa-astros-design` | Updating Hapa operator dashboards, wiki viewers, node dashboards, and graph UIs. | Keeps the UI consistent with the Hapa/Astros operator aesthetic. |
-| `hapa-narrative-weekly` | Refreshing the Hapa weekly canon narrative entries. | Uses Second Brain, wiki, and Graphify query evidence to produce the public narrative log. |
-| `hapa-narrative-enrichment` | Adding more facts, lore insights, and connections to existing weekly narrative entries. | Runs the additive enrichment pass and tracks pass/agent telemetry. |
+| `hapa-narrative-weekly` | Refreshing the Hapa weekly canon narrative entries. | Runs after `hapa-turn-miner`; uses Second Brain, wiki, and Graphify query evidence to produce the public narrative log. |
+| `hapa-narrative-enrichment` | Adding more facts, lore insights, and connections to existing weekly narrative entries. | Runs after turn mining and base narrative refresh; tracks pass/agent telemetry. |
 
 ## Adjacent Skills
 
@@ -33,6 +33,7 @@ Use a Hapa skill first when the task asks to modify or interpret a source-of-tru
 - Conversation ingestion: `hapa-turn-miner`.
 - Result lineage: `hapa-turn-result-lineage`.
 - Hapa UI visual design: `hapa-astros-design`.
+- Weekly canon refresh: `hapa-turn-miner`, then `hapa-narrative-weekly`, then `hapa-narrative-enrichment`.
 - Weekly canon enrichment: `hapa-narrative-enrichment`.
 
 After the skill completes, run Hapa Graphify again to refresh the relevant map, query, or report sidecar.
