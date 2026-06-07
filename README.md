@@ -75,6 +75,7 @@ See [docs/ACCESS_POINTS.md](docs/ACCESS_POINTS.md) for the complete map.
 .venv/bin/python -m hapa_graphify knowledge graph --limit-per-source 25 --json
 .venv/bin/python -m hapa_graphify ecosystem ast --max-codebases 5 --limit-per-codebase 20 --json
 .venv/bin/python -m hapa_graphify narrative run --start-date 2026-01-01 --end-date 2026-06-07 --json
+.venv/bin/python -m hapa_graphify narrative enrich --json
 ```
 
 Full coverage runs:

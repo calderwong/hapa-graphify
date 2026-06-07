@@ -29,6 +29,7 @@ python3 -m hapa_graphify ecosystem ast --full --output reports/hapa-ecosystem-as
 python3 -m hapa_graphify knowledge graph --limit-per-source 25 --json
 python3 -m hapa_graphify knowledge graph --full --output reports/hapa-knowledge-graph-run.json --json
 python3 -m hapa_graphify narrative run --start-date 2026-01-01 --end-date 2026-06-07 --json
+python3 -m hapa_graphify narrative enrich --json
 python3 -m hapa_graphify fragment --source hapa-ecosystem-codebases --full --json
 python3 -m hapa_graphify export --source all --dry-run --json
 python3 -m hapa_graphify export --source all --public --dry-run --json

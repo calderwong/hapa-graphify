@@ -16,7 +16,7 @@
 | Hapa ecosystem discovery | `/api/ecosystem/discover` | `ecosystem discover` | `/ui` Discover | Electron shell loads `/ui` | NODE_MAP, Quest Keeper audit, Overwatch configs, local manifests | unit test + CLI | partial |
 | Full ecosystem AST analysis | `/api/ecosystem/ast` | `ecosystem ast --full` | `/ui` AST Full | Electron shell loads `/ui` | discovered Hapa codebases + Graphify AST | full report + validation | partial |
 | Knowledge/document graph | `/api/knowledge/graph` | `knowledge graph --full` | `/ui` Knowledge Full | Electron shell loads `/ui` | Second Brain, Hapa docs, full wiki, Quest Keeper, Overwatch | full report + validation | partial |
-| Hapa narrative log | Static Pages | `narrative run`, scripts | `/narrative/` | Browser/Electron can load Pages output | Second Brain, wiki, Graphify queries | narrative tests + local smoke | partial |
+| Hapa narrative log + enrichment | Static Pages | `narrative run`, `narrative enrich`, scripts | `/narrative/` | Browser/Electron can load Pages output | Second Brain, wiki, Graphify queries | narrative/enrichment tests + local smoke | partial |
 | Export | `/api/export` | `export --dry-run` | `/ui` Export Dry | Electron shell loads `/ui` | graph fragment | unit test + CLI | partial |
 | Board writeback | `/api/board/checkpoint` | `board checkpoint --dry-run` | `/ui` Checkpoint Dry | Electron shell loads `/ui` | Overwatch events | unit test + checkpoint | partial |
 | Docs viewer | `/ui` | docs files | `/ui` | `bin/hapa-graphify-desktop.sh` | docs | file check | partial |

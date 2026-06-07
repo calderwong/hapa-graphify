@@ -37,6 +37,7 @@ from .core import (
 )
 from .mcp import call_mcp_tool, list_mcp_tools, run_jsonl_server
 from .narrative import run_narrative_agent
+from .narrative_enrichment import run_narrative_enrichment
 from .writeback import plan_writeback
 
 
@@ -195,13 +196,19 @@ def main(argv: list[str] | None = None) -> int:
     p_knowledge.add_argument("--json", action="store_true")
 
     p_narrative = sub.add_parser("narrative")
-    p_narrative.add_argument("action", choices=["run"])
+    p_narrative.add_argument("action", choices=["run", "enrich"])
     p_narrative.add_argument("--start-date", default="2026-01-01")
     p_narrative.add_argument("--end-date", default="2026-06-07")
     p_narrative.add_argument("--output")
     p_narrative.add_argument("--run-log")
     p_narrative.add_argument("--image-queue")
     p_narrative.add_argument("--generate-images", action="store_true")
+    p_narrative.add_argument("--entries")
+    p_narrative.add_argument("--pass-log")
+    p_narrative.add_argument("--run-summary")
+    p_narrative.add_argument("--agent-id", default="hapa-narrative-enrichment")
+    p_narrative.add_argument("--max-entries", type=int)
+    p_narrative.add_argument("--dry-run", action="store_true")
     p_narrative.add_argument("--json", action="store_true")
 
     args = parser.parse_args(argv)
@@ -345,14 +352,25 @@ def main(argv: list[str] | None = None) -> int:
             output=args.output,
         )
     elif args.command == "narrative":
-        result = run_narrative_agent(
-            start_date=date.fromisoformat(args.start_date),
-            end_date=date.fromisoformat(args.end_date),
-            output=Path(args.output) if args.output else None,
-            run_log=Path(args.run_log) if args.run_log else None,
-            image_queue=Path(args.image_queue) if args.image_queue else None,
-            generate_images=args.generate_images,
-        )
+        if args.action == "run":
+            result = run_narrative_agent(
+                start_date=date.fromisoformat(args.start_date),
+                end_date=date.fromisoformat(args.end_date),
+                output=Path(args.output) if args.output else None,
+                run_log=Path(args.run_log) if args.run_log else None,
+                image_queue=Path(args.image_queue) if args.image_queue else None,
+                generate_images=args.generate_images,
+            )
+        else:
+            result = run_narrative_enrichment(
+                entries_path=Path(args.entries) if args.entries else None,
+                output=Path(args.output) if args.output else None,
+                pass_log=Path(args.pass_log) if args.pass_log else None,
+                run_summary=Path(args.run_summary) if args.run_summary else None,
+                agent_id=args.agent_id,
+                max_entries=args.max_entries,
+                dry_run=args.dry_run,
+            )
     else:  # pragma: no cover
         result = {"ok": False, "error": f"Unknown command {args.command}"}
 

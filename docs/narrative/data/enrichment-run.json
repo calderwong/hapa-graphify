@@ -1,0 +1,26 @@
+{
+  "agent_id": "hapa-narrative-enrichment",
+  "dry_run": false,
+  "duration_ms": 126862,
+  "entries_enriched": 24,
+  "entries_seen": 24,
+  "finished_at": "2026-06-07T01:55:20Z",
+  "graphify_query_count": 112,
+  "ok": true,
+  "output": "docs/narrative/data/entries.json",
+  "pass_id": "hapa_narrative_enrichment_1780797193",
+  "pass_log": "docs/narrative/data/enrichment-log.ndjson",
+  "run_id": "hapa_narrative_enrichment_1780797193",
+  "schema": "hapa.narrative.enrichment_run.v1",
+  "source_counts": {
+    "bridges": 11658,
+    "hapa_nodes": 110,
+    "knowledge_bodies": 11,
+    "skills": 126,
+    "turns": 6106,
+    "wiki_articles": 64,
+    "wiki_files_changed": 58052
+  },
+  "started_at": "2026-06-07T01:53:13Z",
+  "warnings": []
+}

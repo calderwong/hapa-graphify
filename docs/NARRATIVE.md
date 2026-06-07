@@ -19,6 +19,24 @@ Equivalent script:
 .venv/bin/python scripts/run_hapa_narrative.py --start-date 2026-01-01 --end-date 2026-06-07 --json
 ```
 
+## Enrichment
+
+Run the enrichment pass after the base narrative exists:
+
+```bash
+.venv/bin/python scripts/run_hapa_narrative_enrichment.py --json
+```
+
+Equivalent CLI:
+
+```bash
+.venv/bin/python -m hapa_graphify narrative enrich --json
+```
+
+The pass reads the weekly entries, selects expansion terms from each entry plus adjacent/overall canon context, queries Hapa Graphify, gathers bounded source cards from configured stores, and writes facts, technical insights, lore-card insights, and connections back into each entry. It tracks the agent and pass history in `entry.enrichment.passes`.
+
+The weekly Codex automation named `Hapa Narrative Enrichment Weekly` (`hapa-narrative-enrichment-weekly`) reruns this pass on Monday mornings local time.
+
 ## Images
 
 Each post gets a deterministic local illustrated PNG, a fallback SVG card, a GPT-image prompt, and image queue telemetry.
@@ -62,6 +80,8 @@ https://calderwong.github.io/hapa-graphify/narrative/
 - `docs/narrative/data/entries.json`: rendered entries.
 - `docs/narrative/data/run-log.ndjson`: append-only agent run telemetry.
 - `docs/narrative/data/agent-run.json`: latest run summary.
+- `docs/narrative/data/enrichment-run.json`: latest enrichment pass summary.
+- `docs/narrative/data/enrichment-log.ndjson`: append-only enrichment pass telemetry.
 - `docs/narrative/data/image-queue.ndjson`: local illustration and GPT-image queue status records.
 - `docs/narrative/images/*.png`: local illustrated PNGs, or GPT-image replacements when generated.
 - `docs/narrative/images/*.svg`: deterministic fallback cards.
@@ -72,6 +92,7 @@ Bundled repeatable skill:
 
 ```text
 skills/hapa-narrative-weekly/SKILL.md
+skills/hapa-narrative-enrichment/SKILL.md
 ```
 
-Use it when an agent needs to refresh weekly Hapa canon entries, connect weeks to previous entries, and preserve telemetry.
+Use these when an agent needs to refresh weekly Hapa canon entries, enrich them with additional facts and connections, and preserve telemetry.

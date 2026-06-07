@@ -20,6 +20,7 @@ Generated entries live in `docs/narrative/data/entries.json`.
 - `evidence.graphify_queries`: query terms, match counts, and top graph matches.
 - `evidence.previous_entry_ids`: continuity links.
 - `image`: GPT-image prompt, status, fallback SVG path, target PNG path.
+- `enrichment`: optional latest enrichment bundle, facts, insights, connections, graph queries, source cards, and pass history.
 - `telemetry`: agent id, run id, source counts, query counts, paragraph counts.
 
 ## Log Shape
@@ -35,6 +36,8 @@ Generated entries live in `docs/narrative/data/entries.json`.
 - `source_counts`
 - `warnings`
 - `ok`
+
+`docs/narrative/data/enrichment-log.ndjson` appends `hapa.narrative.enrichment_run.v1` records. The latest enrichment run also lives at `docs/narrative/data/enrichment-run.json`.
 
 ## Public Boundary
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hapa Narrative</title>
-  <link rel="stylesheet" href="assets/narrative.css?v=20260607-images">
+  <link rel="stylesheet" href="assets/narrative.css?v=20260607-enrichment">
 </head>
 <body>
   <main class="app">
@@ -97,13 +97,17 @@
         acc.articles += Number(entry.evidence.counts.wiki_articles || 0);
         acc.files += Number(entry.evidence.counts.wiki_files || 0);
         acc.queries += Number(entry.telemetry.graphify_query_count || 0);
+        acc.enriched += entry.enrichment ? 1 : 0;
+        acc.facts += entry.enrichment ? Number((entry.enrichment.facts || []).length) : 0;
         return acc;
-      }, { turns: 0, articles: 0, files: 0, queries: 0 });
+      }, { turns: 0, articles: 0, files: 0, queries: 0, enriched: 0, facts: 0 });
       summary.innerHTML = `
         <div class="metric"><b>${fmt(totals.turns)}</b><span>turns covered</span></div>
         <div class="metric"><b>${fmt(totals.articles)}</b><span>article updates</span></div>
         <div class="metric"><b>${fmt(totals.files)}</b><span>wiki/doc files</span></div>
         <div class="metric"><b>${fmt(totals.queries)}</b><span>graphify queries</span></div>
+        <div class="metric"><b>${fmt(totals.enriched)}</b><span>enriched entries</span></div>
+        <div class="metric"><b>${fmt(totals.facts)}</b><span>context facts</span></div>
       `;
     }
 
@@ -150,12 +154,54 @@
           <span>${fmt(counts.wiki_files)} files</span>
         </div>
         <div class="chips">${topics}</div>
+        ${enrichmentHtml(entry)}
         <details>
           <summary>Evidence and Graphify queries</summary>
           <div class="links">${links || "<span>No linked source evidence for this bucket.</span>"}</div>
           <div class="queries">${queries}</div>
           <pre>${escapeHtml(JSON.stringify(entry.telemetry, null, 2))}</pre>
         </details>
+      `;
+    }
+
+    function enrichmentHtml(entry) {
+      const enrichment = entry.enrichment;
+      if (!enrichment) return "";
+      const facts = (enrichment.facts || []).map((fact) => {
+        const link = fact.link ? ` <a href="${escapeHtml(fact.link)}">source</a>` : "";
+        return `<li><b>${escapeHtml(fact.label)}</b><span>${escapeHtml(fact.detail)}${link}</span></li>`;
+      }).join("");
+      const insights = (enrichment.insights || []).map((item) => {
+        return `<li><b>${escapeHtml(item.track)}</b><span>${escapeHtml(item.text)}</span></li>`;
+      }).join("");
+      const connections = (enrichment.connections || []).slice(0, 8).map((item) => {
+        const label = item.label || item.target_entry_id || item.target_node_id || item.kind;
+        return `<span class="connection">${escapeHtml(item.kind)} · ${escapeHtml(label)}</span>`;
+      }).join("");
+      const pass = (enrichment.passes || [])[enrichment.passes.length - 1] || {};
+      return `
+        <section class="enrichment-panel">
+          <div class="enrichment-head">
+            <span>Enrichment Pass</span>
+            <b>${escapeHtml(pass.agent_id || "agent")}</b>
+          </div>
+          <p>${escapeHtml(enrichment.summary || "")}</p>
+          <details>
+            <summary>Facts, lore, and connections</summary>
+            <div class="enrichment-grid">
+              <div><h3>Facts</h3><ul>${facts}</ul></div>
+              <div><h3>Insights</h3><ul>${insights}</ul></div>
+            </div>
+            <div class="connections">${connections}</div>
+            <pre>${escapeHtml(JSON.stringify({
+              latest_pass_id: enrichment.latest_pass_id,
+              pass_count: enrichment.pass_count,
+              selection: enrichment.selection,
+              query_count: (enrichment.graphify_queries || []).length,
+              source_card_count: (enrichment.source_cards || []).length
+            }, null, 2))}</pre>
+          </details>
+        </section>
       `;
     }
 

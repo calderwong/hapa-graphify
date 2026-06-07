@@ -18,12 +18,18 @@
     "generate": [
       "python3 scripts/run_hapa_narrative.py --start-date 2026-01-01 --end-date 2026-06-07 --json"
     ],
+    "enrichment": [
+      "python3 scripts/run_hapa_narrative_enrichment.py --json",
+      "python3 -m hapa_graphify narrative enrich --json"
+    ],
     "images": [
       "python3 scripts/generate_hapa_narrative_images.py --start-date 2026-01-01 --end-date 2026-06-07 --json"
     ],
     "logs": [
       "docs/narrative/data/entries.json",
       "docs/narrative/data/run-log.ndjson",
+      "docs/narrative/data/enrichment-log.ndjson",
+      "docs/narrative/data/enrichment-run.json",
       "docs/narrative/data/image-queue.ndjson"
     ]
   },
@@ -32,8 +38,11 @@
       "apps/hapa-narrative/hapa-node.json",
       "docs/narrative/",
       "scripts/run_hapa_narrative.py",
+      "scripts/run_hapa_narrative_enrichment.py",
       "scripts/generate_hapa_narrative_images.py",
       "hapa_graphify/narrative.py",
+      "hapa_graphify/narrative_enrichment.py",
+      "skills/hapa-narrative-enrichment/",
       "skills/hapa-narrative-weekly/"
     ],
     "vault_or_private": [

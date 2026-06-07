@@ -28,7 +28,13 @@ description: Generate Hapa canon narrative blog entries from Hapa Second Brain, 
 
 Without `OPENAI_API_KEY`, the run still writes deterministic local PNG illustrations, GPT-image prompts, fallback SVG cards, and queued image telemetry.
 
-4. Review the static app:
+4. Run the enrichment pass when deeper weekly context is needed:
+
+```bash
+.venv/bin/python scripts/run_hapa_narrative_enrichment.py --json
+```
+
+5. Review the static app:
 
 ```bash
 python3 -m http.server 8800 --bind 127.0.0.1 --directory docs
@@ -41,6 +47,8 @@ Open `http://127.0.0.1:8800/narrative/`.
 - `docs/narrative/data/entries.json`: current blog entries.
 - `docs/narrative/data/run-log.ndjson`: append-only agent run telemetry.
 - `docs/narrative/data/agent-run.json`: latest run summary.
+- `docs/narrative/data/enrichment-run.json`: latest enrichment pass summary.
+- `docs/narrative/data/enrichment-log.ndjson`: append-only enrichment pass telemetry.
 - `docs/narrative/data/image-queue.ndjson`: local illustration and GPT-image queue status records.
 - `docs/narrative/images/*.svg`: deterministic fallback visual cards.
 - `docs/narrative/images/*.png`: deterministic local illustrations, or GPT-image replacements when available.

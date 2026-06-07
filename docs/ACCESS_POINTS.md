@@ -11,6 +11,7 @@ Primary local automation surface:
 .venv/bin/python -m hapa_graphify map --level source_type --json
 .venv/bin/python -m hapa_graphify query "hapa graphify" --json
 .venv/bin/python -m hapa_graphify narrative run --start-date 2026-01-01 --end-date 2026-06-07 --json
+.venv/bin/python -m hapa_graphify narrative enrich --json
 ```
 
 Use the CLI for scripts, tests, full runs, report generation, and agent-safe dry-run workflows.

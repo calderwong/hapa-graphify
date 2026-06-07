@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hapa Narrative Enrichment"
+  short_description: "Weekly context enrichment for Hapa narrative"
+  default_prompt: "Use $hapa-narrative-enrichment to refresh Hapa narrative enrichment context for the weekly canon log."
