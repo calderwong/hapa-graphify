@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import argparse
+from datetime import date
 import json
+from pathlib import Path
 import sys
 
 from .api import run_server
@@ -34,6 +36,7 @@ from .core import (
     validate_sources,
 )
 from .mcp import call_mcp_tool, list_mcp_tools, run_jsonl_server
+from .narrative import run_narrative_agent
 from .writeback import plan_writeback
 
 
@@ -191,6 +194,16 @@ def main(argv: list[str] | None = None) -> int:
     p_knowledge.add_argument("--output")
     p_knowledge.add_argument("--json", action="store_true")
 
+    p_narrative = sub.add_parser("narrative")
+    p_narrative.add_argument("action", choices=["run"])
+    p_narrative.add_argument("--start-date", default="2026-01-01")
+    p_narrative.add_argument("--end-date", default="2026-06-07")
+    p_narrative.add_argument("--output")
+    p_narrative.add_argument("--run-log")
+    p_narrative.add_argument("--image-queue")
+    p_narrative.add_argument("--generate-images", action="store_true")
+    p_narrative.add_argument("--json", action="store_true")
+
     args = parser.parse_args(argv)
 
     if args.command == "health":
@@ -330,6 +343,15 @@ def main(argv: list[str] | None = None) -> int:
             limit_per_source=args.limit_per_source,
             source_ids=args.source or None,
             output=args.output,
+        )
+    elif args.command == "narrative":
+        result = run_narrative_agent(
+            start_date=date.fromisoformat(args.start_date),
+            end_date=date.fromisoformat(args.end_date),
+            output=Path(args.output) if args.output else None,
+            run_log=Path(args.run_log) if args.run_log else None,
+            image_queue=Path(args.image_queue) if args.image_queue else None,
+            generate_images=args.generate_images,
         )
     else:  # pragma: no cover
         result = {"ok": False, "error": f"Unknown command {args.command}"}

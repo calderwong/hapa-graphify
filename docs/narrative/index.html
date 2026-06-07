@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hapa Narrative</title>
+  <link rel="stylesheet" href="assets/narrative.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="../">
+        <span class="mark">HN</span>
+        <span>
+          <strong>Hapa Narrative</strong>
+          <small>weekly canon log</small>
+        </span>
+      </a>
+      <nav class="nav">
+        <a href="../demo/">Atlas</a>
+        <a href="../AGENT_GUIDE.md">Agents</a>
+        <a href="data/entries.json">JSON</a>
+      </nav>
+    </header>
+
+    <section class="toolbar" aria-label="Narrative controls">
+      <div>
+        <h1>Canon by week</h1>
+        <p id="meta">Loading Hapa narrative log...</p>
+      </div>
+      <div class="segmented" role="group" aria-label="Track">
+        <button class="active" data-track="technical">Technical</button>
+        <button data-track="lore_card">Lore Card</button>
+        <button data-track="both">Both</button>
+      </div>
+    </section>
+
+    <section class="summary" id="summary"></section>
+    <section class="timeline" id="timeline"></section>
+  </main>
+
+  <template id="entry-template">
+    <article class="entry">
+      <div class="entry-media"></div>
+      <div class="entry-body">
+        <div class="entry-head">
+          <div>
+            <p class="date"></p>
+            <h2></h2>
+          </div>
+          <span class="kind"></span>
+        </div>
+        <div class="tracks"></div>
+        <div class="evidence"></div>
+      </div>
+    </article>
+  </template>
+
+  <script>
+    const state = { track: "technical", payload: null };
+    const timeline = document.getElementById("timeline");
+    const summary = document.getElementById("summary");
+    const meta = document.getElementById("meta");
+
+    for (const button of document.querySelectorAll("[data-track]")) {
+      button.addEventListener("click", () => {
+        state.track = button.dataset.track;
+        for (const item of document.querySelectorAll("[data-track]")) item.classList.toggle("active", item === button);
+        render();
+      });
+    }
+
+    fetch("data/entries.json")
+      .then((response) => response.json())
+      .then((payload) => {
+        state.payload = payload;
+        render();
+      })
+      .catch((error) => {
+        meta.textContent = error.message;
+      });
+
+    function render() {
+      const payload = state.payload;
+      if (!payload) return;
+      meta.textContent = `${payload.entry_count} entries | ${payload.date_range.start} to ${payload.date_range.end} | generated ${payload.generated_at}`;
+      renderSummary(payload);
+      timeline.innerHTML = "";
+      for (const entry of payload.entries) {
+        timeline.appendChild(renderEntry(entry));
+      }
+    }
+
+    function renderSummary(payload) {
+      const totals = payload.entries.reduce((acc, entry) => {
+        acc.turns += Number(entry.evidence.counts.turns || 0);
+        acc.articles += Number(entry.evidence.counts.wiki_articles || 0);
+        acc.files += Number(entry.evidence.counts.wiki_files || 0);
+        acc.queries += Number(entry.telemetry.graphify_query_count || 0);
+        return acc;
+      }, { turns: 0, articles: 0, files: 0, queries: 0 });
+      summary.innerHTML = `
+        <div class="metric"><b>${fmt(totals.turns)}</b><span>turns covered</span></div>
+        <div class="metric"><b>${fmt(totals.articles)}</b><span>article updates</span></div>
+        <div class="metric"><b>${fmt(totals.files)}</b><span>wiki/doc files</span></div>
+        <div class="metric"><b>${fmt(totals.queries)}</b><span>graphify queries</span></div>
+      `;
+    }
+
+    function renderEntry(entry) {
+      const node = document.getElementById("entry-template").content.firstElementChild.cloneNode(true);
+      node.querySelector("h2").textContent = entry.title;
+      node.querySelector(".date").textContent = entry.period.label;
+      node.querySelector(".kind").textContent = entry.kind.replaceAll("_", " ");
+      const imageSrc = ["generated", "exists"].includes(entry.image.status) ? entry.image.target_png : entry.image.fallback_svg;
+      node.querySelector(".entry-media").innerHTML = `
+        <img alt="${escapeHtml(entry.title)}" src="${imageSrc}" onerror="this.onerror=null; this.src='${entry.image.fallback_svg}'">
+        <div class="image-status">${escapeHtml(entry.image.status)}</div>
+      `;
+      node.querySelector(".tracks").innerHTML = trackHtml(entry);
+      node.querySelector(".evidence").innerHTML = evidenceHtml(entry);
+      return node;
+    }
+
+    function trackHtml(entry) {
+      const technical = `<section class="track"><h3>${entry.tracks.technical.label}</h3>${paragraphs(entry.tracks.technical.paragraphs)}</section>`;
+      const lore = `<section class="track lore"><h3>${entry.tracks.lore_card.label}</h3>${paragraphs(entry.tracks.lore_card.paragraphs)}</section>`;
+      if (state.track === "technical") return technical;
+      if (state.track === "lore_card") return lore;
+      return technical + lore;
+    }
+
+    function paragraphs(items) {
+      return (items || []).map((item) => `<p>${escapeHtml(item)}</p>`).join("");
+    }
+
+    function evidenceHtml(entry) {
+      const counts = entry.evidence.counts;
+      const topics = chips(entry.evidence.top_topics, "topic");
+      const links = (entry.evidence.links || []).slice(0, 8).map((link) => {
+        return `<a class="source-link" href="${escapeHtml(link.href)}" title="${escapeHtml(link.href)}">${escapeHtml(link.label)}</a>`;
+      }).join("");
+      const queries = (entry.evidence.graphify_queries || []).map((query) => {
+        return `<span class="query">${escapeHtml(query.query)} <b>${fmt(query.match_count || 0)}</b></span>`;
+      }).join("");
+      return `
+        <div class="counts">
+          <span>${fmt(counts.turns)} turns</span>
+          <span>${fmt(counts.wiki_articles)} articles</span>
+          <span>${fmt(counts.wiki_files)} files</span>
+        </div>
+        <div class="chips">${topics}</div>
+        <details>
+          <summary>Evidence and Graphify queries</summary>
+          <div class="links">${links || "<span>No linked source evidence for this bucket.</span>"}</div>
+          <div class="queries">${queries}</div>
+          <pre>${escapeHtml(JSON.stringify(entry.telemetry, null, 2))}</pre>
+        </details>
+      `;
+    }
+
+    function chips(items, className) {
+      return (items || []).slice(0, 8).map((item) => `<span class="chip ${className}">${escapeHtml(item.key)} <b>${fmt(item.count)}</b></span>`).join("");
+    }
+
+    function fmt(value) {
+      return new Intl.NumberFormat("en-US").format(Number(value || 0));
+    }
+
+    function escapeHtml(value) {
+      return String(value || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+  </script>
+</body>
+</html>

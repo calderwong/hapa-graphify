@@ -176,6 +176,7 @@ def capabilities() -> dict[str, Any]:
             "ecosystem discover",
             "ecosystem ast --full",
             "knowledge graph --full",
+            "narrative run",
             "serve",
             "mcp tools",
             "mcp call",

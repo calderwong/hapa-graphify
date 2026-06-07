@@ -60,6 +60,7 @@ Then validate:
 - **API:** loopback routes under `/api/*`
 - **MCP:** `.venv/bin/python -m hapa_graphify mcp serve-jsonl`
 - **Desktop:** `bin/hapa-graphify-desktop.sh`
+- **Narrative app:** `docs/narrative/index.html`
 - **Static demo:** `docs/index.html` and `docs/demo/index.html`
 
 See [docs/ACCESS_POINTS.md](docs/ACCESS_POINTS.md) for the complete map.
@@ -73,6 +74,7 @@ See [docs/ACCESS_POINTS.md](docs/ACCESS_POINTS.md) for the complete map.
 .venv/bin/python -m hapa_graphify ecosystem discover --json
 .venv/bin/python -m hapa_graphify knowledge graph --limit-per-source 25 --json
 .venv/bin/python -m hapa_graphify ecosystem ast --max-codebases 5 --limit-per-codebase 20 --json
+.venv/bin/python -m hapa_graphify narrative run --start-date 2026-01-01 --end-date 2026-06-07 --json
 ```
 
 Full coverage runs:
@@ -102,6 +104,7 @@ The generator writes `docs/demo-data/atlas.json` with private paths, record keys
 - [Hapa Ecosystem Context](docs/HAPA_ECOSYSTEM.md)
 - [Hapa Skills Map](docs/SKILLS.md)
 - [Use Cases](docs/USE_CASES.md)
+- [Hapa Narrative](docs/NARRATIVE.md)
 - [Access Points](docs/ACCESS_POINTS.md)
 - [CLI](docs/CLI.md)
 - [API](docs/API.md)

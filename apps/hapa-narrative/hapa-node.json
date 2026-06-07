@@ -1,0 +1,58 @@
+{
+  "schema": "hapa.node.manifest.v1",
+  "id": "hapa-narrative",
+  "display_name": "Hapa Narrative",
+  "status": "active-scaffold",
+  "role": "Weekly Hapa canon narrative log, dual-track summary surface, GPT-image prompt queue, and telemetry-backed blog app.",
+  "source_root": "apps/hapa-narrative",
+  "runtime": {
+    "language": "static-html-python-generator",
+    "entrypoint": "docs/narrative/index.html",
+    "generator": "python3 scripts/run_hapa_narrative.py"
+  },
+  "interfaces": {
+    "static_app": [
+      "docs/narrative/index.html",
+      "https://calderwong.github.io/hapa-graphify/narrative/"
+    ],
+    "generate": [
+      "python3 scripts/run_hapa_narrative.py --start-date 2026-01-01 --end-date 2026-06-07 --json"
+    ],
+    "images": [
+      "python3 scripts/generate_hapa_narrative_images.py --start-date 2026-01-01 --end-date 2026-06-07 --json"
+    ],
+    "logs": [
+      "docs/narrative/data/entries.json",
+      "docs/narrative/data/run-log.ndjson",
+      "docs/narrative/data/image-queue.ndjson"
+    ]
+  },
+  "publication_boundary": {
+    "source_safe": [
+      "apps/hapa-narrative/hapa-node.json",
+      "docs/narrative/",
+      "scripts/run_hapa_narrative.py",
+      "scripts/generate_hapa_narrative_images.py",
+      "hapa_graphify/narrative.py",
+      "skills/hapa-narrative-weekly/"
+    ],
+    "vault_or_private": [
+      "OPENAI_API_KEY",
+      "local Second Brain DB",
+      "local wiki roots",
+      "raw media",
+      "private local paths"
+    ]
+  },
+  "related_nodes": [
+    "hapa-graphify",
+    "hapa-second-brain",
+    "hapa-worldbuilding-wiki",
+    "hapa-overwatch-kanban",
+    "hapa-quest-keeper"
+  ],
+  "tracks": [
+    "technical",
+    "lore_card"
+  ]
+}

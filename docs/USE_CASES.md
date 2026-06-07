@@ -84,3 +84,13 @@ Run:
 ```
 
 Board writes stay dry-run unless a human or authorized board protocol grants append authority.
+
+## 9. Generate Hapa Canon Narrative Entries
+
+Run:
+
+```bash
+.venv/bin/python -m hapa_graphify narrative run --start-date 2026-01-01 --end-date 2026-06-07 --json
+```
+
+This creates the initial 10-paragraph summary plus weekly entries with technical and lore-card tracks, source links, Graphify query telemetry, image prompts, and the `hapa-narrative` app data.
