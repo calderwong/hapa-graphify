@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hapa Narrative</title>
-  <link rel="stylesheet" href="assets/narrative.css">
+  <link rel="stylesheet" href="assets/narrative.css?v=20260607-images">
 </head>
 <body>
   <main class="app">
@@ -112,7 +112,7 @@
       node.querySelector("h2").textContent = entry.title;
       node.querySelector(".date").textContent = entry.period.label;
       node.querySelector(".kind").textContent = entry.kind.replaceAll("_", " ");
-      const imageSrc = ["generated", "exists"].includes(entry.image.status) ? entry.image.target_png : entry.image.fallback_svg;
+      const imageSrc = ["generated", "exists", "generated_local_illustration"].includes(entry.image.status) ? entry.image.target_png : entry.image.fallback_svg;
       node.querySelector(".entry-media").innerHTML = `
         <img alt="${escapeHtml(entry.title)}" src="${imageSrc}" onerror="this.onerror=null; this.src='${entry.image.fallback_svg}'">
         <div class="image-status">${escapeHtml(entry.image.status)}</div>

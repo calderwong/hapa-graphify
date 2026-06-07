@@ -21,7 +21,13 @@ Equivalent script:
 
 ## Images
 
-Each post gets a GPT-image prompt, image queue telemetry, and a deterministic fallback SVG card.
+Each post gets a deterministic local illustrated PNG, a fallback SVG card, a GPT-image prompt, and image queue telemetry.
+
+Install the optional image renderer before a full local refresh:
+
+```bash
+.venv/bin/python -m pip install -e ".[images]"
+```
 
 If `OPENAI_API_KEY` is available and image generation is authorized:
 
@@ -29,7 +35,7 @@ If `OPENAI_API_KEY` is available and image generation is authorized:
 .venv/bin/python scripts/generate_hapa_narrative_images.py --start-date 2026-01-01 --end-date 2026-06-07 --json
 ```
 
-Without an API key, image jobs stay `queued_openai_api_key_missing` and the app displays fallback SVGs.
+Without an API key, the app displays the local illustrated PNGs, keeps the deterministic SVGs as fallbacks, and records GPT-image jobs as `queued_openai_api_key_missing`.
 
 ## App
 
@@ -56,9 +62,9 @@ https://calderwong.github.io/hapa-graphify/narrative/
 - `docs/narrative/data/entries.json`: rendered entries.
 - `docs/narrative/data/run-log.ndjson`: append-only agent run telemetry.
 - `docs/narrative/data/agent-run.json`: latest run summary.
-- `docs/narrative/data/image-queue.ndjson`: GPT-image jobs.
-- `docs/narrative/images/*.svg`: fallback cards.
-- `docs/narrative/images/*.png`: generated image outputs when available.
+- `docs/narrative/data/image-queue.ndjson`: local illustration and GPT-image queue status records.
+- `docs/narrative/images/*.png`: local illustrated PNGs, or GPT-image replacements when generated.
+- `docs/narrative/images/*.svg`: deterministic fallback cards.
 
 ## Skill
 

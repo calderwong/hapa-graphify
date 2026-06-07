@@ -3,8 +3,10 @@ from __future__ import annotations
 import argparse
 import base64
 import collections
+import hashlib
 import html
 import json
+import math
 import os
 import re
 import sqlite3
@@ -106,6 +108,12 @@ def run_narrative_agent(
         queries = _graphify_queries(packet, previous_entry)
         entry = _entry_from_packet(period, packet, queries, previous_entry, run_id)
         _write_svg_card(entry, image_dir / f"{entry['id']}.svg")
+        if _write_png_illustration(entry, image_dir / f"{entry['id']}.png"):
+            entry["image"]["status"] = "generated_local_illustration"
+            entry["image"]["generator"] = "pillow-local-illustrator"
+        else:
+            entry["image"]["status"] = "generated_svg_illustration"
+            entry["image"]["generator"] = "svg-local-illustrator"
         entries.append(entry)
         previous_entry = entry
 
@@ -394,7 +402,7 @@ def _entry_from_packet(
         "image": {
             "model": "gpt-image-1",
             "prompt": image_prompt,
-            "status": "queued_openai_api_key_missing" if not os.environ.get("OPENAI_API_KEY") else "queued",
+            "status": "pending_local_illustration",
             "fallback_svg": f"images/{period.id}.svg",
             "target_png": f"images/{period.id}.png",
         },
@@ -511,7 +519,7 @@ def _lore_previous_line(packet: dict[str, Any], previous_entry: dict[str, Any] |
 
 def _prepare_image_queue(entries: list[dict[str, Any]], image_queue: Path) -> list[dict[str, Any]]:
     events = []
-    status = "queued_openai_api_key_missing" if not os.environ.get("OPENAI_API_KEY") else "queued"
+    gpt_status = "queued_openai_api_key_missing" if not os.environ.get("OPENAI_API_KEY") else "queued"
     image_queue.parent.mkdir(parents=True, exist_ok=True)
     with image_queue.open("w", encoding="utf-8") as handle:
         for entry in entries:
@@ -520,9 +528,11 @@ def _prepare_image_queue(entries: list[dict[str, Any]], image_queue: Path) -> li
                 "entry_id": entry["id"],
                 "model": "gpt-image-1",
                 "prompt": entry["image"]["prompt"],
-                "status": status,
+                "status": entry["image"]["status"],
+                "gpt_image_status": gpt_status,
                 "target_png": entry["image"]["target_png"],
                 "fallback_svg": entry["image"]["fallback_svg"],
+                "generator": entry["image"].get("generator"),
                 "created_at": _utc_now(),
             }
             event = _redact_public_payload(event)
@@ -548,14 +558,19 @@ def _generate_images(entries: list[dict[str, Any]], image_queue: Path) -> list[d
                 "fallback_svg": entry["image"]["fallback_svg"],
                 "created_at": _utc_now(),
             }
-            if target.exists():
+            has_local_placeholder = target.exists() and entry["image"].get("generator") in {"pillow-local-illustrator", "svg-local-illustrator"}
+            if target.exists() and not has_local_placeholder:
                 event["status"] = "exists"
             else:
                 try:
                     _call_openai_image_api(api_key, entry["image"]["prompt"], target)
                     event["status"] = "generated"
+                    event["generator"] = "openai-gpt-image-1"
+                    entry["image"]["status"] = "generated"
+                    entry["image"]["generator"] = "openai-gpt-image-1"
                 except Exception as exc:  # pragma: no cover - network/API dependent
                     event["status"] = "failed"
+                    event["fallback_status"] = entry["image"]["status"]
                     event["error"] = str(exc)
             event = _redact_public_payload(event)
             handle.write(json.dumps(event, sort_keys=True) + "\n")
@@ -620,11 +635,233 @@ def _write_svg_card(entry: dict[str, Any], output: Path) -> None:
             '<g fill="#edf7fa" font-family="Inter, ui-sans-serif, system-ui">',
             *svg_lines,
             '</g>',
-            '<text x="54" y="936" fill="#9fb0bb" font-size="18" font-family="ui-monospace, monospace">hapa-narrative | GPT-image prompt queued</text>',
+            '<text x="54" y="936" fill="#9fb0bb" font-size="18" font-family="ui-monospace, monospace">hapa-narrative | local illustration</text>',
             '</svg>',
         ]),
         encoding="utf-8",
     )
+
+
+def _write_png_illustration(entry: dict[str, Any], output: Path) -> bool:
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+    except Exception:
+        return False
+
+    output.parent.mkdir(parents=True, exist_ok=True)
+    width = height = 1024
+    seed = int(hashlib.sha256(entry["id"].encode("utf-8")).hexdigest()[:12], 16)
+    palette = _entry_palette(entry, seed)
+    image = Image.new("RGB", (width, height), palette["bg"])
+    draw = ImageDraw.Draw(image, "RGBA")
+
+    for y in range(height):
+        blend = y / height
+        color = tuple(int(palette["bg"][i] * (1 - blend) + palette["deep"][i] * blend) for i in range(3))
+        draw.line([(0, y), (width, y)], fill=color)
+
+    _draw_grid(draw, width, height, palette)
+    _draw_orbit_field(draw, width, height, palette, seed)
+    _draw_topic_glyphs(draw, entry, palette, seed)
+    _draw_count_runes(draw, entry, palette)
+    _draw_title_panel(draw, entry, palette)
+
+    image.save(output, format="PNG", optimize=True)
+    return True
+
+
+def _entry_palette(entry: dict[str, Any], seed: int) -> dict[str, tuple[int, int, int]]:
+    topics = " ".join(item["key"].lower() for item in entry["evidence"]["top_topics"][:6])
+    if any(term in topics for term in ("media", "video", "avatar", "design")):
+        accent = (217, 101, 159)
+        accent2 = (215, 173, 63)
+    elif any(term in topics for term in ("software", "engineering", "graph", "knowledge")):
+        accent = (53, 199, 220)
+        accent2 = (157, 134, 230)
+    elif any(term in topics for term in ("health", "body")):
+        accent = (101, 193, 121)
+        accent2 = (215, 173, 63)
+    elif any(term in topics for term in ("worldbuilding", "lore", "fantasy")):
+        accent = (215, 173, 63)
+        accent2 = (217, 101, 159)
+    else:
+        options = [(53, 199, 220), (215, 173, 63), (217, 101, 159), (101, 193, 121), (157, 134, 230)]
+        accent = options[seed % len(options)]
+        accent2 = options[(seed // 7) % len(options)]
+    return {
+        "bg": (5, 10, 14),
+        "deep": (18 + seed % 12, 24 + seed % 18, 32 + seed % 16),
+        "surface": (18, 28, 36),
+        "surface2": (25, 38, 48),
+        "line": (48, 67, 82),
+        "text": (237, 247, 250),
+        "muted": (159, 176, 187),
+        "accent": accent,
+        "accent2": accent2,
+    }
+
+
+def _draw_grid(draw: Any, width: int, height: int, palette: dict[str, tuple[int, int, int]]) -> None:
+    for x in range(0, width, 32):
+        alpha = 34 if x % 128 else 64
+        draw.line([(x, 0), (x, height)], fill=(*palette["line"], alpha), width=1)
+    for y in range(0, height, 32):
+        alpha = 34 if y % 128 else 64
+        draw.line([(0, y), (width, y)], fill=(*palette["line"], alpha), width=1)
+
+
+def _draw_orbit_field(draw: Any, width: int, height: int, palette: dict[str, tuple[int, int, int]], seed: int) -> None:
+    cx = width * 0.61
+    cy = height * 0.39
+    for index, radius in enumerate((112, 178, 248, 332)):
+        offset = (seed % 37) + index * 12
+        box = [cx - radius, cy - radius * 0.62 + offset, cx + radius, cy + radius * 0.62 + offset]
+        draw.ellipse(box, outline=(*palette["accent"], 44 + index * 12), width=2)
+    for index in range(22):
+        angle = (index / 22) * math.tau + (seed % 100) / 100
+        radius = 108 + (seed // (index + 3)) % 276
+        x = cx + math.cos(angle) * radius
+        y = cy + math.sin(angle) * radius * 0.62
+        size = 6 + (seed // (index + 11)) % 16
+        color = palette["accent"] if index % 3 else palette["accent2"]
+        draw.ellipse([x - size, y - size, x + size, y + size], fill=(*color, 150), outline=(*palette["text"], 170), width=1)
+        if index % 4 == 0:
+            draw.line([(cx, cy), (x, y)], fill=(*palette["line"], 90), width=1)
+
+
+def _draw_topic_glyphs(draw: Any, entry: dict[str, Any], palette: dict[str, tuple[int, int, int]], seed: int) -> None:
+    topics = " ".join(item["key"].lower() for item in entry["evidence"]["top_topics"][:8])
+    keywords = " ".join(item["key"].lower() for item in entry["evidence"]["top_keywords"][:8])
+    glyphs = []
+    if "graph" in topics or "knowledge" in topics or "second brain" in topics:
+        glyphs.append("graph")
+    if "media" in topics or "video" in keywords or "image" in keywords:
+        glyphs.append("media")
+    if "avatar" in keywords or "pose" in keywords or "sprite" in keywords:
+        glyphs.append("avatar")
+    if "protocol" in keywords or "hapa" in topics:
+        glyphs.append("protocol")
+    if "software" in topics or "engineering" in topics:
+        glyphs.append("code")
+    if not glyphs:
+        glyphs.append("quiet")
+
+    positions = [(150, 660), (270, 790), (126, 836), (380, 680), (292, 560)]
+    for index, glyph in enumerate(glyphs[:5]):
+        x, y = positions[index]
+        scale = 1.0 + ((seed // (index + 5)) % 18) / 60
+        _draw_glyph(draw, glyph, x, y, scale, palette, index)
+
+
+def _draw_glyph(draw: Any, glyph: str, x: float, y: float, scale: float, palette: dict[str, tuple[int, int, int]], index: int) -> None:
+    accent = palette["accent"] if index % 2 == 0 else palette["accent2"]
+    line = (*accent, 190)
+    fill = (*palette["surface2"], 190)
+    if glyph == "graph":
+        nodes = [(x, y), (x + 48 * scale, y - 44 * scale), (x + 104 * scale, y + 8 * scale), (x + 46 * scale, y + 64 * scale)]
+        for a, b in zip(nodes, nodes[1:] + nodes[:1]):
+            draw.line([a, b], fill=line, width=max(2, int(3 * scale)))
+        for px, py in nodes:
+            r = 13 * scale
+            draw.ellipse([px - r, py - r, px + r, py + r], fill=fill, outline=line, width=3)
+    elif glyph == "media":
+        w, h = 118 * scale, 78 * scale
+        draw.rounded_rectangle([x, y, x + w, y + h], radius=12, fill=fill, outline=line, width=3)
+        draw.polygon([(x + 42 * scale, y + 20 * scale), (x + 42 * scale, y + 58 * scale), (x + 76 * scale, y + 39 * scale)], fill=line)
+    elif glyph == "avatar":
+        r = 34 * scale
+        draw.ellipse([x, y, x + r * 2, y + r * 2], fill=fill, outline=line, width=3)
+        draw.rounded_rectangle([x - 18 * scale, y + r * 1.7, x + r * 2 + 18 * scale, y + r * 3.1], radius=22, fill=fill, outline=line, width=3)
+        draw.line([(x + r, y + r * 1.1), (x + r, y + r * 2.35)], fill=line, width=3)
+    elif glyph == "protocol":
+        points = [(x + 54 * scale, y), (x + 108 * scale, y + 42 * scale), (x + 88 * scale, y + 112 * scale), (x + 18 * scale, y + 112 * scale), (x, y + 42 * scale)]
+        draw.polygon(points, fill=fill, outline=line)
+        draw.line([(x + 28 * scale, y + 44 * scale), (x + 82 * scale, y + 44 * scale)], fill=line, width=4)
+        draw.line([(x + 28 * scale, y + 66 * scale), (x + 72 * scale, y + 66 * scale)], fill=line, width=3)
+    elif glyph == "code":
+        draw.line([(x + 46 * scale, y), (x, y + 42 * scale), (x + 46 * scale, y + 84 * scale)], fill=line, width=7)
+        draw.line([(x + 84 * scale, y), (x + 130 * scale, y + 42 * scale), (x + 84 * scale, y + 84 * scale)], fill=line, width=7)
+        draw.line([(x + 70 * scale, y + 90 * scale), (x + 88 * scale, y - 8 * scale)], fill=(*palette["text"], 180), width=4)
+    else:
+        draw.arc([x, y, x + 130 * scale, y + 130 * scale], 210, 508, fill=line, width=6)
+        draw.ellipse([x + 52 * scale, y + 52 * scale, x + 78 * scale, y + 78 * scale], fill=line)
+
+
+def _draw_count_runes(draw: Any, entry: dict[str, Any], palette: dict[str, tuple[int, int, int]]) -> None:
+    counts = entry["evidence"]["counts"]
+    values = [
+        ("turns", int(counts.get("turns") or 0)),
+        ("articles", int(counts.get("wiki_articles") or 0)),
+        ("files", int(counts.get("wiki_files") or 0)),
+    ]
+    x = 650
+    y = 720
+    for index, (label, value) in enumerate(values):
+        top = y + index * 72
+        draw.rounded_rectangle([x, top, 930, top + 50], radius=12, fill=(*palette["surface"], 210), outline=(*palette["line"], 180), width=1)
+        bar = min(230, 24 + int(math.log10(value + 1) * 68))
+        color = palette["accent"] if index != 1 else palette["accent2"]
+        draw.rounded_rectangle([x + 10, top + 30, x + 10 + bar, top + 40], radius=5, fill=(*color, 180))
+        _draw_text(draw, f"{value:,}", x + 14, top + 8, 18, palette["text"], weight="bold")
+        _draw_text(draw, label.upper(), x + 128, top + 11, 14, palette["muted"], mono=True)
+
+
+def _draw_title_panel(draw: Any, entry: dict[str, Any], palette: dict[str, tuple[int, int, int]]) -> None:
+    draw.rounded_rectangle([48, 52, 600, 298], radius=18, fill=(*palette["surface"], 222), outline=(*palette["line"], 210), width=2)
+    draw.rounded_rectangle([70, 76, 140, 118], radius=10, fill=(*palette["accent"], 190))
+    _draw_text(draw, "HN", 88, 86, 22, palette["bg"], weight="bold", mono=True)
+    _draw_text(draw, entry["period"]["label"], 156, 83, 17, palette["muted"], mono=True)
+    y = 136
+    for line in _wrap(entry["title"], 27)[:3]:
+        _draw_text(draw, line, 70, y, 34, palette["text"], weight="bold")
+        y += 42
+    topics = ", ".join(item["key"] for item in entry["evidence"]["top_topics"][:2]) or "quiet ledger"
+    _draw_text(draw, _truncate(topics, 44), 70, 264, 15, palette["muted"], mono=True)
+    draw.line([(70, 246), (546, 246)], fill=(*palette["accent2"], 150), width=2)
+
+
+def _draw_text(
+    draw: Any,
+    text: str,
+    x: int,
+    y: int,
+    size: int,
+    fill: tuple[int, int, int],
+    *,
+    weight: str = "regular",
+    mono: bool = False,
+) -> None:
+    font = _font(size, weight=weight, mono=mono)
+    draw.text((x, y), text, fill=(*fill, 255), font=font)
+
+
+def _font(size: int, *, weight: str = "regular", mono: bool = False) -> Any:
+    try:
+        from PIL import ImageFont
+    except Exception:  # pragma: no cover - optional dependency
+        return None
+    candidates = []
+    if mono:
+        candidates.extend([
+            "/System/Library/Fonts/Menlo.ttc",
+            "/System/Library/Fonts/Supplemental/Courier New.ttf",
+        ])
+    elif weight == "bold":
+        candidates.extend([
+            "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+            "/System/Library/Fonts/SFNS.ttf",
+        ])
+    else:
+        candidates.extend([
+            "/System/Library/Fonts/Supplemental/Arial.ttf",
+            "/System/Library/Fonts/SFNS.ttf",
+        ])
+    for candidate in candidates:
+        try:
+            return ImageFont.truetype(candidate, size=size)
+        except OSError:
+            continue
+    return ImageFont.load_default()
 
 
 def _weekly_periods(start_date: date, end_date: date) -> list[Period]:

@@ -420,9 +420,10 @@
       "id": "hapa-narrative-2026-01-01-summary-so-far",
       "image": {
         "fallback_svg": "images/hapa-narrative-2026-01-01-summary-so-far.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Summary So Far: Hapa Canon Before 2026. Period: Summary so far through 2026-01-01. Themes: protocol, image, asset, pointer, artificial intelligence, hapa and worldbuilding, design and aesthetics, knowledge systems. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-2026-01-01-summary-so-far.png"
       },
       "kind": "summary_so_far",
@@ -432,17 +433,17 @@
         "start": null,
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:02Z",
+      "published_at": "2026-06-07T01:27:01Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:02Z",
+        "created_at": "2026-06-07T01:27:01Z",
         "graphify_match_count": 30,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 10,
           "technical": 10
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 4277,
           "wiki_articles": 0,
@@ -922,9 +923,10 @@
       "id": "hapa-narrative-week-2026-01-01-2026-01-07",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-01-01-2026-01-07.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-01-01: Desktop / Overwatch. Period: 2026-01-01 to 2026-01-07. Themes: desktop, overwatch, protocol, hapa and worldbuilding, artificial intelligence, software engineering, design and aesthetics. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-01-01-2026-01-07.png"
       },
       "kind": "weekly",
@@ -934,17 +936,17 @@
         "start": "2026-01-01",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:06Z",
+      "published_at": "2026-06-07T01:27:05Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:06Z",
+        "created_at": "2026-06-07T01:27:05Z",
         "graphify_match_count": 616,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 292,
           "wiki_articles": 0,
@@ -1410,9 +1412,10 @@
       "id": "hapa-narrative-week-2026-01-08-2026-01-14",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-01-08-2026-01-14.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-01-08: Cymatica / Desktop. Period: 2026-01-08 to 2026-01-14. Themes: cymatica, desktop, implement, lore, artificial intelligence, design and aesthetics, hapa and worldbuilding, knowledge systems. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-01-08-2026-01-14.png"
       },
       "kind": "weekly",
@@ -1422,17 +1425,17 @@
         "start": "2026-01-08",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:10Z",
+      "published_at": "2026-06-07T01:27:09Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:10Z",
+        "created_at": "2026-06-07T01:27:09Z",
         "graphify_match_count": 43,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 85,
           "wiki_articles": 0,
@@ -1740,9 +1743,10 @@
       "id": "hapa-narrative-week-2026-01-15-2026-01-21",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-01-15-2026-01-21.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-01-15: Summary / Gaming. Period: 2026-01-15 to 2026-01-21. Themes: summary, gaming, warden, imagination, artificial intelligence, knowledge systems, geopolitics, games and simulation. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-01-15-2026-01-21.png"
       },
       "kind": "weekly",
@@ -1752,17 +1756,17 @@
         "start": "2026-01-15",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:13Z",
+      "published_at": "2026-06-07T01:27:12Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:13Z",
+        "created_at": "2026-06-07T01:27:12Z",
         "graphify_match_count": 23,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 4,
           "wiki_articles": 0,
@@ -2005,9 +2009,10 @@
       "id": "hapa-narrative-week-2026-01-22-2026-01-28",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-01-22-2026-01-28.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-01-22: Cultivate / Start. Period: 2026-01-22 to 2026-01-28. Themes: cultivate, start, device, unknown, artificial intelligence, software engineering, games and simulation, media pipelines. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-01-22-2026-01-28.png"
       },
       "kind": "weekly",
@@ -2017,17 +2022,17 @@
         "start": "2026-01-22",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:17Z",
+      "published_at": "2026-06-07T01:27:16Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:17Z",
+        "created_at": "2026-06-07T01:27:16Z",
         "graphify_match_count": 7,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 1,
           "wiki_articles": 0,
@@ -2238,9 +2243,10 @@
       "id": "hapa-narrative-week-2026-01-29-2026-02-04",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-01-29-2026-02-04.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-01-29: Going / Strokes. Period: 2026-01-29 to 2026-02-04. Themes: going, strokes, ccompretzle, high-5, artificial intelligence, software engineering, games and simulation, hapa and worldbuilding. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-01-29-2026-02-04.png"
       },
       "kind": "weekly",
@@ -2250,17 +2256,17 @@
         "start": "2026-01-29",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:21Z",
+      "published_at": "2026-06-07T01:27:20Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:21Z",
+        "created_at": "2026-06-07T01:27:20Z",
         "graphify_match_count": 2,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 1,
           "wiki_articles": 0,
@@ -2356,9 +2362,10 @@
       "id": "hapa-narrative-week-2026-02-05-2026-02-11",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-02-05-2026-02-11.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-02-05: Quiet Ledger. Period: 2026-02-05 to 2026-02-11. Themes: quiet Hapa archive week. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-02-05-2026-02-11.png"
       },
       "kind": "weekly",
@@ -2368,17 +2375,17 @@
         "start": "2026-02-05",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:23Z",
+      "published_at": "2026-06-07T01:27:22Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:23Z",
+        "created_at": "2026-06-07T01:27:22Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -2474,9 +2481,10 @@
       "id": "hapa-narrative-week-2026-02-12-2026-02-18",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-02-12-2026-02-18.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-02-12: Quiet Ledger. Period: 2026-02-12 to 2026-02-18. Themes: quiet Hapa archive week. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-02-12-2026-02-18.png"
       },
       "kind": "weekly",
@@ -2486,17 +2494,17 @@
         "start": "2026-02-12",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:24Z",
+      "published_at": "2026-06-07T01:27:24Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:24Z",
+        "created_at": "2026-06-07T01:27:24Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -2592,9 +2600,10 @@
       "id": "hapa-narrative-week-2026-02-19-2026-02-25",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-02-19-2026-02-25.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-02-19: Quiet Ledger. Period: 2026-02-19 to 2026-02-25. Themes: quiet Hapa archive week. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-02-19-2026-02-25.png"
       },
       "kind": "weekly",
@@ -2604,17 +2613,17 @@
         "start": "2026-02-19",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:26Z",
+      "published_at": "2026-06-07T01:27:25Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:26Z",
+        "created_at": "2026-06-07T01:27:25Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -2710,9 +2719,10 @@
       "id": "hapa-narrative-week-2026-02-26-2026-03-04",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-02-26-2026-03-04.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-02-26: Quiet Ledger. Period: 2026-02-26 to 2026-03-04. Themes: quiet Hapa archive week. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-02-26-2026-03-04.png"
       },
       "kind": "weekly",
@@ -2722,17 +2732,17 @@
         "start": "2026-02-26",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:28Z",
+      "published_at": "2026-06-07T01:27:27Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:28Z",
+        "created_at": "2026-06-07T01:27:27Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -2828,9 +2838,10 @@
       "id": "hapa-narrative-week-2026-03-05-2026-03-11",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-03-05-2026-03-11.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-03-05: Quiet Ledger. Period: 2026-03-05 to 2026-03-11. Themes: quiet Hapa archive week. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-03-05-2026-03-11.png"
       },
       "kind": "weekly",
@@ -2840,17 +2851,17 @@
         "start": "2026-03-05",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:30Z",
+      "published_at": "2026-06-07T01:27:29Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:30Z",
+        "created_at": "2026-06-07T01:27:29Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -2946,9 +2957,10 @@
       "id": "hapa-narrative-week-2026-03-12-2026-03-18",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-03-12-2026-03-18.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-03-12: Quiet Ledger. Period: 2026-03-12 to 2026-03-18. Themes: quiet Hapa archive week. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-03-12-2026-03-18.png"
       },
       "kind": "weekly",
@@ -2958,17 +2970,17 @@
         "start": "2026-03-12",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:32Z",
+      "published_at": "2026-06-07T01:27:31Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:32Z",
+        "created_at": "2026-06-07T01:27:31Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -3340,9 +3352,10 @@
       "id": "hapa-narrative-week-2026-03-19-2026-03-25",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-03-19-2026-03-25.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-03-19: Image / Building. Period: 2026-03-19 to 2026-03-25. Themes: image, building, protocol, truth, artificial intelligence, hapa and worldbuilding, media pipelines, design and aesthetics. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-03-19-2026-03-25.png"
       },
       "kind": "weekly",
@@ -3352,17 +3365,17 @@
         "start": "2026-03-19",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:35Z",
+      "published_at": "2026-06-07T01:27:35Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:35Z",
+        "created_at": "2026-06-07T01:27:35Z",
         "graphify_match_count": 1492,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 4,
           "wiki_articles": 0,
@@ -3458,9 +3471,10 @@
       "id": "hapa-narrative-week-2026-03-26-2026-04-01",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-03-26-2026-04-01.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-03-26: Quiet Ledger. Period: 2026-03-26 to 2026-04-01. Themes: quiet Hapa archive week. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-03-26-2026-04-01.png"
       },
       "kind": "weekly",
@@ -3470,17 +3484,17 @@
         "start": "2026-03-26",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:37Z",
+      "published_at": "2026-06-07T01:27:37Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:37Z",
+        "created_at": "2026-06-07T01:27:37Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -3576,9 +3590,10 @@
       "id": "hapa-narrative-week-2026-04-02-2026-04-08",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-04-02-2026-04-08.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-04-02: Quiet Ledger. Period: 2026-04-02 to 2026-04-08. Themes: quiet Hapa archive week. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-04-02-2026-04-08.png"
       },
       "kind": "weekly",
@@ -3588,17 +3603,17 @@
         "start": "2026-04-02",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:39Z",
+      "published_at": "2026-06-07T01:27:38Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:39Z",
+        "created_at": "2026-06-07T01:27:38Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -4046,9 +4061,10 @@
       "id": "hapa-narrative-week-2026-04-09-2026-04-15",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-04-09-2026-04-15.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-04-09: Image / Asset. Period: 2026-04-09 to 2026-04-15. Themes: image, asset, pointer, sediment, artificial intelligence, hapa and worldbuilding, music and performance, geopolitics. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-04-09-2026-04-15.png"
       },
       "kind": "weekly",
@@ -4058,17 +4074,17 @@
         "start": "2026-04-09",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:42Z",
+      "published_at": "2026-06-07T01:27:42Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:42Z",
+        "created_at": "2026-06-07T01:27:42Z",
         "graphify_match_count": 30,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 22,
           "wiki_articles": 0,
@@ -4494,9 +4510,10 @@
       "id": "hapa-narrative-week-2026-04-16-2026-04-22",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-04-16-2026-04-22.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-04-16: Verse / Calder. Period: 2026-04-16 to 2026-04-22. Themes: verse, calder, content, spend, artificial intelligence, geopolitics, hapa and worldbuilding, media pipelines. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-04-16-2026-04-22.png"
       },
       "kind": "weekly",
@@ -4506,17 +4523,17 @@
         "start": "2026-04-16",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:46Z",
+      "published_at": "2026-06-07T01:27:46Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:46Z",
+        "created_at": "2026-06-07T01:27:46Z",
         "graphify_match_count": 15,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 13,
           "wiki_articles": 0,
@@ -4775,9 +4792,10 @@
       "id": "hapa-narrative-week-2026-04-23-2026-04-29",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-04-23-2026-04-29.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-04-23: Numbers / Everyone. Period: 2026-04-23 to 2026-04-29. Themes: numbers, everyone, hears, strategic, artificial intelligence, knowledge systems, geopolitics, romance. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-04-23-2026-04-29.png"
       },
       "kind": "weekly",
@@ -4787,17 +4805,17 @@
         "start": "2026-04-23",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:50Z",
+      "published_at": "2026-06-07T01:27:50Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:50Z",
+        "created_at": "2026-06-07T01:27:50Z",
         "graphify_match_count": 2,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 3,
           "wiki_articles": 0,
@@ -5082,9 +5100,10 @@
       "id": "hapa-narrative-week-2026-04-30-2026-05-06",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-04-30-2026-05-06.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-04-30: Acres / United. Period: 2026-04-30 to 2026-05-06. Themes: acres, united, states, federal, knowledge systems, area square, total. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-04-30-2026-05-06.png"
       },
       "kind": "weekly",
@@ -5094,17 +5113,17 @@
         "start": "2026-04-30",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:53Z",
+      "published_at": "2026-06-07T01:27:53Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:53Z",
+        "created_at": "2026-06-07T01:27:53Z",
         "graphify_match_count": 6,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 3,
           "wiki_articles": 0,
@@ -5200,9 +5219,10 @@
       "id": "hapa-narrative-week-2026-05-07-2026-05-13",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-05-07-2026-05-13.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-05-07: Quiet Ledger. Period: 2026-05-07 to 2026-05-13. Themes: quiet Hapa archive week. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-05-07-2026-05-13.png"
       },
       "kind": "weekly",
@@ -5212,17 +5232,17 @@
         "start": "2026-05-07",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:55Z",
+      "published_at": "2026-06-07T01:27:55Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:55Z",
+        "created_at": "2026-06-07T01:27:55Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -5782,9 +5802,10 @@
       "id": "hapa-narrative-week-2026-05-14-2026-05-20",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-05-14-2026-05-20.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-05-14: Desktop / Cymatica. Period: 2026-05-14 to 2026-05-20. Themes: desktop, cymatica, function, project, artificial intelligence, design and aesthetics, hapa and worldbuilding, media pipelines. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-05-14-2026-05-20.png"
       },
       "kind": "weekly",
@@ -5794,17 +5815,17 @@
         "start": "2026-05-14",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:03:59Z",
+      "published_at": "2026-06-07T01:27:59Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:03:59Z",
+        "created_at": "2026-06-07T01:27:59Z",
         "graphify_match_count": 32,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 174,
           "wiki_articles": 0,
@@ -6393,9 +6414,10 @@
       "id": "hapa-narrative-week-2026-05-21-2026-05-27",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-05-21-2026-05-27.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-05-21: Function / Response. Period: 2026-05-21 to 2026-05-27. Themes: function, response, arguments, calls, artificial intelligence, hapa and worldbuilding, media pipelines, software engineering. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-05-21-2026-05-27.png"
       },
       "kind": "weekly",
@@ -6405,17 +6427,17 @@
         "start": "2026-05-21",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:04:03Z",
+      "published_at": "2026-06-07T01:28:02Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:04:03Z",
+        "created_at": "2026-06-07T01:28:02Z",
         "graphify_match_count": 2,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 789,
           "wiki_articles": 27,
@@ -7070,9 +7092,10 @@
       "id": "hapa-narrative-week-2026-05-28-2026-06-03",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-05-28-2026-06-03.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-05-28: Protocol / Artifact. Period: 2026-05-28 to 2026-06-03. Themes: protocol, artifact, hapamarlin, build, hapa and worldbuilding, artificial intelligence, design and aesthetics, software engineering. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-05-28-2026-06-03.png"
       },
       "kind": "weekly",
@@ -7082,17 +7105,17 @@
         "start": "2026-05-28",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:04:07Z",
+      "published_at": "2026-06-07T01:28:06Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:04:07Z",
+        "created_at": "2026-06-07T01:28:06Z",
         "graphify_match_count": 700,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 438,
           "wiki_articles": 34,
@@ -7374,9 +7397,10 @@
       "id": "hapa-narrative-week-2026-06-04-2026-06-07",
       "image": {
         "fallback_svg": "images/hapa-narrative-week-2026-06-04-2026-06-07.svg",
+        "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
         "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-06-04: Quiet Ledger. Period: 2026-06-04 to 2026-06-07. Themes: quiet Hapa archive week. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
-        "status": "queued_openai_api_key_missing",
+        "status": "generated_local_illustration",
         "target_png": "images/hapa-narrative-week-2026-06-04-2026-06-07.png"
       },
       "kind": "weekly",
@@ -7386,17 +7410,17 @@
         "start": "2026-06-04",
         "timezone": "UTC"
       },
-      "published_at": "2026-06-07T01:04:09Z",
+      "published_at": "2026-06-07T01:28:08Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-06-07T01:04:09Z",
+        "created_at": "2026-06-07T01:28:08Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1780794168",
+        "run_id": "hapa_narrative_1780795602",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 3,
@@ -7425,9 +7449,9 @@
     }
   ],
   "entry_count": 24,
-  "generated_at": "2026-06-07T01:04:09Z",
+  "generated_at": "2026-06-07T01:28:08Z",
   "node_id": "hapa-narrative",
-  "run_id": "hapa_narrative_1780794168",
+  "run_id": "hapa_narrative_1780795602",
   "schema": "hapa.narrative.entries.v1",
   "tracks": [
     {

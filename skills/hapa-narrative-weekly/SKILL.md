@@ -20,13 +20,13 @@ description: Generate Hapa canon narrative blog entries from Hapa Second Brain, 
 .venv/bin/python scripts/run_hapa_narrative.py --start-date 2026-01-01 --end-date 2026-06-07 --json
 ```
 
-3. If `OPENAI_API_KEY` is available and image generation is authorized, generate PNG images:
+3. Generate local PNG illustrations and, if `OPENAI_API_KEY` is available and image generation is authorized, replace them with GPT-image outputs:
 
 ```bash
 .venv/bin/python scripts/generate_hapa_narrative_images.py --start-date 2026-01-01 --end-date 2026-06-07 --json
 ```
 
-Without `OPENAI_API_KEY`, the run still writes GPT-image prompts, fallback SVG cards, and queued image telemetry.
+Without `OPENAI_API_KEY`, the run still writes deterministic local PNG illustrations, GPT-image prompts, fallback SVG cards, and queued image telemetry.
 
 4. Review the static app:
 
@@ -41,9 +41,9 @@ Open `http://127.0.0.1:8800/narrative/`.
 - `docs/narrative/data/entries.json`: current blog entries.
 - `docs/narrative/data/run-log.ndjson`: append-only agent run telemetry.
 - `docs/narrative/data/agent-run.json`: latest run summary.
-- `docs/narrative/data/image-queue.ndjson`: GPT-image queue and status records.
+- `docs/narrative/data/image-queue.ndjson`: local illustration and GPT-image queue status records.
 - `docs/narrative/images/*.svg`: deterministic fallback visual cards.
-- `docs/narrative/images/*.png`: GPT-image outputs when available.
+- `docs/narrative/images/*.png`: deterministic local illustrations, or GPT-image replacements when available.
 
 ## Evidence Rules
 

@@ -21,7 +21,7 @@ Full reports stay local-private. Public demos use sanitized atlas data generated
 
 ```bash
 python3 -m venv .venv
-.venv/bin/python -m pip install -e ".[graphify]"
+.venv/bin/python -m pip install -e ".[graphify,images]"
 .venv/bin/python -m hapa_graphify health --deep --json
 .venv/bin/python -m hapa_graphify sources validate --json
 .venv/bin/python -m hapa_graphify serve --host 127.0.0.1 --port 8796

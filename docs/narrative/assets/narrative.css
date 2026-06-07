@@ -202,7 +202,9 @@ p {
 }
 
 .entry-media {
-  min-height: 320px;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+  align-self: start;
   background: #0a1118;
   border-right: 1px solid var(--line);
   position: relative;
@@ -212,7 +214,7 @@ p {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .image-status {
@@ -300,7 +302,7 @@ pre {
   }
 
   .entry-media {
-    min-height: 260px;
+    min-height: 0;
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
