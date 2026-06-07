@@ -1,0 +1,40 @@
+{
+  "schema": "hapa.graph.fragment.v1",
+  "source_id": "golden-fixture",
+  "nodes": [
+    {
+      "id": "golden:hapa-node:alpha",
+      "label": "Golden Alpha Node",
+      "type": "hapa_node",
+      "truth_status": "verified_source",
+      "source_id": "golden-fixture",
+      "record_owner": "tests",
+      "privacy": "fixture",
+      "record_type": "hapa_node"
+    },
+    {
+      "id": "golden:capability:beta",
+      "label": "Golden Beta Capability",
+      "type": "capability",
+      "truth_status": "derived_or_inferred",
+      "source_id": "golden-fixture",
+      "record_owner": "tests",
+      "privacy": "fixture",
+      "record_type": "capability"
+    }
+  ],
+  "edges": [
+    {
+      "source": "golden:hapa-node:alpha",
+      "target": "golden:capability:beta",
+      "type": "implements",
+      "truth_status": "derived_or_inferred",
+      "source_id": "golden-fixture",
+      "record_owner": "tests",
+      "privacy": "fixture"
+    }
+  ],
+  "metadata": {
+    "purpose": "Stable fixture for schema, export, and docs examples."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "hapa.graphify.sources.v1",
+  "sources": [
+    {
+      "id": "fixture-docs",
+      "kind": "markdown_root",
+      "root": ".",
+      "privacy": "fixture",
+      "authority": "read-only",
+      "record_owner": "tests",
+      "refresh_mode": "manual",
+      "include": [
+        "*.md"
+      ]
+    }
+  ]
+}

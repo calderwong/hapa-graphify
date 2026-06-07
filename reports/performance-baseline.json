@@ -1,0 +1,72 @@
+{
+  "baseline": {
+    "edge_count": 402,
+    "export_node_count": 609,
+    "mcp_guard_error": "graph_too_large",
+    "node_count": 609,
+    "path_found": true,
+    "query_match_count": 115
+  },
+  "duration_seconds": 0.528767,
+  "generated_at": "2026-06-06T19:36:35Z",
+  "limit_per_source": 50,
+  "ok": true,
+  "steps": [
+    {
+      "duration_seconds": 0.117125,
+      "name": "build_combined_graph",
+      "ok": true,
+      "summary": {
+        "edges": 402,
+        "nodes": 609
+      }
+    },
+    {
+      "duration_seconds": 0.103296,
+      "name": "query_hapa_graphify",
+      "ok": true,
+      "summary": {
+        "edge_count": 402,
+        "node_count": 609,
+        "schema": "hapa.graph.fragment.v1",
+        "source_id": "all"
+      }
+    },
+    {
+      "duration_seconds": 0.100941,
+      "name": "path_cli_card_to_node",
+      "ok": true,
+      "summary": {
+        "edge_count": 402,
+        "node_count": 609,
+        "schema": "hapa.graph.fragment.v1",
+        "source_id": "all"
+      }
+    },
+    {
+      "duration_seconds": 0.106272,
+      "name": "export_public_dry_run",
+      "ok": true,
+      "summary": {
+        "edges": 402,
+        "nodes": 609
+      }
+    },
+    {
+      "duration_seconds": 0.101078,
+      "name": "mcp_large_graph_guard",
+      "ok": false,
+      "summary": {
+        "error": "graph_too_large",
+        "max_nodes": 1,
+        "node_count": 609,
+        "ok": false
+      }
+    }
+  ],
+  "ui_strategy": {
+    "default_query_limit": 20,
+    "graph_render_limit": 24,
+    "large_graph_behavior": "render query result sample; use filters and explain/path instead of full-canvas load"
+  }
+}

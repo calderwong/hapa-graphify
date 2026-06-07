@@ -1,0 +1,150 @@
+{
+  "schema": "hapa.graphify.sources.v1",
+  "default_authority": "read-only",
+  "default_privacy": "private-local",
+  "default_exclude": [
+    ".git/**",
+    "node_modules/**",
+    "tmp/**",
+    "public/generated/**",
+    "*.db-wal",
+    "*.db-shm",
+    ".env",
+    ".node_token"
+  ],
+  "sources": [
+    {
+      "id": "graphify-upstream-reviewed",
+      "kind": "repo_root",
+      "root": "../graphify",
+      "privacy": "public-reference",
+      "authority": "read-only",
+      "record_owner": "graphify-upstream",
+      "refresh_mode": "manual-reviewed",
+      "include": [
+        "README.md",
+        "ARCHITECTURE.md",
+        "SECURITY.md",
+        "pyproject.toml",
+        "graphify/**/*.py",
+        "tests/**/*.py"
+      ],
+      "metadata": {
+        "remote": "https://github.com/safishamsi/graphify",
+        "reviewed_commit": "4b06fd7bf7e1e407d8acb4dd9a1404e21cf34bce",
+        "reviewed_tag": "v0.8.33"
+      }
+    },
+    {
+      "id": "second-brain-live",
+      "kind": "sqlite",
+      "root": "$HAPA_SECOND_BRAIN_DB",
+      "privacy": "private-local",
+      "authority": "read-only",
+      "record_owner": "hapa-second-brain",
+      "refresh_mode": "incremental",
+      "include": [
+        "hapa_nodes",
+        "hapa_node_skills",
+        "skill_inventory",
+        "wiki_articles",
+        "ecosystem_connections",
+        "hapa_turn_cards",
+        "ai_chat_turns",
+        "capability_bridge_connections",
+        "topics",
+        "knowledge_bodies"
+      ],
+      "exclude": [
+        "embeddings",
+        "raw_private_exports"
+      ]
+    },
+    {
+      "id": "hapa-front-door-docs",
+      "kind": "markdown_root",
+      "root": "$HAPA_FRONT_DOOR_DOCS",
+      "privacy": "local-private-paths",
+      "authority": "read-only",
+      "record_owner": "hapa",
+      "refresh_mode": "changed-source",
+      "include": [
+        "*.md",
+        "site/generated/**/*.json"
+      ]
+    },
+    {
+      "id": "worldbuilding-wiki-operations",
+      "kind": "markdown_root",
+      "root": "$HAPA_WIKI_OPERATIONS_ROOT",
+      "privacy": "private-local",
+      "authority": "read-only",
+      "record_owner": "hapa-worldbuilding-wiki",
+      "refresh_mode": "changed-source",
+      "include": [
+        "**/*.md"
+      ],
+      "exclude": [
+        "Raw/**",
+        "Private/**"
+      ]
+    },
+    {
+      "id": "worldbuilding-wiki-full",
+      "kind": "markdown_root",
+      "root": "$HAPA_WIKI_ROOT",
+      "privacy": "private-local",
+      "authority": "read-only",
+      "record_owner": "hapa-worldbuilding-wiki",
+      "refresh_mode": "changed-source",
+      "include": [
+        "**/*.md",
+        "**/*.markdown",
+        "**/*.mdx"
+      ],
+      "exclude": [
+        ".git/**",
+        "Raw/**",
+        "Private/**"
+      ],
+      "max_headings_per_page": 4
+    },
+    {
+      "id": "overwatch-kanban-hapa-graphify",
+      "kind": "kanban_project",
+      "root": "$HAPA_OVERWATCH_ROOT",
+      "privacy": "private-local",
+      "authority": "append-only-events",
+      "record_owner": "hapa-overwatch-kanban",
+      "refresh_mode": "append-only",
+      "project_id": "hapa-app-hapa-graphify"
+    },
+    {
+      "id": "quest-keeper-audits",
+      "kind": "markdown_root",
+      "root": "$HAPA_QUEST_KEEPER_AUDIT_ROOT",
+      "privacy": "private-local",
+      "authority": "read-only",
+      "record_owner": "hapa-quest-keeper",
+      "refresh_mode": "changed-source",
+      "include": [
+        "*.md",
+        "*.json"
+      ]
+    },
+    {
+      "id": "hapa-ecosystem-codebases",
+      "kind": "hapa_ecosystem_codebases",
+      "root": "$HAPA_FRONT_DOOR_DOCS",
+      "privacy": "private-local",
+      "authority": "read-only",
+      "record_owner": "hapa-graphify",
+      "refresh_mode": "changed-source",
+      "discovery": {
+        "node_map": "$HAPA_NODE_MAP",
+        "quest_keeper_audit": "$HAPA_QUEST_KEEPER_AUDIT",
+        "overwatch_config_dir": "$HAPA_OVERWATCH_CONFIG_DIR"
+      }
+    }
+  ]
+}

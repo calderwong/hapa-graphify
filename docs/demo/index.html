@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hapa Graphify Demo</title>
+  <link rel="stylesheet" href="../assets/pages.css">
+</head>
+<body>
+  <main class="shell">
+    <nav class="topbar">
+      <div class="brand">
+        <div class="mark">HG</div>
+        <div>
+          <strong>Static Atlas Demo</strong>
+          <div class="label">Public-safe source/type map</div>
+        </div>
+      </div>
+      <div class="nav">
+        <a class="chip" href="../">Home</a>
+        <a class="chip" href="../OVERVIEW.md">Docs</a>
+        <a class="chip" href="https://github.com/calderwong/hapa-graphify">GitHub</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <h1>Combined Hapa atlas</h1>
+      <p>This demo uses a sanitized static snapshot generated from compact local sidecars. It shows group structure and weighted connections without exposing full private reports, local paths, record keys, or source samples.</p>
+    </section>
+
+    <section class="metrics" id="metrics">
+      <div class="card metric"><b>...</b><span>nodes</span></div>
+      <div class="card metric"><b>...</b><span>edges</span></div>
+      <div class="card metric"><b>...</b><span>groups</span></div>
+    </section>
+
+    <section style="margin-top: 24px;">
+      <svg id="graph" role="img" aria-label="Hapa Graphify static atlas demo"></svg>
+    </section>
+
+    <section class="grid" style="margin-top: 24px;">
+      <div class="card">
+        <h2>Selected</h2>
+        <pre id="selected">{}</pre>
+      </div>
+      <div class="card">
+        <h2>Top Groups</h2>
+        <div id="groups" style="display: grid; gap: 8px;"></div>
+      </div>
+      <div class="card">
+        <h2>Local Version</h2>
+        <p>Run the local app for live drill-down, path, explain, source browsing, and full local reports.</p>
+        <pre>.venv/bin/python -m hapa_graphify serve --host 127.0.0.1 --port 8796</pre>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const svg = document.getElementById("graph");
+    const selected = document.getElementById("selected");
+    const groups = document.getElementById("groups");
+
+    fetch("../demo-data/atlas.json")
+      .then((response) => response.json())
+      .then((data) => {
+        renderMetrics(data);
+        renderGraph(data);
+        renderGroups(data.nodes || []);
+      })
+      .catch((error) => {
+        selected.textContent = JSON.stringify({ ok: false, error: error.message }, null, 2);
+      });
+
+    function renderMetrics(data) {
+      document.getElementById("metrics").innerHTML = `
+        <div class="card metric"><b>${fmt(data.graph?.full_node_count || 0)}</b><span>full nodes</span></div>
+        <div class="card metric"><b>${fmt(data.graph?.full_edge_count || 0)}</b><span>full edges</span></div>
+        <div class="card metric"><b>${fmt((data.nodes || []).length)}</b><span>visible groups</span></div>
+      `;
+    }
+
+    function renderGroups(nodes) {
+      groups.innerHTML = "";
+      for (const node of nodes.slice(0, 12)) {
+        const row = document.createElement("button");
+        row.className = "row";
+        row.style.color = "var(--text)";
+        row.innerHTML = `<strong>${escapeHtml(node.label)}</strong><span class="label">${fmt(node.node_count)} nodes | ${fmt(node.edge_count)} edges</span>`;
+        row.addEventListener("click", () => select(node));
+        groups.appendChild(row);
+      }
+    }
+
+    function renderGraph(data) {
+      const nodes = (data.nodes || []).slice(0, 40);
+      const edges = data.edges || [];
+      svg.innerHTML = "";
+      const width = svg.clientWidth || 1000;
+      const height = svg.clientHeight || 520;
+      const cx = width / 2;
+      const cy = height / 2;
+      const ns = "http://www.w3.org/2000/svg";
+      const maxCount = Math.max(1, ...nodes.map((node) => Number(node.node_count || 0)));
+      const positions = new Map();
+
+      nodes.forEach((node, index) => {
+        const ring = index === 0 ? 0 : Math.floor((index - 1) / 18) + 1;
+        const slots = ring === 0 ? 1 : 18 + (ring - 1) * 10;
+        const slot = ring === 0 ? 0 : (index - 1) % slots;
+        const angle = ring === 0 ? 0 : Math.PI * 2 * slot / slots - Math.PI / 2;
+        const radius = ring === 0 ? 0 : Math.min(width, height) * Math.min(0.43, 0.16 + ring * 0.09);
+        positions.set(node.id, {
+          x: cx + Math.cos(angle) * radius,
+          y: cy + Math.sin(angle) * radius,
+          r: 8 + Math.sqrt(Number(node.node_count || 0) / maxCount) * 26
+        });
+      });
+
+      const maxEdge = Math.max(1, ...edges.map((edge) => Number(edge.edge_count || 0)));
+      for (const edge of edges) {
+        const source = positions.get(edge.source);
+        const target = positions.get(edge.target);
+        if (!source || !target) continue;
+        const line = document.createElementNS(ns, "line");
+        line.setAttribute("x1", source.x);
+        line.setAttribute("y1", source.y);
+        line.setAttribute("x2", target.x);
+        line.setAttribute("y2", target.y);
+        line.setAttribute("stroke", "#3a4b58");
+        line.setAttribute("stroke-width", String(1 + Math.log10(Number(edge.edge_count || 1)) * 1.6));
+        line.setAttribute("opacity", String(0.18 + Number(edge.edge_count || 0) / maxEdge * 0.55));
+        svg.appendChild(line);
+      }
+
+      nodes.forEach((node, index) => {
+        const position = positions.get(node.id);
+        const group = document.createElementNS(ns, "g");
+        group.setAttribute("class", "node");
+        const circle = document.createElementNS(ns, "circle");
+        circle.setAttribute("cx", position.x);
+        circle.setAttribute("cy", position.y);
+        circle.setAttribute("r", position.r);
+        circle.setAttribute("fill", colorFor(node.node_type));
+        circle.setAttribute("stroke", "#edf7fa");
+        circle.setAttribute("stroke-width", "1");
+        circle.addEventListener("click", () => select(node));
+        group.appendChild(circle);
+        if (index < 18) {
+          const text = document.createElementNS(ns, "text");
+          const left = position.x < cx;
+          text.setAttribute("x", position.x + (left ? -position.r - 8 : position.r + 8));
+          text.setAttribute("y", position.y + 4);
+          text.setAttribute("text-anchor", left ? "end" : "start");
+          text.textContent = truncate(node.label, 34);
+          group.appendChild(text);
+        }
+        svg.appendChild(group);
+      });
+    }
+
+    function select(node) {
+      selected.textContent = JSON.stringify(node, null, 2);
+    }
+
+    function colorFor(type) {
+      if (type === "protocol_card") return "#d7ad3f";
+      if (type === "wiki_article") return "#35c7dc";
+      if (type === "source_file") return "#9d86e6";
+      if (type === "capability") return "#d9659f";
+      if (type === "artifact" || type === "turn_card") return "#65c179";
+      return "#edf7fa";
+    }
+
+    function fmt(value) {
+      return new Intl.NumberFormat("en-US", { notation: Number(value) >= 1000000 ? "compact" : "standard" }).format(Number(value) || 0);
+    }
+
+    function truncate(value, length) {
+      const text = String(value || "");
+      return text.length > length ? text.slice(0, length - 1) + "." : text;
+    }
+
+    function escapeHtml(value) {
+      return String(value || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+  </script>
+</body>
+</html>

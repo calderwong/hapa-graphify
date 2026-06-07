@@ -1,0 +1,98 @@
+{
+  "schema": "hapa.node.manifest.v1",
+  "id": "hapa-graphify",
+  "display_name": "Hapa Graphify",
+  "status": "active-scaffold",
+  "role": "Hapa-standard graph compiler, Graphify wrapper, ecosystem ingest process, and graph query surface.",
+  "source_root": "work/hapa-graphify",
+  "runtime": {
+    "language": "python",
+    "desktop_shell": "electron-scaffold",
+    "entrypoint": "python3 -m hapa_graphify"
+  },
+  "environment": {
+    "host": {
+      "name": "HAPA_GRAPHIFY_HOST",
+      "default": "127.0.0.1"
+    },
+    "port": {
+      "name": "HAPA_GRAPHIFY_PORT",
+      "default": "8796"
+    },
+    "source_registry": {
+      "name": "HAPA_GRAPHIFY_SOURCE_REGISTRY",
+      "default": "config/hapa-graphify.sources.json"
+    },
+    "output_root": {
+      "name": "HAPA_GRAPHIFY_OUT",
+      "default": "graphify-out/hapa"
+    }
+  },
+  "interfaces": {
+    "health": [
+      "python3 -m hapa_graphify health --deep --json",
+      "GET /health"
+    ],
+    "capabilities": [
+      "python3 -m hapa_graphify capabilities --json",
+      "GET /capabilities"
+    ],
+    "smoke": [
+      "python3 -m hapa_graphify smoke --dry-run --json",
+      "GET /api/smoke?dry_run=1"
+    ],
+    "ui": [
+      "http://127.0.0.1:8796/ui"
+    ],
+    "mcp": [
+      "python3 -m hapa_graphify mcp tools --json",
+      "python3 -m hapa_graphify mcp serve-jsonl"
+    ],
+    "desktop": [
+      "bin/hapa-graphify-desktop.sh --check",
+      "bin/hapa-graphify-desktop.sh"
+    ],
+    "writeback": [
+      "python3 -m hapa_graphify writeback --target all --dry-run --json",
+      "GET /api/writeback?target=all&dry_run=1"
+    ]
+  },
+  "publication_boundary": {
+    "source_safe": [
+      "hapa_graphify/",
+      "config/hapa-graphify.sources.json",
+      "docs/",
+      "tests/",
+      "README.md",
+      "AGENTS.md",
+      "SECURITY.md",
+      "hapa-node.json",
+      "pyproject.toml"
+    ],
+    "vault_or_private": [
+      "graphify-out/",
+      "runs/",
+      "*.db",
+      "*.db-wal",
+      "*.db-shm",
+      ".env",
+      ".node_token",
+      "tmp/",
+      "private-media/"
+    ]
+  },
+  "related_nodes": [
+    "hapa",
+    "hapa-second-brain",
+    "hapa-lance-node",
+    "hapa-overwatch-kanban",
+    "hapa-quest-keeper",
+    "hapa-telemetry-node",
+    "hapa-agent-registry-node",
+    "hapa-worldbuilding-wiki",
+    "hapa-wiki-viewer"
+  ],
+  "board": {
+    "project_id": "hapa-app-hapa-graphify"
+  }
+}

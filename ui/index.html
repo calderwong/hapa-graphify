@@ -1,0 +1,1443 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hapa Graphify Operator</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b0d10;
+      --surface: #12161a;
+      --surface-2: #171d22;
+      --surface-3: #20272d;
+      --line: #33404a;
+      --line-strong: #59707d;
+      --text: #edf2f4;
+      --muted: #9aa8b2;
+      --cyan: #38c7d7;
+      --green: #65c179;
+      --gold: #d7ad3f;
+      --pink: #d9659f;
+      --red: #df6c76;
+      --violet: #9d86e6;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: var(--sans);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    body {
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    button {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #161b20;
+      color: var(--text);
+      padding: 0 11px;
+      cursor: pointer;
+    }
+
+    button:hover, button:focus-visible {
+      border-color: var(--cyan);
+      outline: none;
+    }
+
+    button:disabled {
+      opacity: 0.55;
+      cursor: wait;
+    }
+
+    button.primary {
+      background: #123037;
+      border-color: #2f8591;
+    }
+
+    button.warn {
+      background: #312816;
+      border-color: #7d6422;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #0f1317;
+      color: var(--text);
+      padding: 8px 10px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 72px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .shell {
+      height: 100vh;
+      display: grid;
+      grid-template-rows: 62px minmax(0, 1fr);
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: minmax(260px, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+      padding: 12px 16px;
+      background: #0f1317;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .mark {
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--line-strong);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: var(--cyan);
+      background: #151b20;
+      font-family: var(--mono);
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.1;
+    }
+
+    .sub {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .chips {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .chip {
+      min-height: 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 10px;
+      color: var(--muted);
+      background: #151a1f;
+      font-family: var(--mono);
+      font-size: 12px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .dot.ok { background: var(--green); }
+    .dot.bad { background: var(--red); }
+
+    main {
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 340px minmax(0, 1fr) 380px;
+      background: var(--line);
+      gap: 1px;
+    }
+
+    aside, section {
+      min-height: 0;
+      background: var(--surface);
+    }
+
+    .sidebar, .inspector {
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr);
+    }
+
+    .panel-head {
+      min-height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface-2);
+    }
+
+    .panel-title {
+      margin: 0;
+      color: #d8eef2;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .stack {
+      min-height: 0;
+      display: grid;
+      gap: 12px;
+      padding: 14px;
+      overflow: auto;
+    }
+
+    .control-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .tri-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .wide { grid-column: 1 / -1; }
+
+    .preset-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .preset-grid button {
+      font-size: 12px;
+      font-family: var(--mono);
+    }
+
+    .workspace {
+      min-width: 0;
+      display: grid;
+      grid-template-rows: auto minmax(260px, 43vh) minmax(0, 1fr);
+      gap: 1px;
+      background: var(--line);
+    }
+
+    .atlas {
+      min-height: 136px;
+      padding: 12px;
+      background: #101419;
+      overflow: auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(260px, 1fr));
+      gap: 10px;
+    }
+
+    .report-card {
+      min-height: 112px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface-2);
+      padding: 11px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .report-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .report-title {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .report-kind {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 3px 7px;
+      color: #d6d3ff;
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .metric-line {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .mini-metric {
+      min-width: 0;
+      border: 1px solid #29323a;
+      border-radius: 8px;
+      padding: 7px;
+      background: #11161b;
+    }
+
+    .mini-metric b {
+      display: block;
+      font-size: 16px;
+      line-height: 1.1;
+    }
+
+    .mini-metric span {
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .graph-panel {
+      min-height: 0;
+      position: relative;
+      background:
+        linear-gradient(#1b2228 1px, transparent 1px),
+        linear-gradient(90deg, #1b2228 1px, transparent 1px),
+        #0d1115;
+      background-size: 24px 24px;
+      overflow: hidden;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .graph-node {
+      cursor: pointer;
+    }
+
+    .map-edge {
+      stroke: #3a4b58;
+      stroke-linecap: round;
+    }
+
+    .map-node {
+      cursor: pointer;
+    }
+
+    .map-node circle {
+      pointer-events: all;
+    }
+
+    .graph-node text,
+    .map-node text {
+      font-size: 11px;
+      fill: #eef7f8;
+      pointer-events: none;
+      paint-order: stroke;
+      stroke: #0d1115;
+      stroke-width: 4px;
+      stroke-linejoin: round;
+    }
+
+    .graph-empty {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+      pointer-events: none;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .results {
+      min-height: 0;
+      overflow: auto;
+      padding: 12px;
+      background: #0f1317;
+    }
+
+    .row {
+      width: 100%;
+      min-height: 54px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+      text-align: left;
+      margin-bottom: 8px;
+      border: 1px solid #2e3942;
+      border-radius: 8px;
+      background: #151a1f;
+      padding: 9px 10px;
+    }
+
+    .row:hover, .row.active {
+      border-color: var(--cyan);
+      background: #182126;
+    }
+
+    .row-title {
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .row-meta {
+      margin-top: 5px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 11px;
+      overflow-wrap: anywhere;
+    }
+
+    .badge {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 7px;
+      color: #cfeaf0;
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface-2);
+      padding: 10px;
+    }
+
+    .metric b {
+      display: block;
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    pre {
+      margin: 0;
+      max-height: 270px;
+      overflow: auto;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      color: #dce8ea;
+      background: #0f1317;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .log {
+      max-height: 190px;
+      overflow: auto;
+      display: grid;
+      gap: 8px;
+    }
+
+    .status-line {
+      color: var(--muted);
+      font-size: 12px;
+      min-height: 18px;
+    }
+
+    .small-note {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .action-band {
+      border: 1px solid #3a3222;
+      border-radius: 8px;
+      background: #181611;
+      padding: 10px;
+      display: grid;
+      gap: 8px;
+    }
+
+    @media (max-width: 1180px) {
+      main {
+        grid-template-columns: 320px minmax(0, 1fr);
+      }
+      .inspector {
+        grid-column: 1 / -1;
+        min-height: 340px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      body { overflow: auto; height: auto; }
+      .shell { height: auto; min-height: 100vh; }
+      header { grid-template-columns: 1fr; }
+      .chips { justify-content: flex-start; }
+      main { grid-template-columns: 1fr; }
+      .workspace { grid-template-rows: auto 360px minmax(360px, auto); }
+      .atlas { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="brand">
+        <div class="mark">HG</div>
+        <div>
+          <h1>Hapa Graphify Operator</h1>
+          <div class="sub" id="api-base-label">127.0.0.1 graph compiler console</div>
+        </div>
+      </div>
+      <div class="chips">
+        <span class="chip"><span class="dot" id="health-dot"></span><span id="health-label">checking</span></span>
+        <span class="chip" id="source-chip">sources 0</span>
+        <span class="chip" id="report-chip">reports 0</span>
+        <span class="chip" id="graph-chip">graph 0 / 0</span>
+      </div>
+    </header>
+
+    <main>
+      <aside class="sidebar">
+        <div class="panel-head">
+          <p class="panel-title">Explorer Controls</p>
+        </div>
+        <div class="stack">
+          <label class="wide">API Base
+            <input id="api-base" value="">
+          </label>
+          <div class="control-grid">
+            <button id="refresh" class="primary">Refresh</button>
+            <button id="smoke">Smoke</button>
+          </div>
+
+          <label class="wide">Dataset Presets</label>
+          <div class="preset-grid">
+            <button data-preset-source="second-brain-live">Second Brain</button>
+            <button data-preset-source="worldbuilding-wiki-full">Full Wiki Sample</button>
+            <button data-preset-source="hapa-ecosystem-codebases">Code Sample</button>
+            <button data-preset-source="all">All Sample</button>
+          </div>
+
+          <div class="control-grid">
+            <label>Atlas
+              <select id="map-kind">
+                <option value="all" selected>all</option>
+                <option value="knowledge">knowledge</option>
+                <option value="code_ast">code_ast</option>
+                <option value="latest">latest</option>
+              </select>
+            </label>
+            <label>Group By
+              <select id="map-level">
+                <option value="source_type">source x type</option>
+                <option value="type">type</option>
+                <option value="community">community</option>
+                <option value="truth">truth</option>
+                <option value="owner">owner</option>
+              </select>
+            </label>
+          </div>
+          <div class="control-grid">
+            <label>Groups
+              <input id="map-limit" type="number" min="4" max="120" value="64">
+            </label>
+            <label>Edges
+              <input id="edge-limit" type="number" min="0" max="400" value="180">
+            </label>
+          </div>
+          <div class="control-grid">
+            <button id="load-map" class="primary">Load Map</button>
+            <button id="drill-group">Drill Group</button>
+          </div>
+
+          <label>Source
+            <select id="source-select">
+              <option value="all">all</option>
+            </select>
+          </label>
+          <label>Query
+            <input id="query" value="hapa">
+          </label>
+          <div class="tri-grid">
+            <label>Results
+              <input id="limit" type="number" min="1" max="100" value="24">
+            </label>
+            <label>Sample
+              <input id="limit-source" type="number" min="1" max="500" value="60">
+            </label>
+            <label>Offset
+              <input id="offset" type="number" min="0" max="100000" value="0">
+            </label>
+          </div>
+          <label>Node Type
+            <select id="node-type">
+              <option value="">any</option>
+              <option value="hapa_node">hapa_node</option>
+              <option value="wiki_article">wiki_article</option>
+              <option value="protocol_card">protocol_card</option>
+              <option value="concept">concept</option>
+              <option value="skill">skill</option>
+              <option value="capability">capability</option>
+              <option value="turn_card">turn_card</option>
+              <option value="artifact">artifact</option>
+              <option value="repo">repo</option>
+              <option value="source_file">source_file</option>
+            </select>
+          </label>
+          <label>Truth
+            <select id="truth-status">
+              <option value="">any</option>
+              <option value="verified_source">verified_source</option>
+              <option value="verified_runtime">verified_runtime</option>
+              <option value="derived_or_inferred">derived_or_inferred</option>
+              <option value="needs_review">needs_review</option>
+              <option value="blocked">blocked</option>
+            </select>
+          </label>
+          <div class="control-grid">
+            <button id="run-query" class="primary">Search</button>
+            <button id="browse">Browse</button>
+          </div>
+          <div class="control-grid">
+            <button id="run-explain">Explain</button>
+            <button id="run-path">Path</button>
+          </div>
+          <label>Path Start
+            <input id="path-start" value="hapa-graphify">
+          </label>
+          <label>Path End
+            <input id="path-end" value="hapa-second-brain">
+          </label>
+          <label>Explain ID
+            <input id="explain-id" value="hapa-graphify">
+          </label>
+
+          <div class="action-band">
+            <div class="small-note">Full runs write report files and can take time. Exploration above stays bounded.</div>
+            <div class="control-grid">
+              <button id="knowledge-sample">Knowledge Sample</button>
+              <button id="knowledge-graph" class="warn">Knowledge Full</button>
+            </div>
+            <div class="control-grid">
+              <button id="ecosystem-discover">Discover Code</button>
+              <button id="ecosystem-ast" class="warn">AST Full</button>
+            </div>
+          </div>
+
+          <div class="control-grid">
+            <button id="export">Export Dry</button>
+            <button id="reviews">Reviews</button>
+          </div>
+          <label class="wide">Checkpoint
+            <textarea id="checkpoint-message">Operator checkpoint dry-run</textarea>
+          </label>
+          <button class="wide" id="checkpoint">Checkpoint Dry</button>
+          <div class="status-line" id="status-line">idle</div>
+        </div>
+      </aside>
+
+      <section class="workspace">
+        <div class="atlas" id="report-atlas"></div>
+        <div class="graph-panel">
+          <svg id="graph" role="img" aria-label="Hapa graph preview"></svg>
+          <div class="graph-empty" id="graph-empty">Run Search or Browse to render a bounded graph preview.</div>
+        </div>
+        <div class="results" id="results"></div>
+      </section>
+
+      <aside class="inspector">
+        <div class="panel-head">
+          <p class="panel-title">Inspector</p>
+        </div>
+        <div class="stack">
+          <div class="metric-grid">
+            <div class="metric"><b id="node-count">0</b><span>nodes</span></div>
+            <div class="metric"><b id="edge-count">0</b><span>edges</span></div>
+            <div class="metric"><b id="match-count">0</b><span>matches</span></div>
+            <div class="metric"><b id="source-count">0</b><span>sources</span></div>
+          </div>
+          <div>
+            <p class="panel-title">Selected</p>
+            <pre id="selected">{}</pre>
+          </div>
+          <div>
+            <p class="panel-title">Run Ledger</p>
+            <div class="log" id="runs"></div>
+          </div>
+          <div>
+            <p class="panel-title">Latest Response</p>
+            <pre id="latest">{}</pre>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    const state = {
+      apiBase: location.protocol.startsWith("http") ? location.origin : "http://127.0.0.1:8796",
+      matches: [],
+      selectedId: null,
+      selectedGroup: null,
+      viewMode: "map",
+      map: null,
+      mapRootNodes: [],
+      mapRootEdges: [],
+      mapNodes: [],
+      mapEdges: [],
+      reports: [],
+      sources: []
+    };
+
+    const $ = (id) => document.getElementById(id);
+    $("api-base").value = state.apiBase;
+
+    function endpoint(path) {
+      state.apiBase = $("api-base").value.replace(/\/$/, "");
+      $("api-base-label").textContent = state.apiBase;
+      return state.apiBase + path;
+    }
+
+    async function getJson(path) {
+      const response = await fetch(endpoint(path));
+      const data = await response.json();
+      if (!response.ok || data.ok === false) throw new Error(data.error || "request failed");
+      return data;
+    }
+
+    async function postJson(path, payload) {
+      const response = await fetch(endpoint(path), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      const data = await response.json();
+      if (!response.ok || data.ok === false) throw new Error(data.error || "request failed");
+      return data;
+    }
+
+    function setStatus(text, ok = true) {
+      $("status-line").textContent = text;
+      $("health-dot").className = "dot " + (ok ? "ok" : "bad");
+      $("health-label").textContent = ok ? "online" : "offline";
+    }
+
+    function setBusy(busy) {
+      document.querySelectorAll("button").forEach((button) => { button.disabled = busy; });
+    }
+
+    function showLatest(data) {
+      $("latest").textContent = JSON.stringify(compactPayload(data), null, 2);
+      if (data.graph) {
+        $("node-count").textContent = fmt(data.graph.node_count || 0);
+        $("edge-count").textContent = fmt(data.graph.edge_count || 0);
+        $("graph-chip").textContent = `graph ${fmt(data.graph.node_count || 0)} / ${fmt(data.graph.edge_count || 0)}`;
+      }
+    }
+
+    function compactPayload(data) {
+      if (!data || typeof data !== "object") return data;
+      const clone = { ...data };
+      if (Array.isArray(clone.matches)) clone.matches = clone.matches.slice(0, 5);
+      if (Array.isArray(clone.nodes)) clone.nodes = clone.nodes.slice(0, 5);
+      if (Array.isArray(clone.edges)) clone.edges = clone.edges.slice(0, 5);
+      if (Array.isArray(clone.sources)) clone.sources = clone.sources.slice(0, 8);
+      if (clone.fragment) clone.fragment = { node_count: clone.fragment.nodes?.length || 0, edge_count: clone.fragment.edges?.length || 0 };
+      return clone;
+    }
+
+    async function refresh() {
+      const [health, sources, runs, reports] = await Promise.all([
+        getJson("/health?deep=0"),
+        getJson("/api/sources"),
+        getJson("/api/runs?limit=6"),
+        getJson("/api/reports")
+      ]);
+      state.sources = sources.sources || [];
+      state.reports = reports.summaries || [];
+      setStatus("ready", health.ok);
+      $("source-chip").textContent = `sources ${state.sources.length}`;
+      $("report-chip").textContent = `reports ${state.reports.length}`;
+      $("source-count").textContent = state.sources.length;
+      renderSources(state.sources);
+      renderRuns(runs.entries || []);
+      renderReports(state.reports);
+      showLatest({ ok: true, health: health.node_id, reports: reports.count, sources: state.sources.length });
+    }
+
+    function renderSources(sources) {
+      const select = $("source-select");
+      const current = select.value || "all";
+      select.innerHTML = '<option value="all">all</option>';
+      for (const source of sources) {
+        const option = document.createElement("option");
+        option.value = source.id;
+        option.textContent = `${source.id} (${source.kind})`;
+        select.appendChild(option);
+      }
+      select.value = [...select.options].some((option) => option.value === current) ? current : "all";
+    }
+
+    function renderRuns(entries) {
+      $("runs").innerHTML = entries.length ? "" : '<div class="row-meta">no runs</div>';
+      for (const entry of entries.slice().reverse()) {
+        const row = document.createElement("div");
+        row.className = "row";
+        row.innerHTML = `<div><div class="row-title">${escapeHtml(entry.command || entry.run_id || "run")}</div><div class="row-meta">${escapeHtml(entry.run_id || "")}</div></div><span class="badge">${entry.ok ? "ok" : "fail"}</span>`;
+        $("runs").appendChild(row);
+      }
+    }
+
+    function renderReports(reports) {
+      const atlas = $("report-atlas");
+      atlas.innerHTML = "";
+      if (!reports.length) {
+        atlas.innerHTML = '<div class="small-note">No report summaries yet. Run Knowledge Full or AST Full to create report sidecars.</div>';
+        return;
+      }
+      for (const report of reports.slice().reverse()) {
+        const card = document.createElement("button");
+        card.className = "report-card";
+        card.innerHTML = `
+          <div class="report-top">
+            <div class="report-title">${escapeHtml(report.run_id || report.output || "report")}</div>
+            <span class="report-kind">${escapeHtml(report.kind || "graph")}</span>
+          </div>
+          <div class="metric-line">
+            <div class="mini-metric"><b>${fmt(report.graph?.node_count || 0)}</b><span>nodes</span></div>
+            <div class="mini-metric"><b>${fmt(report.graph?.edge_count || 0)}</b><span>edges</span></div>
+            <div class="mini-metric"><b>${fmt(report.output_bytes || 0)}</b><span>bytes</span></div>
+          </div>
+          <div class="row-meta">${escapeHtml(report.updated_at || "")}</div>
+        `;
+        card.addEventListener("click", () => {
+          showLatest(report);
+          $("selected").textContent = JSON.stringify(report, null, 2);
+          $("node-count").textContent = fmt(report.graph?.node_count || 0);
+          $("edge-count").textContent = fmt(report.graph?.edge_count || 0);
+          $("match-count").textContent = fmt(report.sources?.length || 0);
+          renderReportSources(report);
+          setStatus("report summary selected");
+        });
+        atlas.appendChild(card);
+      }
+    }
+
+    function renderReportSources(report) {
+      const matches = (report.sources || []).map((source) => ({
+        node: {
+          id: source.source_id,
+          label: source.source_id,
+          type: "report_source",
+          truth_status: source.ok ? "verified_runtime" : "blocked",
+          source_id: report.run_id,
+          record_owner: "hapa-graphify",
+          privacy: "private-local",
+          details: source
+        }
+      }));
+      state.viewMode = "detail";
+      state.matches = matches;
+      renderResults(matches);
+      renderGraph(matches);
+    }
+
+    async function runMap() {
+      const params = new URLSearchParams({
+        kind: $("map-kind").value || "all",
+        level: $("map-level").value || "source_type",
+        limit: $("map-limit").value || "64",
+        edge_limit: $("edge-limit").value || "180"
+      });
+      const data = await getJson(`/api/map?${params.toString()}`);
+      state.viewMode = "map";
+      state.map = data;
+      state.mapRootNodes = data.nodes || [];
+      state.mapRootEdges = data.edges || [];
+      state.mapNodes = state.mapRootNodes;
+      state.mapEdges = state.mapRootEdges;
+      state.selectedGroup = null;
+      state.selectedId = null;
+      $("selected").textContent = "{}";
+      renderMapResults(state.mapNodes);
+      renderMapGraph(state.mapNodes, state.mapEdges);
+      showLatest(data);
+      $("node-count").textContent = fmt(data.graph?.full_node_count || data.graph?.node_count || 0);
+      $("edge-count").textContent = fmt(data.graph?.full_edge_count || data.graph?.edge_count || 0);
+      $("match-count").textContent = fmt(state.mapNodes.length);
+      $("graph-chip").textContent = `${data.level || "map"} ${fmt(state.mapNodes.length)} / ${fmt(state.mapEdges.length)}`;
+      setStatus(`map loaded: ${data.level || "atlas"}`);
+    }
+
+    async function runQuery() {
+      const params = new URLSearchParams({
+        q: $("query").value.trim() || "hapa",
+        graph_source: $("source-select").value,
+        limit: $("limit").value || "24",
+        limit_per_source: $("limit-source").value || "60"
+      });
+      if ($("node-type").value) params.set("node_type", $("node-type").value);
+      if ($("truth-status").value) params.set("truth_status", $("truth-status").value);
+      const data = await getJson(`/api/query?${params.toString()}`);
+      state.viewMode = "detail";
+      state.matches = data.matches || [];
+      $("match-count").textContent = fmt(data.match_count || 0);
+      renderResults(state.matches);
+      renderGraph(state.matches);
+      showLatest(data);
+      setStatus("search complete");
+    }
+
+    async function runBrowse() {
+      const params = new URLSearchParams({
+        source: $("source-select").value,
+        q: $("query").value.trim(),
+        limit: $("limit").value || "24",
+        offset: $("offset").value || "0",
+        limit_per_source: $("limit-source").value || "60"
+      });
+      if ($("node-type").value) params.set("node_type", $("node-type").value);
+      if ($("truth-status").value) params.set("truth_status", $("truth-status").value);
+      const data = await getJson(`/api/browse?${params.toString()}`);
+      state.viewMode = "detail";
+      state.matches = (data.nodes || []).map((node) => ({ node }));
+      $("match-count").textContent = fmt(data.filtered_count || 0);
+      renderResults(state.matches);
+      renderGraph(state.matches);
+      showLatest(data);
+      setStatus("browse complete");
+    }
+
+    function renderResults(matches) {
+      const results = $("results");
+      results.innerHTML = "";
+      for (const item of matches) {
+        const node = item.node;
+        const row = document.createElement("button");
+        row.className = "row";
+        row.innerHTML = `<div><div class="row-title">${escapeHtml(node.label || node.id)}</div><div class="row-meta">${escapeHtml(node.type || "")} | ${escapeHtml(node.source_id || "")} | ${escapeHtml(node.record_type || "")}</div></div><span class="badge">${escapeHtml(node.truth_status || "")}</span>`;
+        row.addEventListener("click", () => selectNode(node));
+        results.appendChild(row);
+      }
+      if (!matches.length) results.innerHTML = '<div class="row-meta">no rows in this bounded window</div>';
+    }
+
+    function renderMapResults(groups) {
+      const results = $("results");
+      results.innerHTML = "";
+      for (const group of groups) {
+        const row = document.createElement("button");
+        row.className = "row";
+        row.innerHTML = `<div><div class="row-title">${escapeHtml(group.label || group.id)}</div><div class="row-meta">${escapeHtml(group.group_type || "")} | ${fmt(group.node_count || 0)} nodes | ${fmt(group.edge_count || 0)} edges</div></div><span class="badge">${escapeHtml(group.node_type || group.truth_status || group.source_id || group.record_owner || "group")}</span>`;
+        row.addEventListener("click", () => {
+          selectGroup(group).catch(handleInteractionError);
+        });
+        results.appendChild(row);
+      }
+      if (!groups.length) results.innerHTML = '<div class="row-meta">no atlas groups available; regenerate map sidecars from a full report</div>';
+    }
+
+    function renderSampleResults(samples) {
+      const results = $("results");
+      results.innerHTML = "";
+      for (const node of samples) {
+        const row = document.createElement("button");
+        row.className = "row";
+        row.innerHTML = `<div><div class="row-title">${escapeHtml(node.label || node.id)}</div><div class="row-meta">${escapeHtml(node.type || "")} | ${escapeHtml(node.source_id || "")} | ${escapeHtml(node.record_type || "")}</div></div><span class="badge">${escapeHtml(node.truth_status || "")}</span>`;
+        row.addEventListener("click", () => selectNode(node));
+        results.appendChild(row);
+      }
+      if (!samples.length) results.innerHTML = '<div class="row-meta">this atlas group has no stored samples</div>';
+    }
+
+    function renderConnectionResults(data) {
+      const results = $("results");
+      const focus = data.focus || {};
+      const edges = data.edges || [];
+      const connectionWeights = new Map();
+      for (const edge of edges) {
+        const source = edge.source;
+        const target = edge.target;
+        const neighborId = source === focus.id ? target : target === focus.id ? source : "";
+        if (neighborId) connectionWeights.set(neighborId, (connectionWeights.get(neighborId) || 0) + Number(edge.edge_count || 0));
+      }
+      results.innerHTML = "";
+      for (const group of data.nodes || []) {
+        const row = document.createElement("button");
+        row.className = "row";
+        const isFocus = group.id === focus.id;
+        const connectionText = isFocus ? `${fmt(data.neighbor_count || 0)} connected groups` : `${fmt(connectionWeights.get(group.id) || 0)} connecting edges`;
+        row.innerHTML = `<div><div class="row-title">${escapeHtml(group.label || group.id)}</div><div class="row-meta">${isFocus ? "selected" : "connected"} | ${fmt(group.node_count || 0)} nodes | ${connectionText}</div></div><span class="badge">${escapeHtml(isFocus ? "focus" : group.node_type || group.truth_status || group.source_id || "group")}</span>`;
+        row.addEventListener("click", () => {
+          selectGroup(group).catch(handleInteractionError);
+        });
+        results.appendChild(row);
+      }
+      if (!(data.nodes || []).length) results.innerHTML = '<div class="row-meta">no connecting groups found</div>';
+    }
+
+    function renderGraph(matches) {
+      const svg = $("graph");
+      svg.innerHTML = "";
+      $("graph-empty").style.display = matches.length ? "none" : "grid";
+      const width = svg.clientWidth || 800;
+      const height = svg.clientHeight || 420;
+      const cx = width / 2;
+      const cy = height / 2;
+      const radius = Math.max(90, Math.min(width, height) * 0.34);
+      const ns = "http://www.w3.org/2000/svg";
+      const hub = document.createElementNS(ns, "circle");
+      hub.setAttribute("cx", cx);
+      hub.setAttribute("cy", cy);
+      hub.setAttribute("r", 10);
+      hub.setAttribute("fill", "#38c7d7");
+      svg.appendChild(hub);
+      const maxLabels = matches.length > 18 ? 6 : 16;
+      matches.slice(0, 32).forEach((item, index) => {
+        const node = item.node;
+        const total = Math.max(1, Math.min(matches.length, 32));
+        const angle = (Math.PI * 2 * index) / total - Math.PI / 2;
+        const x = cx + Math.cos(angle) * radius;
+        const y = cy + Math.sin(angle) * radius;
+        const line = document.createElementNS(ns, "line");
+        line.setAttribute("x1", cx);
+        line.setAttribute("y1", cy);
+        line.setAttribute("x2", x);
+        line.setAttribute("y2", y);
+        line.setAttribute("stroke", "#33404a");
+        line.setAttribute("stroke-width", "1");
+        svg.appendChild(line);
+        const group = document.createElementNS(ns, "g");
+        group.setAttribute("class", "graph-node");
+        group.addEventListener("click", () => selectNode(node));
+        const title = document.createElementNS(ns, "title");
+        title.textContent = node.label || node.id;
+        const circle = document.createElementNS(ns, "circle");
+        circle.setAttribute("cx", x);
+        circle.setAttribute("cy", y);
+        circle.setAttribute("r", node.id === state.selectedId ? 12 : 8);
+        circle.setAttribute("fill", colorFor(node.truth_status, node.type));
+        circle.setAttribute("stroke", "#edf2f4");
+        circle.setAttribute("stroke-width", node.id === state.selectedId ? 2 : 1);
+        group.appendChild(title);
+        group.appendChild(circle);
+        if (index < maxLabels || node.id === state.selectedId) {
+          const text = document.createElementNS(ns, "text");
+          const onLeft = x < cx;
+          text.setAttribute("x", x + (onLeft ? -14 : 14));
+          text.setAttribute("y", y + 4);
+          text.setAttribute("text-anchor", onLeft ? "end" : "start");
+          text.textContent = truncate(node.label || node.id, 26);
+          group.appendChild(text);
+        }
+        svg.appendChild(group);
+      });
+    }
+
+    function renderMapGraph(nodes, edges) {
+      const svg = $("graph");
+      svg.innerHTML = "";
+      $("graph-empty").style.display = nodes.length ? "none" : "grid";
+      const width = svg.clientWidth || 800;
+      const height = svg.clientHeight || 420;
+      const cx = width / 2;
+      const cy = height / 2;
+      const ns = "http://www.w3.org/2000/svg";
+      const visible = nodes.slice(0, 100);
+      const maxCount = Math.max(1, ...visible.map((node) => Number(node.node_count || 0)));
+      const positions = new Map();
+      visible.forEach((node, index) => {
+        const ringIndex = Math.max(0, index - 1);
+        const ring = index === 0 ? 0 : Math.floor(ringIndex / 18) + 1;
+        const ringSlots = ring === 0 ? 1 : 18 + (ring - 1) * 10;
+        const slot = ring === 0 ? 0 : ringIndex % ringSlots;
+        const angle = ring === 0 ? 0 : (Math.PI * 2 * slot) / ringSlots - Math.PI / 2;
+        const radius = ring === 0 ? 0 : Math.min(width, height) * Math.min(0.43, 0.16 + ring * 0.09);
+        positions.set(node.id, {
+          x: cx + Math.cos(angle) * radius,
+          y: cy + Math.sin(angle) * radius,
+          r: 8 + Math.sqrt(Number(node.node_count || 0) / maxCount) * 26
+        });
+      });
+
+      const maxEdge = Math.max(1, ...edges.map((edge) => Number(edge.edge_count || 0)));
+      for (const edge of edges) {
+        const source = positions.get(edge.source);
+        const target = positions.get(edge.target);
+        if (!source || !target) continue;
+        const line = document.createElementNS(ns, "line");
+        line.setAttribute("class", "map-edge");
+        line.setAttribute("x1", source.x);
+        line.setAttribute("y1", source.y);
+        line.setAttribute("x2", target.x);
+        line.setAttribute("y2", target.y);
+        line.setAttribute("stroke-width", String(1 + Math.log10(Number(edge.edge_count || 1)) * 1.6));
+        line.setAttribute("opacity", String(0.18 + (Number(edge.edge_count || 0) / maxEdge) * 0.55));
+        const title = document.createElementNS(ns, "title");
+        title.textContent = `${edge.edge_count || 0} connections`;
+        line.appendChild(title);
+        svg.appendChild(line);
+      }
+
+      const maxLabels = visible.length > 28 ? 14 : 24;
+      visible.forEach((node, index) => {
+        const position = positions.get(node.id);
+        if (!position) return;
+        const group = document.createElementNS(ns, "g");
+        group.setAttribute("class", "map-node");
+        group.addEventListener("click", () => {
+          selectGroup(node).catch(handleInteractionError);
+        });
+        const title = document.createElementNS(ns, "title");
+        title.textContent = `${node.label || node.id} | ${fmt(node.node_count || 0)} nodes | ${fmt(node.edge_count || 0)} edges`;
+        const circle = document.createElementNS(ns, "circle");
+        circle.setAttribute("cx", position.x);
+        circle.setAttribute("cy", position.y);
+        circle.setAttribute("r", node.id === state.selectedId ? position.r + 4 : position.r);
+        circle.setAttribute("fill", colorFor(node.truth_status, node.node_type || node.type));
+        circle.setAttribute("stroke", node.id === state.selectedId ? "#edf2f4" : "#5f7380");
+        circle.setAttribute("stroke-width", node.id === state.selectedId ? 3 : 1);
+        circle.setAttribute("opacity", "0.92");
+        circle.addEventListener("click", (event) => {
+          event.stopPropagation();
+          selectGroup(node).catch(handleInteractionError);
+        });
+        group.appendChild(title);
+        group.appendChild(circle);
+        if (index < maxLabels || node.id === state.selectedId) {
+          const text = document.createElementNS(ns, "text");
+          const onLeft = position.x < cx;
+          text.setAttribute("x", position.x + (onLeft ? -position.r - 8 : position.r + 8));
+          text.setAttribute("y", position.y + 4);
+          text.setAttribute("text-anchor", onLeft ? "end" : "start");
+          text.textContent = truncate(node.label || node.id, 34);
+          group.appendChild(text);
+        }
+        svg.appendChild(group);
+      });
+    }
+
+    function selectNode(node) {
+      state.selectedId = node.id;
+      $("selected").textContent = JSON.stringify(node, null, 2);
+      $("explain-id").value = node.id;
+      if (state.viewMode === "map") {
+        renderMapGraph(state.mapNodes, state.mapEdges);
+      } else {
+        renderGraph(state.matches);
+      }
+    }
+
+    async function selectGroup(group) {
+      setStatus(`loading connections: ${group.label || group.id}`);
+      const params = new URLSearchParams({
+        kind: $("map-kind").value || "all",
+        level: $("map-level").value || "source_type",
+        id: group.id,
+        limit: $("map-limit").value || "64",
+        edge_limit: $("edge-limit").value || "180"
+      });
+      const data = await getJson(`/api/map/neighbors?${params.toString()}`);
+      const focus = data.focus || group;
+      state.viewMode = "map";
+      state.selectedGroup = focus;
+      state.selectedId = focus.id;
+      state.mapNodes = data.nodes || [focus];
+      state.mapEdges = data.edges || [];
+      $("selected").textContent = JSON.stringify(focus, null, 2);
+      if (focus.source_id && [...$("source-select").options].some((option) => option.value === focus.source_id)) {
+        $("source-select").value = focus.source_id;
+      }
+      if (focus.node_type && [...$("node-type").options].some((option) => option.value === focus.node_type)) {
+        $("node-type").value = focus.node_type;
+      }
+      if (focus.truth_status && [...$("truth-status").options].some((option) => option.value === focus.truth_status)) {
+        $("truth-status").value = focus.truth_status;
+      }
+      if (focus.samples?.[0]?.id) $("explain-id").value = focus.samples[0].id;
+      renderConnectionResults(data);
+      renderMapGraph(state.mapNodes, state.mapEdges);
+      showLatest(data);
+      $("node-count").textContent = fmt(data.graph?.full_node_count || data.graph?.node_count || 0);
+      $("edge-count").textContent = fmt(data.graph?.full_edge_count || data.graph?.edge_count || 0);
+      $("match-count").textContent = fmt(data.visible_neighbor_count || Math.max(0, state.mapNodes.length - 1));
+      $("graph-chip").textContent = `neighbors ${fmt(Math.max(0, state.mapNodes.length - 1))} / ${fmt(state.mapEdges.length)}`;
+      setStatus(`connections loaded: ${focus.label || focus.id}`);
+    }
+
+    async function drillGroup() {
+      if (!state.selectedGroup) {
+        await runMap();
+        return;
+      }
+      const group = state.selectedGroup;
+      if (group.source_id && [...$("source-select").options].some((option) => option.value === group.source_id)) {
+        $("source-select").value = group.source_id;
+      } else {
+        $("source-select").value = "all";
+      }
+      $("node-type").value = group.node_type && [...$("node-type").options].some((option) => option.value === group.node_type) ? group.node_type : "";
+      $("truth-status").value = group.truth_status && [...$("truth-status").options].some((option) => option.value === group.truth_status) ? group.truth_status : "";
+      $("query").value = "";
+      $("offset").value = "0";
+      await runBrowse();
+      setStatus(`drilled group: ${group.label || group.id}`);
+    }
+
+    async function runPath() {
+      const params = new URLSearchParams({
+        source: $("path-start").value.trim(),
+        target: $("path-end").value.trim(),
+        graph_source: $("source-select").value,
+        limit_per_source: $("limit-source").value || "60"
+      });
+      const data = await getJson(`/api/path?${params.toString()}`);
+      showLatest(data);
+      setStatus(data.found ? "path found" : "path missing", data.ok);
+    }
+
+    async function runExplain() {
+      const params = new URLSearchParams({
+        id: $("explain-id").value.trim(),
+        graph_source: $("source-select").value,
+        limit_per_source: $("limit-source").value || "60"
+      });
+      const data = await getJson(`/api/explain?${params.toString()}`);
+      showLatest(data);
+      if (data.node) $("selected").textContent = JSON.stringify(data.node, null, 2);
+      setStatus(data.found ? "explained" : "not found", data.ok);
+    }
+
+    async function runSmoke() {
+      const data = await getJson("/api/smoke?dry_run=1");
+      showLatest(data);
+      setStatus("smoke complete", data.ok);
+    }
+
+    async function runReviews() {
+      const source = $("source-select").value === "all" ? "hapa-front-door-docs" : $("source-select").value;
+      const data = await getJson(`/api/review-suggestions?source=${encodeURIComponent(source)}&limit=25`);
+      showLatest(data);
+      setStatus("review suggestions loaded");
+    }
+
+    async function runExport() {
+      const data = await getJson(`/api/export?source=${encodeURIComponent($("source-select").value)}&dry_run=1&limit_per_source=${encodeURIComponent($("limit-source").value || "60")}&full=0`);
+      showLatest(data);
+      setStatus("export dry-run complete");
+    }
+
+    async function runEcosystemDiscover() {
+      const data = await getJson("/api/ecosystem/discover");
+      showLatest(data);
+      $("node-count").textContent = fmt(data.node_root_count || 0);
+      $("edge-count").textContent = fmt(data.codebase_count || 0);
+      $("graph-chip").textContent = `discovered ${fmt(data.node_root_count || 0)} / ${fmt(data.codebase_count || 0)}`;
+      setStatus("ecosystem discovery complete");
+    }
+
+    async function runEcosystemAst() {
+      const data = await postJson("/api/ecosystem/ast", {
+        full: true,
+        output: "reports/hapa-ecosystem-ast-run.json"
+      });
+      showLatest(data);
+      await refreshReportsOnly();
+      setStatus("ecosystem AST complete", data.ok);
+    }
+
+    async function runKnowledgeSample() {
+      const data = await postJson("/api/knowledge/graph", {
+        full: false,
+        limit_per_source: Number($("limit-source").value || 60)
+      });
+      showLatest(data);
+      setStatus("knowledge sample complete", data.ok);
+    }
+
+    async function runKnowledgeGraph() {
+      const data = await postJson("/api/knowledge/graph", {
+        full: true,
+        limit_per_source: 0,
+        output: "reports/hapa-knowledge-graph-run.json"
+      });
+      showLatest(data);
+      await refreshReportsOnly();
+      setStatus("knowledge graph full complete", data.ok);
+    }
+
+    async function refreshReportsOnly() {
+      const reports = await getJson("/api/reports");
+      state.reports = reports.summaries || [];
+      $("report-chip").textContent = `reports ${state.reports.length}`;
+      renderReports(state.reports);
+    }
+
+    async function runCheckpoint() {
+      const data = await postJson("/api/board/checkpoint", {
+        message: $("checkpoint-message").value,
+        dry_run: true
+      });
+      showLatest(data);
+      setStatus("checkpoint dry-run complete");
+    }
+
+    function setPreset(sourceId) {
+      $("source-select").value = [...$("source-select").options].some((option) => option.value === sourceId) ? sourceId : "all";
+      if (sourceId === "worldbuilding-wiki-full") {
+        $("map-kind").value = "knowledge";
+        $("map-level").value = "source_type";
+        $("node-type").value = "";
+        $("query").value = "protocol";
+        $("limit-source").value = "80";
+      } else if (sourceId === "second-brain-live") {
+        $("map-kind").value = "knowledge";
+        $("map-level").value = "source_type";
+        $("node-type").value = "";
+        $("query").value = "hapa";
+        $("limit-source").value = "120";
+      } else if (sourceId === "hapa-ecosystem-codebases") {
+        $("map-kind").value = "code_ast";
+        $("map-level").value = "type";
+        $("node-type").value = "source_file";
+        $("query").value = "hapa";
+        $("limit-source").value = "40";
+      } else {
+        $("map-kind").value = "all";
+        $("map-level").value = "source_type";
+        $("node-type").value = "";
+        $("query").value = "hapa";
+        $("limit-source").value = "40";
+      }
+      runMap().catch((error) => {
+        setStatus(error.message, false);
+        showLatest({ ok: false, error: error.message });
+      });
+    }
+
+    function colorFor(status, type) {
+      if (status === "blocked") return "#df6c76";
+      if (status === "verified_runtime") return "#65c179";
+      if (type === "protocol_card") return "#d7ad3f";
+      if (type === "wiki_article") return "#38c7d7";
+      if (type === "skill" || type === "capability") return "#9d86e6";
+      if (status === "derived_or_inferred") return "#d9659f";
+      return "#edf2f4";
+    }
+
+    function truncate(value, length) {
+      const text = String(value || "");
+      return text.length > length ? text.slice(0, length - 1) + "." : text;
+    }
+
+    function fmt(value) {
+      return new Intl.NumberFormat("en-US", { notation: Number(value) >= 1000000 ? "compact" : "standard" }).format(Number(value) || 0);
+    }
+
+    function escapeHtml(value) {
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function handleInteractionError(error) {
+      setStatus(error.message, false);
+      showLatest({ ok: false, error: error.message });
+    }
+
+    function bind(id, fn) {
+      $(id).addEventListener("click", async () => {
+        try {
+          setBusy(true);
+          setStatus("running");
+          await fn();
+        } catch (error) {
+          setStatus(error.message, false);
+          showLatest({ ok: false, error: error.message });
+        } finally {
+          setBusy(false);
+        }
+      });
+    }
+
+    document.querySelectorAll("[data-preset-source]").forEach((button) => {
+      button.addEventListener("click", () => setPreset(button.dataset.presetSource));
+    });
+
+    bind("refresh", refresh);
+    bind("smoke", runSmoke);
+    bind("load-map", runMap);
+    bind("drill-group", drillGroup);
+    bind("run-query", runQuery);
+    bind("browse", runBrowse);
+    bind("run-path", runPath);
+    bind("run-explain", runExplain);
+    bind("reviews", runReviews);
+    bind("export", runExport);
+    bind("ecosystem-discover", runEcosystemDiscover);
+    bind("ecosystem-ast", runEcosystemAst);
+    bind("knowledge-sample", runKnowledgeSample);
+    bind("knowledge-graph", runKnowledgeGraph);
+    bind("checkpoint", runCheckpoint);
+
+    refresh().then(runMap).catch((error) => setStatus(error.message, false));
+  </script>
+</body>
+</html>

@@ -1,0 +1,1843 @@
+{
+  "edges": [
+    {
+      "edge_count": 324115,
+      "edge_type_counts": [
+        {
+          "count": 184040,
+          "key": "indexes"
+        },
+        {
+          "count": 140075,
+          "key": "mentions"
+        }
+      ],
+      "id": "map-edge:source_type:b10aa5801f4d",
+      "source": "map:source_type:751ebab3add1",
+      "target": "map:source_type:f12a4fe4eea5",
+      "truth_counts": [
+        {
+          "count": 184040,
+          "key": "verified_source"
+        },
+        {
+          "count": 140075,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 87469,
+      "edge_type_counts": [
+        {
+          "count": 83015,
+          "key": "defines"
+        },
+        {
+          "count": 4454,
+          "key": "imports"
+        }
+      ],
+      "id": "map-edge:source_type:80844ab499db",
+      "source": "map:source_type:53728fb8d10c",
+      "target": "map:source_type:74abc8e36680",
+      "truth_counts": [
+        {
+          "count": 87469,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 52898,
+      "edge_type_counts": [
+        {
+          "count": 52898,
+          "key": "indexes"
+        }
+      ],
+      "id": "map-edge:source_type:30257a614442",
+      "source": "map:source_type:f12a4fe4eea5",
+      "target": "map:source_type:751ebab3add1",
+      "truth_counts": [
+        {
+          "count": 52898,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 6106,
+      "edge_type_counts": [
+        {
+          "count": 6106,
+          "key": "derived_from"
+        }
+      ],
+      "id": "map-edge:source_type:9e58586bed67",
+      "source": "map:source_type:47ea14bd3c7d",
+      "target": "map:source_type:504b259fe437",
+      "truth_counts": [
+        {
+          "count": 6106,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 4499,
+      "edge_type_counts": [
+        {
+          "count": 4499,
+          "key": "mentions"
+        }
+      ],
+      "id": "map-edge:source_type:8b7607aea3a9",
+      "source": "map:source_type:878172d84746",
+      "target": "map:source_type:f12a4fe4eea5",
+      "truth_counts": [
+        {
+          "count": 4499,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 3964,
+      "edge_type_counts": [
+        {
+          "count": 3964,
+          "key": "indexes"
+        }
+      ],
+      "id": "map-edge:source_type:771dd9cab4b3",
+      "source": "map:source_type:f12a4fe4eea5",
+      "target": "map:source_type:878172d84746",
+      "truth_counts": [
+        {
+          "count": 3964,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 3001,
+      "edge_type_counts": [
+        {
+          "count": 3001,
+          "key": "indexes"
+        }
+      ],
+      "id": "map-edge:source_type:2cbc7cdbdf7e",
+      "source": "map:source_type:1d30e5fa6f82",
+      "target": "map:source_type:53728fb8d10c",
+      "truth_counts": [
+        {
+          "count": 3001,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 2110,
+      "edge_type_counts": [
+        {
+          "count": 2000,
+          "key": "indexes"
+        },
+        {
+          "count": 110,
+          "key": "mentions"
+        }
+      ],
+      "id": "map-edge:source_type:2421279e3bad",
+      "source": "map:source_type:f367cd5c4543",
+      "target": "map:source_type:e300100807e1",
+      "truth_counts": [
+        {
+          "count": 2000,
+          "key": "verified_source"
+        },
+        {
+          "count": 110,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 2000,
+      "edge_type_counts": [
+        {
+          "count": 2000,
+          "key": "relates_to"
+        }
+      ],
+      "id": "map-edge:source_type:9b826f64d5bd",
+      "source": "map:source_type:984e70b1c26c",
+      "target": "map:source_type:47ea14bd3c7d",
+      "truth_counts": [
+        {
+          "count": 2000,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 1900,
+      "edge_type_counts": [
+        {
+          "count": 1900,
+          "key": "relates_to"
+        }
+      ],
+      "id": "map-edge:source_type:f946585a0fa2",
+      "source": "map:source_type:d535f155c36b",
+      "target": "map:source_type:47ea14bd3c7d",
+      "truth_counts": [
+        {
+          "count": 1900,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 1604,
+      "edge_type_counts": [
+        {
+          "count": 1604,
+          "key": "relates_to"
+        }
+      ],
+      "id": "map-edge:source_type:ff96f79974dc",
+      "source": "map:source_type:d535f155c36b",
+      "target": "map:source_type:984e70b1c26c",
+      "truth_counts": [
+        {
+          "count": 1604,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 1198,
+      "edge_type_counts": [
+        {
+          "count": 1198,
+          "key": "relates_to"
+        }
+      ],
+      "id": "map-edge:source_type:31c8a45ec912",
+      "source": "map:source_type:db88b24678b0",
+      "target": "map:source_type:a9769bebd34e",
+      "truth_counts": [
+        {
+          "count": 1198,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 639,
+      "edge_type_counts": [
+        {
+          "count": 639,
+          "key": "implements"
+        }
+      ],
+      "id": "map-edge:source_type:cde400d80c7e",
+      "source": "map:source_type:db88b24678b0",
+      "target": "map:source_type:d535f155c36b",
+      "truth_counts": [
+        {
+          "count": 639,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 527,
+      "edge_type_counts": [
+        {
+          "count": 527,
+          "key": "indexes"
+        }
+      ],
+      "id": "map-edge:source_type:6ef209bb825e",
+      "source": "map:source_type:e300100807e1",
+      "target": "map:source_type:f367cd5c4543",
+      "truth_counts": [
+        {
+          "count": 527,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 269,
+      "edge_type_counts": [
+        {
+          "count": 269,
+          "key": "uses_skill"
+        }
+      ],
+      "id": "map-edge:source_type:696684415dde",
+      "source": "map:source_type:10ba8e8d80c2",
+      "target": "map:source_type:db88b24678b0",
+      "truth_counts": [
+        {
+          "count": 269,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 246,
+      "edge_type_counts": [
+        {
+          "count": 237,
+          "key": "mentions"
+        },
+        {
+          "count": 9,
+          "key": "tracks"
+        }
+      ],
+      "id": "map-edge:source_type:dbbc3367566c",
+      "source": "map:source_type:6db24ce5a528",
+      "target": "map:source_type:30e2936e1dd3",
+      "truth_counts": [
+        {
+          "count": 246,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 220,
+      "edge_type_counts": [
+        {
+          "count": 220,
+          "key": "implements"
+        }
+      ],
+      "id": "map-edge:source_type:eb4e5a987559",
+      "source": "map:source_type:d535f155c36b",
+      "target": "map:source_type:a9769bebd34e",
+      "truth_counts": [
+        {
+          "count": 220,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 206,
+      "edge_type_counts": [
+        {
+          "count": 206,
+          "key": "derived_from"
+        }
+      ],
+      "id": "map-edge:source_type:f7c2d6e7fbd3",
+      "source": "map:source_type:db88b24678b0",
+      "target": "map:source_type:504b259fe437",
+      "truth_counts": [
+        {
+          "count": 206,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 172,
+      "edge_type_counts": [
+        {
+          "count": 171,
+          "key": "relates_to"
+        },
+        {
+          "count": 1,
+          "key": "imports"
+        }
+      ],
+      "id": "map-edge:source_type:4d76acefaf46",
+      "source": "map:source_type:74abc8e36680",
+      "target": "map:source_type:53728fb8d10c",
+      "truth_counts": [
+        {
+          "count": 172,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 105,
+      "edge_type_counts": [
+        {
+          "count": 105,
+          "key": "mentions"
+        }
+      ],
+      "id": "map-edge:source_type:0fa2c1da509d",
+      "source": "map:source_type:22e891da4f05",
+      "target": "map:source_type:6db24ce5a528",
+      "truth_counts": [
+        {
+          "count": 105,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 96,
+      "edge_type_counts": [
+        {
+          "count": 96,
+          "key": "derived_from"
+        }
+      ],
+      "id": "map-edge:source_type:64b334d5aa4f",
+      "source": "map:source_type:db88b24678b0",
+      "target": "map:source_type:47ea14bd3c7d",
+      "truth_counts": [
+        {
+          "count": 96,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 76,
+      "edge_type_counts": [
+        {
+          "count": 76,
+          "key": "implements"
+        }
+      ],
+      "id": "map-edge:source_type:a894c247658d",
+      "source": "map:source_type:52aaf9e57a2f",
+      "target": "map:source_type:1d30e5fa6f82",
+      "truth_counts": [
+        {
+          "count": 76,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 47,
+      "edge_type_counts": [
+        {
+          "count": 47,
+          "key": "indexes"
+        }
+      ],
+      "id": "map-edge:source_type:8ae5f2438ad9",
+      "source": "map:source_type:c587533c7308",
+      "target": "map:source_type:25c1e32dfa5d",
+      "truth_counts": [
+        {
+          "count": 47,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 37,
+      "edge_type_counts": [
+        {
+          "count": 37,
+          "key": "tracks"
+        }
+      ],
+      "id": "map-edge:source_type:a77b7d333e0a",
+      "source": "map:source_type:6db24ce5a528",
+      "target": "map:source_type:ae8c0d2c4474",
+      "truth_counts": [
+        {
+          "count": 37,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 35,
+      "edge_type_counts": [
+        {
+          "count": 35,
+          "key": "mentions"
+        }
+      ],
+      "id": "map-edge:source_type:0f3b7197ff81",
+      "source": "map:source_type:b9b0bfab2e92",
+      "target": "map:source_type:e300100807e1",
+      "truth_counts": [
+        {
+          "count": 35,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 17,
+      "edge_type_counts": [
+        {
+          "count": 17,
+          "key": "indexes"
+        }
+      ],
+      "id": "map-edge:source_type:51df736474c9",
+      "source": "map:source_type:e300100807e1",
+      "target": "map:source_type:b9b0bfab2e92",
+      "truth_counts": [
+        {
+          "count": 17,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 16,
+      "edge_type_counts": [
+        {
+          "count": 16,
+          "key": "mentions"
+        }
+      ],
+      "id": "map-edge:source_type:97e483650743",
+      "source": "map:source_type:981e36114d09",
+      "target": "map:source_type:984e70b1c26c",
+      "truth_counts": [
+        {
+          "count": 16,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 13,
+      "edge_type_counts": [
+        {
+          "count": 13,
+          "key": "indexes"
+        }
+      ],
+      "id": "map-edge:source_type:5b514f0f9a5c",
+      "source": "map:source_type:25c1e32dfa5d",
+      "target": "map:source_type:c587533c7308",
+      "truth_counts": [
+        {
+          "count": 13,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 9,
+      "edge_type_counts": [
+        {
+          "count": 9,
+          "key": "mentions"
+        }
+      ],
+      "id": "map-edge:source_type:b2da6668ecb0",
+      "source": "map:source_type:22e891da4f05",
+      "target": "map:source_type:30e2936e1dd3",
+      "truth_counts": [
+        {
+          "count": 9,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 7,
+      "edge_type_counts": [
+        {
+          "count": 7,
+          "key": "uses_skill"
+        }
+      ],
+      "id": "map-edge:source_type:c8b10998bce6",
+      "source": "map:source_type:10ba8e8d80c2",
+      "target": "map:source_type:a9769bebd34e",
+      "truth_counts": [
+        {
+          "count": 7,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 4,
+      "edge_type_counts": [
+        {
+          "count": 4,
+          "key": "indexes"
+        }
+      ],
+      "id": "map-edge:source_type:6c3fab925587",
+      "source": "map:source_type:1ae37a1b50a3",
+      "target": "map:source_type:c1106a7e7c1b",
+      "truth_counts": [
+        {
+          "count": 4,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 3,
+      "edge_type_counts": [
+        {
+          "count": 3,
+          "key": "indexes"
+        }
+      ],
+      "id": "map-edge:source_type:7390ed170826",
+      "source": "map:source_type:25c1e32dfa5d",
+      "target": "map:source_type:4c3f51e76ad4",
+      "truth_counts": [
+        {
+          "count": 3,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    },
+    {
+      "edge_count": 2,
+      "edge_type_counts": [
+        {
+          "count": 2,
+          "key": "indexes"
+        }
+      ],
+      "id": "map-edge:source_type:24c25be92e6b",
+      "source": "map:source_type:c1106a7e7c1b",
+      "target": "map:source_type:1ae37a1b50a3",
+      "truth_counts": [
+        {
+          "count": 2,
+          "key": "verified_source"
+        }
+      ],
+      "type": "aggregated"
+    }
+  ],
+  "graph": {
+    "edge_count": 33,
+    "full_edge_count": 582209,
+    "full_node_count": 371430,
+    "node_count": 28
+  },
+  "kind": "all",
+  "level": "source_type",
+  "nodes": [
+    {
+      "edge_count": 385901,
+      "external_edge_count": 385476,
+      "group_type": "source_type",
+      "id": "map:source_type:f12a4fe4eea5",
+      "internal_edge_count": 425,
+      "label": "worldbuilding-wiki-full / concept",
+      "level": "source_type",
+      "node_count": 204985,
+      "node_type": "concept",
+      "owner_counts": [
+        {
+          "count": 204985,
+          "key": "hapa-worldbuilding-wiki"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 204985,
+          "key": "worldbuilding-wiki-full"
+        }
+      ],
+      "source_id": "worldbuilding-wiki-full",
+      "truth_counts": [
+        {
+          "count": 184466,
+          "key": "verified_source"
+        },
+        {
+          "count": 20519,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 204985,
+          "key": "concept"
+        }
+      ]
+    },
+    {
+      "edge_count": 154433,
+      "external_edge_count": 87641,
+      "group_type": "source_type",
+      "id": "map:source_type:74abc8e36680",
+      "internal_edge_count": 66792,
+      "label": "hapa-ecosystem-codebases / capability",
+      "level": "source_type",
+      "node_count": 58515,
+      "node_type": "capability",
+      "owner_counts": [
+        {
+          "count": 58515,
+          "key": "hapa-graphify"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "code_ast"
+      ],
+      "source_counts": [
+        {
+          "count": 58515,
+          "key": "hapa-ecosystem-codebases"
+        }
+      ],
+      "source_id": "hapa-ecosystem-codebases",
+      "truth_counts": [
+        {
+          "count": 58515,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 58515,
+          "key": "capability"
+        }
+      ]
+    },
+    {
+      "edge_count": 377013,
+      "external_edge_count": 377013,
+      "group_type": "source_type",
+      "id": "map:source_type:751ebab3add1",
+      "internal_edge_count": 0,
+      "label": "worldbuilding-wiki-full / wiki_article",
+      "level": "source_type",
+      "node_count": 52898,
+      "node_type": "wiki_article",
+      "owner_counts": [
+        {
+          "count": 52898,
+          "key": "hapa-worldbuilding-wiki"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 52898,
+          "key": "worldbuilding-wiki-full"
+        }
+      ],
+      "source_id": "worldbuilding-wiki-full",
+      "truth_counts": [
+        {
+          "count": 52898,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 52898,
+          "key": "wiki_article"
+        }
+      ]
+    },
+    {
+      "edge_count": 20085,
+      "external_edge_count": 8463,
+      "group_type": "source_type",
+      "id": "map:source_type:878172d84746",
+      "internal_edge_count": 11622,
+      "label": "worldbuilding-wiki-full / protocol_card",
+      "level": "source_type",
+      "node_count": 15586,
+      "node_type": "protocol_card",
+      "owner_counts": [
+        {
+          "count": 15586,
+          "key": "hapa-worldbuilding-wiki"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 15586,
+          "key": "worldbuilding-wiki-full"
+        }
+      ],
+      "source_id": "worldbuilding-wiki-full",
+      "truth_counts": [
+        {
+          "count": 15586,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 15586,
+          "key": "protocol_card"
+        }
+      ]
+    },
+    {
+      "edge_count": 12418,
+      "external_edge_count": 6312,
+      "group_type": "source_type",
+      "id": "map:source_type:504b259fe437",
+      "internal_edge_count": 6106,
+      "label": "second-brain-live / artifact",
+      "level": "source_type",
+      "node_count": 12802,
+      "node_type": "artifact",
+      "owner_counts": [
+        {
+          "count": 12802,
+          "key": "hapa-second-brain"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 12802,
+          "key": "second-brain-live"
+        }
+      ],
+      "source_id": "second-brain-live",
+      "truth_counts": [
+        {
+          "count": 12802,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 12802,
+          "key": "artifact"
+        }
+      ]
+    },
+    {
+      "edge_count": 4520,
+      "external_edge_count": 3620,
+      "group_type": "source_type",
+      "id": "map:source_type:984e70b1c26c",
+      "internal_edge_count": 900,
+      "label": "second-brain-live / concept",
+      "level": "source_type",
+      "node_count": 11361,
+      "node_type": "concept",
+      "owner_counts": [
+        {
+          "count": 11361,
+          "key": "hapa-second-brain"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 11361,
+          "key": "second-brain-live"
+        }
+      ],
+      "source_id": "second-brain-live",
+      "truth_counts": [
+        {
+          "count": 11361,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 11361,
+          "key": "concept"
+        }
+      ]
+    },
+    {
+      "edge_count": 10102,
+      "external_edge_count": 10102,
+      "group_type": "source_type",
+      "id": "map:source_type:47ea14bd3c7d",
+      "internal_edge_count": 0,
+      "label": "second-brain-live / turn_card",
+      "level": "source_type",
+      "node_count": 8108,
+      "node_type": "turn_card",
+      "owner_counts": [
+        {
+          "count": 8108,
+          "key": "hapa-second-brain"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 8108,
+          "key": "second-brain-live"
+        }
+      ],
+      "source_id": "second-brain-live",
+      "truth_counts": [
+        {
+          "count": 6106,
+          "key": "verified_source"
+        },
+        {
+          "count": 2002,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 8108,
+          "key": "turn_card"
+        }
+      ]
+    },
+    {
+      "edge_count": 92957,
+      "external_edge_count": 90642,
+      "group_type": "source_type",
+      "id": "map:source_type:53728fb8d10c",
+      "internal_edge_count": 2315,
+      "label": "hapa-ecosystem-codebases / source_file",
+      "level": "source_type",
+      "node_count": 3001,
+      "node_type": "source_file",
+      "owner_counts": [
+        {
+          "count": 3001,
+          "key": "hapa-graphify"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "code_ast"
+      ],
+      "source_counts": [
+        {
+          "count": 3001,
+          "key": "hapa-ecosystem-codebases"
+        }
+      ],
+      "source_id": "hapa-ecosystem-codebases",
+      "truth_counts": [
+        {
+          "count": 3001,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 3001,
+          "key": "source_file"
+        }
+      ]
+    },
+    {
+      "edge_count": 2979,
+      "external_edge_count": 2689,
+      "group_type": "source_type",
+      "id": "map:source_type:e300100807e1",
+      "internal_edge_count": 290,
+      "label": "worldbuilding-wiki-operations / concept",
+      "level": "source_type",
+      "node_count": 2388,
+      "node_type": "concept",
+      "owner_counts": [
+        {
+          "count": 2388,
+          "key": "hapa-worldbuilding-wiki"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 2388,
+          "key": "worldbuilding-wiki-operations"
+        }
+      ],
+      "source_id": "worldbuilding-wiki-operations",
+      "truth_counts": [
+        {
+          "count": 2291,
+          "key": "verified_source"
+        },
+        {
+          "count": 97,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 2388,
+          "key": "concept"
+        }
+      ]
+    },
+    {
+      "edge_count": 2637,
+      "external_edge_count": 2637,
+      "group_type": "source_type",
+      "id": "map:source_type:f367cd5c4543",
+      "internal_edge_count": 0,
+      "label": "worldbuilding-wiki-operations / wiki_article",
+      "level": "source_type",
+      "node_count": 527,
+      "node_type": "wiki_article",
+      "owner_counts": [
+        {
+          "count": 527,
+          "key": "hapa-worldbuilding-wiki"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 527,
+          "key": "worldbuilding-wiki-operations"
+        }
+      ],
+      "source_id": "worldbuilding-wiki-operations",
+      "truth_counts": [
+        {
+          "count": 527,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 527,
+          "key": "wiki_article"
+        }
+      ]
+    },
+    {
+      "edge_count": 4363,
+      "external_edge_count": 4363,
+      "group_type": "source_type",
+      "id": "map:source_type:d535f155c36b",
+      "internal_edge_count": 0,
+      "label": "second-brain-live / hapa_node",
+      "level": "source_type",
+      "node_count": 330,
+      "node_type": "hapa_node",
+      "owner_counts": [
+        {
+          "count": 330,
+          "key": "hapa-second-brain"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 330,
+          "key": "second-brain-live"
+        }
+      ],
+      "source_id": "second-brain-live",
+      "truth_counts": [
+        {
+          "count": 220,
+          "key": "verified_source"
+        },
+        {
+          "count": 110,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 330,
+          "key": "hapa_node"
+        }
+      ]
+    },
+    {
+      "edge_count": 1425,
+      "external_edge_count": 1425,
+      "group_type": "source_type",
+      "id": "map:source_type:a9769bebd34e",
+      "internal_edge_count": 0,
+      "label": "second-brain-live / capability",
+      "level": "source_type",
+      "node_count": 227,
+      "node_type": "capability",
+      "owner_counts": [
+        {
+          "count": 227,
+          "key": "hapa-second-brain"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 227,
+          "key": "second-brain-live"
+        }
+      ],
+      "source_id": "second-brain-live",
+      "truth_counts": [
+        {
+          "count": 220,
+          "key": "verified_source"
+        },
+        {
+          "count": 7,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 227,
+          "key": "capability"
+        }
+      ]
+    },
+    {
+      "edge_count": 2408,
+      "external_edge_count": 2408,
+      "group_type": "source_type",
+      "id": "map:source_type:db88b24678b0",
+      "internal_edge_count": 0,
+      "label": "second-brain-live / skill",
+      "level": "source_type",
+      "node_count": 126,
+      "node_type": "skill",
+      "owner_counts": [
+        {
+          "count": 126,
+          "key": "hapa-second-brain"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 126,
+          "key": "second-brain-live"
+        }
+      ],
+      "source_id": "second-brain-live",
+      "truth_counts": [
+        {
+          "count": 126,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 126,
+          "key": "skill"
+        }
+      ]
+    },
+    {
+      "edge_count": 255,
+      "external_edge_count": 255,
+      "group_type": "source_type",
+      "id": "map:source_type:30e2936e1dd3",
+      "internal_edge_count": 0,
+      "label": "overwatch-kanban-hapa-graphify / artifact",
+      "level": "source_type",
+      "node_count": 93,
+      "node_type": "artifact",
+      "owner_counts": [
+        {
+          "count": 93,
+          "key": "hapa-overwatch-kanban"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 93,
+          "key": "overwatch-kanban-hapa-graphify"
+        }
+      ],
+      "source_id": "overwatch-kanban-hapa-graphify",
+      "truth_counts": [
+        {
+          "count": 93,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 93,
+          "key": "artifact"
+        }
+      ]
+    },
+    {
+      "edge_count": 117,
+      "external_edge_count": 52,
+      "group_type": "source_type",
+      "id": "map:source_type:b9b0bfab2e92",
+      "internal_edge_count": 65,
+      "label": "worldbuilding-wiki-operations / protocol_card",
+      "level": "source_type",
+      "node_count": 82,
+      "node_type": "protocol_card",
+      "owner_counts": [
+        {
+          "count": 82,
+          "key": "hapa-worldbuilding-wiki"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 82,
+          "key": "worldbuilding-wiki-operations"
+        }
+      ],
+      "source_id": "worldbuilding-wiki-operations",
+      "truth_counts": [
+        {
+          "count": 82,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 82,
+          "key": "protocol_card"
+        }
+      ]
+    },
+    {
+      "edge_count": 460,
+      "external_edge_count": 388,
+      "group_type": "source_type",
+      "id": "map:source_type:6db24ce5a528",
+      "internal_edge_count": 72,
+      "label": "overwatch-kanban-hapa-graphify / kanban_card",
+      "level": "source_type",
+      "node_count": 77,
+      "node_type": "kanban_card",
+      "owner_counts": [
+        {
+          "count": 77,
+          "key": "hapa-overwatch-kanban"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 77,
+          "key": "overwatch-kanban-hapa-graphify"
+        }
+      ],
+      "source_id": "overwatch-kanban-hapa-graphify",
+      "truth_counts": [
+        {
+          "count": 77,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 77,
+          "key": "kanban_card"
+        }
+      ]
+    },
+    {
+      "edge_count": 3077,
+      "external_edge_count": 3077,
+      "group_type": "source_type",
+      "id": "map:source_type:1d30e5fa6f82",
+      "internal_edge_count": 0,
+      "label": "hapa-ecosystem-codebases / repo",
+      "level": "source_type",
+      "node_count": 76,
+      "node_type": "repo",
+      "owner_counts": [
+        {
+          "count": 76,
+          "key": "hapa-graphify"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "code_ast"
+      ],
+      "source_counts": [
+        {
+          "count": 76,
+          "key": "hapa-ecosystem-codebases"
+        }
+      ],
+      "source_id": "hapa-ecosystem-codebases",
+      "truth_counts": [
+        {
+          "count": 76,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 76,
+          "key": "repo"
+        }
+      ]
+    },
+    {
+      "edge_count": 16,
+      "external_edge_count": 16,
+      "group_type": "source_type",
+      "id": "map:source_type:981e36114d09",
+      "internal_edge_count": 0,
+      "label": "second-brain-live / wiki_article",
+      "level": "source_type",
+      "node_count": 75,
+      "node_type": "wiki_article",
+      "owner_counts": [
+        {
+          "count": 75,
+          "key": "hapa-second-brain"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 75,
+          "key": "second-brain-live"
+        }
+      ],
+      "source_id": "second-brain-live",
+      "truth_counts": [
+        {
+          "count": 64,
+          "key": "verified_source"
+        },
+        {
+          "count": 11,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 75,
+          "key": "wiki_article"
+        }
+      ]
+    },
+    {
+      "edge_count": 63,
+      "external_edge_count": 63,
+      "group_type": "source_type",
+      "id": "map:source_type:25c1e32dfa5d",
+      "internal_edge_count": 0,
+      "label": "hapa-front-door-docs / concept",
+      "level": "source_type",
+      "node_count": 48,
+      "node_type": "concept",
+      "owner_counts": [
+        {
+          "count": 48,
+          "key": "hapa"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 48,
+          "key": "hapa-front-door-docs"
+        }
+      ],
+      "source_id": "hapa-front-door-docs",
+      "truth_counts": [
+        {
+          "count": 48,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 48,
+          "key": "concept"
+        }
+      ]
+    },
+    {
+      "edge_count": 76,
+      "external_edge_count": 76,
+      "group_type": "source_type",
+      "id": "map:source_type:52aaf9e57a2f",
+      "internal_edge_count": 0,
+      "label": "hapa-ecosystem-codebases / hapa_node",
+      "level": "source_type",
+      "node_count": 43,
+      "node_type": "hapa_node",
+      "owner_counts": [
+        {
+          "count": 43,
+          "key": "hapa-graphify"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "code_ast"
+      ],
+      "source_counts": [
+        {
+          "count": 43,
+          "key": "hapa-ecosystem-codebases"
+        }
+      ],
+      "source_id": "hapa-ecosystem-codebases",
+      "truth_counts": [
+        {
+          "count": 43,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 43,
+          "key": "hapa_node"
+        }
+      ]
+    },
+    {
+      "edge_count": 0,
+      "external_edge_count": 0,
+      "group_type": "source_type",
+      "id": "map:source_type:483d12410b7f",
+      "internal_edge_count": 0,
+      "label": "hapa-front-door-docs / hapa_node",
+      "level": "source_type",
+      "node_count": 32,
+      "node_type": "hapa_node",
+      "owner_counts": [
+        {
+          "count": 32,
+          "key": "hapa"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 32,
+          "key": "hapa-front-door-docs"
+        }
+      ],
+      "source_id": "hapa-front-door-docs",
+      "truth_counts": [
+        {
+          "count": 32,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 32,
+          "key": "hapa_node"
+        }
+      ]
+    },
+    {
+      "edge_count": 15,
+      "external_edge_count": 3,
+      "group_type": "source_type",
+      "id": "map:source_type:4c3f51e76ad4",
+      "internal_edge_count": 12,
+      "label": "hapa-front-door-docs / protocol_card",
+      "level": "source_type",
+      "node_count": 15,
+      "node_type": "protocol_card",
+      "owner_counts": [
+        {
+          "count": 15,
+          "key": "hapa"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 15,
+          "key": "hapa-front-door-docs"
+        }
+      ],
+      "source_id": "hapa-front-door-docs",
+      "truth_counts": [
+        {
+          "count": 15,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 15,
+          "key": "protocol_card"
+        }
+      ]
+    },
+    {
+      "edge_count": 60,
+      "external_edge_count": 60,
+      "group_type": "source_type",
+      "id": "map:source_type:c587533c7308",
+      "internal_edge_count": 0,
+      "label": "hapa-front-door-docs / wiki_article",
+      "level": "source_type",
+      "node_count": 13,
+      "node_type": "wiki_article",
+      "owner_counts": [
+        {
+          "count": 13,
+          "key": "hapa"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 13,
+          "key": "hapa-front-door-docs"
+        }
+      ],
+      "source_id": "hapa-front-door-docs",
+      "truth_counts": [
+        {
+          "count": 13,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 13,
+          "key": "wiki_article"
+        }
+      ]
+    },
+    {
+      "edge_count": 114,
+      "external_edge_count": 114,
+      "group_type": "source_type",
+      "id": "map:source_type:22e891da4f05",
+      "internal_edge_count": 0,
+      "label": "overwatch-kanban-hapa-graphify / agent",
+      "level": "source_type",
+      "node_count": 7,
+      "node_type": "agent",
+      "owner_counts": [
+        {
+          "count": 7,
+          "key": "hapa-overwatch-kanban"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 7,
+          "key": "overwatch-kanban-hapa-graphify"
+        }
+      ],
+      "source_id": "overwatch-kanban-hapa-graphify",
+      "truth_counts": [
+        {
+          "count": 7,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 7,
+          "key": "agent"
+        }
+      ]
+    },
+    {
+      "edge_count": 276,
+      "external_edge_count": 276,
+      "group_type": "source_type",
+      "id": "map:source_type:10ba8e8d80c2",
+      "internal_edge_count": 0,
+      "label": "second-brain-live / agent",
+      "level": "source_type",
+      "node_count": 7,
+      "node_type": "agent",
+      "owner_counts": [
+        {
+          "count": 7,
+          "key": "hapa-second-brain"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 7,
+          "key": "second-brain-live"
+        }
+      ],
+      "source_id": "second-brain-live",
+      "truth_counts": [
+        {
+          "count": 7,
+          "key": "derived_or_inferred"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 7,
+          "key": "agent"
+        }
+      ]
+    },
+    {
+      "edge_count": 6,
+      "external_edge_count": 6,
+      "group_type": "source_type",
+      "id": "map:source_type:c1106a7e7c1b",
+      "internal_edge_count": 0,
+      "label": "quest-keeper-audits / wiki_article",
+      "level": "source_type",
+      "node_count": 4,
+      "node_type": "wiki_article",
+      "owner_counts": [
+        {
+          "count": 4,
+          "key": "hapa-quest-keeper"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 4,
+          "key": "quest-keeper-audits"
+        }
+      ],
+      "source_id": "quest-keeper-audits",
+      "truth_counts": [
+        {
+          "count": 4,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 4,
+          "key": "wiki_article"
+        }
+      ]
+    },
+    {
+      "edge_count": 6,
+      "external_edge_count": 6,
+      "group_type": "source_type",
+      "id": "map:source_type:1ae37a1b50a3",
+      "internal_edge_count": 0,
+      "label": "quest-keeper-audits / concept",
+      "level": "source_type",
+      "node_count": 3,
+      "node_type": "concept",
+      "owner_counts": [
+        {
+          "count": 3,
+          "key": "hapa-quest-keeper"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 3,
+          "key": "quest-keeper-audits"
+        }
+      ],
+      "source_id": "quest-keeper-audits",
+      "truth_counts": [
+        {
+          "count": 3,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 3,
+          "key": "concept"
+        }
+      ]
+    },
+    {
+      "edge_count": 37,
+      "external_edge_count": 37,
+      "group_type": "source_type",
+      "id": "map:source_type:ae8c0d2c4474",
+      "internal_edge_count": 0,
+      "label": "overwatch-kanban-hapa-graphify / hapa_node",
+      "level": "source_type",
+      "node_count": 1,
+      "node_type": "hapa_node",
+      "owner_counts": [
+        {
+          "count": 1,
+          "key": "hapa-overwatch-kanban"
+        }
+      ],
+      "record_owner": null,
+      "report_kinds": [
+        "knowledge"
+      ],
+      "source_counts": [
+        {
+          "count": 1,
+          "key": "overwatch-kanban-hapa-graphify"
+        }
+      ],
+      "source_id": "overwatch-kanban-hapa-graphify",
+      "truth_counts": [
+        {
+          "count": 1,
+          "key": "verified_source"
+        }
+      ],
+      "truth_status": null,
+      "type_counts": [
+        {
+          "count": 1,
+          "key": "hapa_node"
+        }
+      ]
+    }
+  ],
+  "schema": "hapa.graphify.pages_demo.v1",
+  "use": "Static public demo data. Local paths, record keys, source files, and samples are intentionally omitted."
+}

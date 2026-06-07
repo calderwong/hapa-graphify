@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "hapa.graph.fragment.v1",
+  "title": "Hapa Graph Fragment",
+  "type": "object",
+  "required": ["schema", "source_id", "nodes", "edges"],
+  "properties": {
+    "schema": {
+      "const": "hapa.graph.fragment.v1"
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "type", "truth_status", "source_id", "record_owner", "privacy"],
+        "properties": {
+          "id": {"type": "string"},
+          "label": {"type": "string"},
+          "type": {
+            "enum": [
+              "hapa_node",
+              "repo",
+              "source_file",
+              "capability",
+              "skill",
+              "agent",
+              "protocol_card",
+              "wiki_article",
+              "turn_card",
+              "kanban_card",
+              "artifact",
+              "endpoint",
+              "concept"
+            ]
+          },
+          "truth_status": {
+            "enum": [
+              "verified_source",
+              "verified_runtime",
+              "derived_or_inferred",
+              "needs_review",
+              "blocked"
+            ]
+          },
+          "source_id": {"type": "string"},
+          "record_owner": {"type": "string"},
+          "privacy": {"type": "string"}
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "target", "type", "truth_status"],
+        "properties": {
+          "source": {"type": "string"},
+          "target": {"type": "string"},
+          "type": {
+            "enum": [
+              "implements",
+              "owns_record",
+              "tracks",
+              "depends_on",
+              "indexes",
+              "mentions",
+              "derived_from",
+              "uses_skill",
+              "relates_to",
+              "calls",
+              "imports",
+              "defines",
+              "routes_to",
+              "blocked_by"
+            ]
+          },
+          "truth_status": {
+            "enum": [
+              "verified_source",
+              "verified_runtime",
+              "derived_or_inferred",
+              "needs_review",
+              "blocked"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

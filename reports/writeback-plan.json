@@ -1,0 +1,63 @@
+{
+  "dry_run": true,
+  "graph": {
+    "edge_count": 204,
+    "node_count": 350,
+    "schema": "hapa.graph.fragment.v1",
+    "source_id": "all"
+  },
+  "lance_jsonl": [
+    {
+      "id": "hapa_graphify_writeback_1780774671:graph-summary",
+      "metadata": {
+        "format": "lance-jsonl-ready",
+        "privacy": "public-redacted",
+        "record_owner": "hapa-graphify",
+        "run_id": "hapa_graphify_writeback_1780774671",
+        "source": "hapa-graphify",
+        "truth_status": "derived_or_inferred"
+      },
+      "text": "Hapa Graphify public projection: 350 nodes, 204 edges."
+    }
+  ],
+  "ok": true,
+  "private_path_leak_count": 0,
+  "public_projection": true,
+  "requires_authorized_write": false,
+  "run_id": "hapa_graphify_writeback_1780774671",
+  "second_brain_rows": [
+    {
+      "article_type": "generated-graph-summary",
+      "operation": "upsert",
+      "record_owner": "hapa-graphify",
+      "run_id": "hapa_graphify_writeback_1780774671",
+      "slug": "hapa-graphify-graph-summary",
+      "summary": "Graph projection contains 350 nodes and 204 edges.",
+      "table": "wiki_articles",
+      "title": "Hapa Graphify Graph Summary",
+      "truth_status": "derived_or_inferred"
+    },
+    {
+      "object_id": "hapa-second-brain",
+      "object_type": "knowledge_body",
+      "operation": "append",
+      "record_owner": "hapa-graphify",
+      "relation_type": "exports_public_projection",
+      "run_id": "hapa_graphify_writeback_1780774671",
+      "subject_id": "hapa-graphify",
+      "subject_type": "hapa_node",
+      "table": "ecosystem_connections",
+      "truth_status": "derived_or_inferred"
+    }
+  ],
+  "targets": [
+    "second-brain",
+    "lance"
+  ],
+  "write_policy": {
+    "dry_run_first": true,
+    "mutates_lance": false,
+    "mutates_second_brain": false,
+    "public_paths_redacted": true
+  }
+}
