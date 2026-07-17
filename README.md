@@ -9,6 +9,8 @@ It is meant to answer questions like:
 - Which graph facts are verified source, runtime-verified, inferred, blocked, or review-needed?
 - How can humans and agents explore the whole ecosystem without loading hundreds of thousands of records at once?
 
+For the authoritative list of currently public Hapa repositories, start with [Hapa Awesome](https://github.com/calderwong/hapa-awesome), the [human-readable catalog](https://github.com/calderwong/hapa-awesome/blob/main/docs/NODES.md), or the [machine-readable public registry](https://github.com/calderwong/hapa-awesome/blob/main/data/nodes.json). Graphify explains relationships; Hapa Awesome owns the public repository directory.
+
 Current local full-run evidence:
 
 - Combined atlas: `371,430` nodes and `582,209` edges.
