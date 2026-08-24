@@ -1,17 +1,17 @@
 {
   "date_range": {
-    "end": "2026-07-27",
+    "end": "2026-08-24",
     "start": "2026-01-01",
     "timezone": "UTC"
   },
   "enrichment": {
     "agent_id": "hapa-narrative-enrichment",
-    "enriched_entry_count": 31,
-    "entry_count": 31,
-    "latest_pass_id": "hapa_narrative_enrichment_1785773439",
+    "enriched_entry_count": 35,
+    "entry_count": 35,
+    "latest_pass_id": "hapa_narrative_enrichment_1787587787",
     "log": "docs/narrative/data/enrichment-log.ndjson",
     "schema": "hapa.narrative.enrichment_index.v1",
-    "updated_at": "2026-08-03T16:15:47Z"
+    "updated_at": "2026-08-24T16:12:49Z"
   },
   "entries": [
     {
@@ -422,27 +422,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 12,
-            "created_at": "2026-07-27T16:18:20Z",
+            "created_at": "2026-08-24T16:10:18Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 8
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 12,
-            "created_at": "2026-08-03T16:11:23Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 8
           }
         ],
@@ -535,7 +525,7 @@
           }
         ],
         "summary": "4,277 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, hapa and worldbuilding, design and aesthetics, and knowledge systems, with 4,277 observed turns. Its strongest graph expansion is `protocol` with 557 matches. Connections selected: 12.",
-        "updated_at": "2026-08-03T16:11:23Z"
+        "updated_at": "2026-08-24T16:10:18Z"
       },
       "evidence": {
         "counts": {
@@ -964,17 +954,17 @@
         "start": null,
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:16:28Z",
+      "published_at": "2026-08-24T16:08:02Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:16:28Z",
+        "created_at": "2026-08-24T16:08:02Z",
         "graphify_match_count": 31,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 10,
           "technical": 10
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 4277,
           "wiki_articles": 0,
@@ -1404,27 +1394,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 12,
-            "created_at": "2026-07-27T16:18:24Z",
+            "created_at": "2026-08-24T16:10:23Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 8
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 12,
-            "created_at": "2026-08-03T16:11:32Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 8
           }
         ],
@@ -1517,7 +1497,7 @@
           }
         ],
         "summary": "292 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on hapa and worldbuilding, artificial intelligence, software engineering, and design and aesthetics, with 292 observed turns. Its strongest graph expansion is `protocol` with 557 matches. Connections selected: 12.",
-        "updated_at": "2026-08-03T16:11:32Z"
+        "updated_at": "2026-08-24T16:10:23Z"
       },
       "evidence": {
         "counts": {
@@ -1970,17 +1950,17 @@
         "start": "2026-01-01",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:16:32Z",
+      "published_at": "2026-08-24T16:08:06Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:16:32Z",
+        "created_at": "2026-08-24T16:08:06Z",
         "graphify_match_count": 636,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 292,
           "wiki_articles": 0,
@@ -2420,27 +2400,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 12,
-            "created_at": "2026-07-27T16:18:28Z",
+            "created_at": "2026-08-24T16:10:28Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 8
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 12,
-            "created_at": "2026-08-03T16:11:42Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 8
           }
         ],
@@ -2533,7 +2503,7 @@
           }
         ],
         "summary": "85 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, design and aesthetics, hapa and worldbuilding, and knowledge systems, with 85 observed turns. Its strongest graph expansion is `overwatch` with 192 matches. Connections selected: 12.",
-        "updated_at": "2026-08-03T16:11:42Z"
+        "updated_at": "2026-08-24T16:10:28Z"
       },
       "evidence": {
         "counts": {
@@ -2986,17 +2956,17 @@
         "start": "2026-01-08",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:16:35Z",
+      "published_at": "2026-08-24T16:08:10Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:16:35Z",
+        "created_at": "2026-08-24T16:08:10Z",
         "graphify_match_count": 38,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 85,
           "wiki_articles": 0,
@@ -3295,27 +3265,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 10,
-            "created_at": "2026-07-27T16:18:33Z",
+            "created_at": "2026-08-24T16:10:33Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 4
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 10,
-            "created_at": "2026-08-03T16:11:52Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 4
           }
         ],
@@ -3372,7 +3332,7 @@
           }
         ],
         "summary": "4 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, knowledge systems, geopolitics, and games and simulation, with 4 observed turns. Its strongest graph expansion is `summary` with 26 matches. Connections selected: 10.",
-        "updated_at": "2026-08-03T16:11:52Z"
+        "updated_at": "2026-08-24T16:10:33Z"
       },
       "evidence": {
         "counts": {
@@ -3667,17 +3627,17 @@
         "start": "2026-01-15",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:16:38Z",
+      "published_at": "2026-08-24T16:08:14Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:16:38Z",
+        "created_at": "2026-08-24T16:08:14Z",
         "graphify_match_count": 22,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 4,
           "wiki_articles": 0,
@@ -3968,27 +3928,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 10,
-            "created_at": "2026-07-27T16:18:37Z",
+            "created_at": "2026-08-24T16:10:37Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 1
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 10,
-            "created_at": "2026-08-03T16:12:03Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 1
           }
         ],
@@ -4018,7 +3968,7 @@
           }
         ],
         "summary": "1 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, software engineering, games and simulation, and media pipelines, with 1 observed turns. Its strongest graph expansion is `start` with 8 matches. Connections selected: 10.",
-        "updated_at": "2026-08-03T16:12:03Z"
+        "updated_at": "2026-08-24T16:10:37Z"
       },
       "evidence": {
         "counts": {
@@ -4248,17 +4198,17 @@
         "start": "2026-01-22",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:16:42Z",
+      "published_at": "2026-08-24T16:08:17Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:16:42Z",
+        "created_at": "2026-08-24T16:08:17Z",
         "graphify_match_count": 8,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 1,
           "wiki_articles": 0,
@@ -4509,27 +4459,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 9,
-            "created_at": "2026-07-27T16:18:41Z",
+            "created_at": "2026-08-24T16:10:42Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 1
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 9,
-            "created_at": "2026-08-03T16:12:13Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 1
           }
         ],
@@ -4559,7 +4499,7 @@
           }
         ],
         "summary": "1 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, software engineering, games and simulation, and hapa and worldbuilding, with 1 observed turns. Its strongest graph expansion is `going` with 8 matches. Connections selected: 9.",
-        "updated_at": "2026-08-03T16:12:13Z"
+        "updated_at": "2026-08-24T16:10:42Z"
       },
       "evidence": {
         "counts": {
@@ -4757,17 +4697,17 @@
         "start": "2026-01-29",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:16:45Z",
+      "published_at": "2026-08-24T16:08:21Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:16:45Z",
+        "created_at": "2026-08-24T16:08:21Z",
         "graphify_match_count": 2,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 1,
           "wiki_articles": 0,
@@ -4995,27 +4935,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 8,
-            "created_at": "2026-07-27T16:18:45Z",
+            "created_at": "2026-08-24T16:10:47Z",
             "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 0
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 8,
-            "created_at": "2026-08-03T16:12:24Z",
-            "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 0
           }
         ],
@@ -5032,7 +4962,7 @@
         },
         "source_cards": [],
         "summary": "0 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches. Connections selected: 8.",
-        "updated_at": "2026-08-03T16:12:24Z"
+        "updated_at": "2026-08-24T16:10:47Z"
       },
       "evidence": {
         "counts": {
@@ -5115,17 +5045,17 @@
         "start": "2026-02-05",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:16:47Z",
+      "published_at": "2026-08-24T16:08:23Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:16:47Z",
+        "created_at": "2026-08-24T16:08:23Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -5271,27 +5201,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 4,
-            "created_at": "2026-07-27T16:18:48Z",
+            "created_at": "2026-08-24T16:10:50Z",
             "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 3,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 0
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 4,
-            "created_at": "2026-08-03T16:12:31Z",
-            "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 3,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 0
           }
         ],
@@ -5306,7 +5226,7 @@
         },
         "source_cards": [],
         "summary": "0 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches. Connections selected: 4.",
-        "updated_at": "2026-08-03T16:12:31Z"
+        "updated_at": "2026-08-24T16:10:50Z"
       },
       "evidence": {
         "counts": {
@@ -5389,17 +5309,17 @@
         "start": "2026-02-12",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:16:48Z",
+      "published_at": "2026-08-24T16:08:25Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:16:48Z",
+        "created_at": "2026-08-24T16:08:25Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -5545,27 +5465,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 4,
-            "created_at": "2026-07-27T16:18:51Z",
+            "created_at": "2026-08-24T16:10:54Z",
             "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 3,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 0
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 4,
-            "created_at": "2026-08-03T16:12:37Z",
-            "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 3,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 0
           }
         ],
@@ -5580,7 +5490,7 @@
         },
         "source_cards": [],
         "summary": "0 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches. Connections selected: 4.",
-        "updated_at": "2026-08-03T16:12:37Z"
+        "updated_at": "2026-08-24T16:10:54Z"
       },
       "evidence": {
         "counts": {
@@ -5663,17 +5573,17 @@
         "start": "2026-02-19",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:16:50Z",
+      "published_at": "2026-08-24T16:08:27Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:16:50Z",
+        "created_at": "2026-08-24T16:08:27Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -5819,27 +5729,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 4,
-            "created_at": "2026-07-27T16:18:53Z",
+            "created_at": "2026-08-24T16:10:57Z",
             "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 3,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 0
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 4,
-            "created_at": "2026-08-03T16:12:44Z",
-            "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 3,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 0
           }
         ],
@@ -5854,7 +5754,7 @@
         },
         "source_cards": [],
         "summary": "0 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches. Connections selected: 4.",
-        "updated_at": "2026-08-03T16:12:44Z"
+        "updated_at": "2026-08-24T16:10:57Z"
       },
       "evidence": {
         "counts": {
@@ -5937,17 +5837,17 @@
         "start": "2026-02-26",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:16:52Z",
+      "published_at": "2026-08-24T16:08:29Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:16:52Z",
+        "created_at": "2026-08-24T16:08:29Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -6093,27 +5993,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 4,
-            "created_at": "2026-07-27T16:18:56Z",
+            "created_at": "2026-08-24T16:11:00Z",
             "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 3,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 0
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 4,
-            "created_at": "2026-08-03T16:12:50Z",
-            "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 3,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 0
           }
         ],
@@ -6128,7 +6018,7 @@
         },
         "source_cards": [],
         "summary": "0 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches. Connections selected: 4.",
-        "updated_at": "2026-08-03T16:12:50Z"
+        "updated_at": "2026-08-24T16:11:00Z"
       },
       "evidence": {
         "counts": {
@@ -6211,17 +6101,17 @@
         "start": "2026-03-05",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:16:53Z",
+      "published_at": "2026-08-24T16:08:31Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:16:53Z",
+        "created_at": "2026-08-24T16:08:31Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -6449,27 +6339,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 8,
-            "created_at": "2026-07-27T16:19:01Z",
+            "created_at": "2026-08-24T16:11:05Z",
             "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 0
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 8,
-            "created_at": "2026-08-03T16:13:01Z",
-            "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 0
           }
         ],
@@ -6486,7 +6366,7 @@
         },
         "source_cards": [],
         "summary": "0 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches. Connections selected: 8.",
-        "updated_at": "2026-08-03T16:13:01Z"
+        "updated_at": "2026-08-24T16:11:05Z"
       },
       "evidence": {
         "counts": {
@@ -6569,17 +6449,17 @@
         "start": "2026-03-12",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:16:55Z",
+      "published_at": "2026-08-24T16:08:33Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:16:55Z",
+        "created_at": "2026-08-24T16:08:33Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -7005,27 +6885,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 12,
-            "created_at": "2026-07-27T16:19:05Z",
+            "created_at": "2026-08-24T16:11:09Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 4
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 12,
-            "created_at": "2026-08-03T16:13:12Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 4
           }
         ],
@@ -7082,7 +6952,7 @@
           }
         ],
         "summary": "4 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, hapa and worldbuilding, media pipelines, and design and aesthetics, with 4 observed turns. Its strongest graph expansion is `building` with 1,300 matches. Connections selected: 12.",
-        "updated_at": "2026-08-03T16:13:12Z"
+        "updated_at": "2026-08-24T16:11:09Z"
       },
       "evidence": {
         "counts": {
@@ -7441,17 +7311,17 @@
         "start": "2026-03-19",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:16:58Z",
+      "published_at": "2026-08-24T16:08:36Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:16:58Z",
+        "created_at": "2026-08-24T16:08:36Z",
         "graphify_match_count": 1522,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 4,
           "wiki_articles": 0,
@@ -7679,27 +7549,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 8,
-            "created_at": "2026-07-27T16:19:09Z",
+            "created_at": "2026-08-24T16:11:14Z",
             "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 0
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 8,
-            "created_at": "2026-08-03T16:13:24Z",
-            "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 0
           }
         ],
@@ -7716,7 +7576,7 @@
         },
         "source_cards": [],
         "summary": "0 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches. Connections selected: 8.",
-        "updated_at": "2026-08-03T16:13:24Z"
+        "updated_at": "2026-08-24T16:11:14Z"
       },
       "evidence": {
         "counts": {
@@ -7799,17 +7659,17 @@
         "start": "2026-03-26",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:00Z",
+      "published_at": "2026-08-24T16:08:38Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:00Z",
+        "created_at": "2026-08-24T16:08:38Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -8037,27 +7897,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 8,
-            "created_at": "2026-07-27T16:19:13Z",
+            "created_at": "2026-08-24T16:11:19Z",
             "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 0
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 8,
-            "created_at": "2026-08-03T16:13:34Z",
-            "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 0
           }
         ],
@@ -8074,7 +7924,7 @@
         },
         "source_cards": [],
         "summary": "0 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches. Connections selected: 8.",
-        "updated_at": "2026-08-03T16:13:34Z"
+        "updated_at": "2026-08-24T16:11:19Z"
       },
       "evidence": {
         "counts": {
@@ -8157,17 +8007,17 @@
         "start": "2026-04-02",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:02Z",
+      "published_at": "2026-08-24T16:08:40Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:02Z",
+        "created_at": "2026-08-24T16:08:40Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -8559,27 +8409,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 12,
-            "created_at": "2026-07-27T16:19:17Z",
+            "created_at": "2026-08-24T16:11:24Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 8
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 12,
-            "created_at": "2026-08-03T16:13:43Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 8
           }
         ],
@@ -8672,7 +8512,7 @@
           }
         ],
         "summary": "22 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, hapa and worldbuilding, music and performance, and geopolitics, with 22 observed turns. Its strongest graph expansion is `signal` with 90 matches. Connections selected: 12.",
-        "updated_at": "2026-08-03T16:13:43Z"
+        "updated_at": "2026-08-24T16:11:24Z"
       },
       "evidence": {
         "counts": {
@@ -9107,17 +8947,17 @@
         "start": "2026-04-09",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:05Z",
+      "published_at": "2026-08-24T16:08:44Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:05Z",
+        "created_at": "2026-08-24T16:08:44Z",
         "graphify_match_count": 32,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 22,
           "wiki_articles": 0,
@@ -9500,27 +9340,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 12,
-            "created_at": "2026-07-27T16:19:21Z",
+            "created_at": "2026-08-24T16:11:29Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 8
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 12,
-            "created_at": "2026-08-03T16:13:57Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 8
           }
         ],
@@ -9613,7 +9443,7 @@
           }
         ],
         "summary": "13 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, geopolitics, hapa and worldbuilding, and media pipelines, with 13 observed turns. Its strongest graph expansion is `signal` with 90 matches. Connections selected: 12.",
-        "updated_at": "2026-08-03T16:13:57Z"
+        "updated_at": "2026-08-24T16:11:29Z"
       },
       "evidence": {
         "counts": {
@@ -10050,17 +9880,17 @@
         "start": "2026-04-16",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:08Z",
+      "published_at": "2026-08-24T16:08:48Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:08Z",
+        "created_at": "2026-08-24T16:08:48Z",
         "graphify_match_count": 18,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 13,
           "wiki_articles": 0,
@@ -10278,27 +10108,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 8,
-            "created_at": "2026-07-27T16:19:25Z",
+            "created_at": "2026-08-24T16:11:34Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 3
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 8,
-            "created_at": "2026-08-03T16:14:08Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 3
           }
         ],
@@ -10346,7 +10166,7 @@
           }
         ],
         "summary": "3 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, knowledge systems, geopolitics, and romance, with 3 observed turns. Its strongest graph expansion is `strategic` with 3 matches. Connections selected: 8.",
-        "updated_at": "2026-08-03T16:14:08Z"
+        "updated_at": "2026-08-24T16:11:34Z"
       },
       "evidence": {
         "counts": {
@@ -10592,17 +10412,17 @@
         "start": "2026-04-23",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:12Z",
+      "published_at": "2026-08-24T16:08:51Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:12Z",
+        "created_at": "2026-08-24T16:08:51Z",
         "graphify_match_count": 2,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 3,
           "wiki_articles": 0,
@@ -10804,27 +10624,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 7,
-            "created_at": "2026-07-27T16:19:30Z",
+            "created_at": "2026-08-24T16:11:39Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 3
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 7,
-            "created_at": "2026-08-03T16:14:18Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 3
           }
         ],
@@ -10872,7 +10682,7 @@
           }
         ],
         "summary": "3 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on acres, knowledge systems, area square, and total, with 3 observed turns. Its strongest graph expansion is `acres` with 2 matches. Connections selected: 7.",
-        "updated_at": "2026-08-03T16:14:18Z"
+        "updated_at": "2026-08-24T16:11:39Z"
       },
       "evidence": {
         "counts": {
@@ -11144,17 +10954,17 @@
         "start": "2026-04-30",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:15Z",
+      "published_at": "2026-08-24T16:08:55Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:15Z",
+        "created_at": "2026-08-24T16:08:55Z",
         "graphify_match_count": 6,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 3,
           "wiki_articles": 0,
@@ -11393,27 +11203,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 10,
-            "created_at": "2026-07-27T16:19:36Z",
+            "created_at": "2026-08-24T16:11:44Z",
             "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 0
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 10,
-            "created_at": "2026-08-03T16:14:28Z",
-            "fact_count": 2,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 0
           }
         ],
@@ -11432,7 +11232,7 @@
         },
         "source_cards": [],
         "summary": "0 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `acres` with 2 matches. Connections selected: 10.",
-        "updated_at": "2026-08-03T16:14:28Z"
+        "updated_at": "2026-08-24T16:11:44Z"
       },
       "evidence": {
         "counts": {
@@ -11515,17 +11315,17 @@
         "start": "2026-05-07",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:16Z",
+      "published_at": "2026-08-24T16:08:57Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:16Z",
+        "created_at": "2026-08-24T16:08:57Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 0,
@@ -11917,27 +11717,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 12,
-            "created_at": "2026-07-27T16:19:40Z",
+            "created_at": "2026-08-24T16:11:49Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 8
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 12,
-            "created_at": "2026-08-03T16:14:38Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 8
           }
         ],
@@ -12030,7 +11820,7 @@
           }
         ],
         "summary": "174 Second Brain turns, 0 wiki article updates, and 604 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, design and aesthetics, hapa and worldbuilding, and media pipelines, with 174 observed turns. Its strongest graph expansion is `desktop` with 21 matches. Connections selected: 12.",
-        "updated_at": "2026-08-03T16:14:38Z"
+        "updated_at": "2026-08-24T16:11:49Z"
       },
       "evidence": {
         "counts": {
@@ -12577,17 +12367,17 @@
         "start": "2026-05-14",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:20Z",
+      "published_at": "2026-08-24T16:09:01Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:20Z",
+        "created_at": "2026-08-24T16:09:01Z",
         "graphify_match_count": 27,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 174,
           "wiki_articles": 0,
@@ -12845,27 +12635,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 9,
-            "created_at": "2026-07-27T16:19:44Z",
+            "created_at": "2026-08-24T16:11:54Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 8
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 9,
-            "created_at": "2026-08-03T16:14:47Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 8
           }
         ],
@@ -12958,7 +12738,7 @@
           }
         ],
         "summary": "789 Second Brain turns, 5 wiki article updates, and 44,977 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, hapa and worldbuilding, media pipelines, and software engineering, with 789 observed turns. Its strongest graph expansion is `desktop` with 21 matches. Connections selected: 9.",
-        "updated_at": "2026-08-03T16:14:47Z"
+        "updated_at": "2026-08-24T16:11:54Z"
       },
       "evidence": {
         "counts": {
@@ -13507,17 +13287,17 @@
         "start": "2026-05-21",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:23Z",
+      "published_at": "2026-08-24T16:09:04Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:23Z",
+        "created_at": "2026-08-24T16:09:04Z",
         "graphify_match_count": 2,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 789,
           "wiki_articles": 5,
@@ -13875,27 +13655,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 12,
-            "created_at": "2026-07-27T16:19:49Z",
+            "created_at": "2026-08-24T16:11:59Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 8
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 12,
-            "created_at": "2026-08-03T16:14:57Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 8
           }
         ],
@@ -13988,7 +13758,7 @@
           }
         ],
         "summary": "646 Second Brain turns, 19 wiki article updates, and 1,696 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on hapa and worldbuilding, artificial intelligence, knowledge systems, and design and aesthetics, with 646 observed turns. Its strongest graph expansion is `protocol` with 557 matches. Connections selected: 12.",
-        "updated_at": "2026-08-03T16:14:57Z"
+        "updated_at": "2026-08-24T16:11:59Z"
       },
       "evidence": {
         "counts": {
@@ -14434,7 +14204,7 @@
             "objective": "work kanban task t_5f5f581d",
             "started_at": "2026-05-28T03:28:13+00:00",
             "turn_type": "code_debugging",
-            "work_summary": "Better use native file I/O for exact content.\\\\nfrom pathlib import Path\\\\np=Path(path)\\\\ntext=p.read_text()\\\\nold='Authenticated endpoints require `Authorization: Bearer [redacted]]]]'\\\\nnew='Authenticated endpoints requi\u2026"
+            "work_summary": "Better use native file I/O for exact content.\\\\nfrom pathlib import Path\\\\np=Path(path)\\\\ntext=p.read_text()\\\\nold='Authenticated endpoints require `Authorization: Bearer [redacted]]]'\\\\nnew='Authenticated endpoints requi\u2026"
           },
           {
             "id": "ai_turn:832242e0a45f1dfa",
@@ -14630,17 +14400,17 @@
         "start": "2026-05-28",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:27Z",
+      "published_at": "2026-08-24T16:09:08Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:27Z",
+        "created_at": "2026-08-24T16:09:08Z",
         "graphify_match_count": 467,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 646,
           "wiki_articles": 19,
@@ -15039,27 +14809,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 12,
-            "created_at": "2026-07-27T16:19:54Z",
+            "created_at": "2026-08-24T16:12:04Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 8
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 12,
-            "created_at": "2026-08-03T16:15:04Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 8
           }
         ],
@@ -15152,7 +14912,7 @@
           }
         ],
         "summary": "173 Second Brain turns, 1 wiki article updates, and 10,593 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, hapa and worldbuilding, software engineering, and ai agents, with 173 observed turns. Its strongest graph expansion is `board` with 27 matches. Connections selected: 12.",
-        "updated_at": "2026-08-03T16:15:04Z"
+        "updated_at": "2026-08-24T16:12:04Z"
       },
       "evidence": {
         "counts": {
@@ -15756,17 +15516,17 @@
         "start": "2026-06-04",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:30Z",
+      "published_at": "2026-08-24T16:09:12Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:30Z",
+        "created_at": "2026-08-24T16:09:12Z",
         "graphify_match_count": 32,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 173,
           "wiki_articles": 1,
@@ -16157,27 +15917,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 12,
-            "created_at": "2026-07-27T16:19:58Z",
+            "created_at": "2026-08-24T16:12:09Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 8
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 12,
-            "created_at": "2026-08-03T16:15:10Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 8
           }
         ],
@@ -16270,7 +16020,7 @@
           }
         ],
         "summary": "193 Second Brain turns, 1 wiki article updates, and 15 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, hapa and worldbuilding, media pipelines, and software engineering, with 193 observed turns. Its strongest graph expansion is `media` with 21 matches. Connections selected: 12.",
-        "updated_at": "2026-08-03T16:15:10Z"
+        "updated_at": "2026-08-24T16:12:09Z"
       },
       "evidence": {
         "counts": {
@@ -16874,17 +16624,17 @@
         "start": "2026-06-11",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:34Z",
+      "published_at": "2026-08-24T16:09:16Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:34Z",
+        "created_at": "2026-08-24T16:09:16Z",
         "graphify_match_count": 33,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 193,
           "wiki_articles": 1,
@@ -17275,27 +17025,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 12,
-            "created_at": "2026-07-27T16:20:02Z",
+            "created_at": "2026-08-24T16:12:13Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 8
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 12,
-            "created_at": "2026-08-03T16:15:16Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 8
           }
         ],
@@ -17388,7 +17128,7 @@
           }
         ],
         "summary": "304 Second Brain turns, 0 wiki article updates, and 119 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on ai agents, artificial intelligence, hapa and worldbuilding, and media pipelines, with 304 observed turns. Its strongest graph expansion is `avatar` with 21 matches. Connections selected: 12.",
-        "updated_at": "2026-08-03T16:15:16Z"
+        "updated_at": "2026-08-24T16:12:13Z"
       },
       "evidence": {
         "counts": {
@@ -17933,17 +17673,17 @@
         "start": "2026-06-18",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:37Z",
+      "published_at": "2026-08-24T16:09:19Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:37Z",
+        "created_at": "2026-08-24T16:09:19Z",
         "graphify_match_count": 29,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 304,
           "wiki_articles": 0,
@@ -18293,27 +18033,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 12,
-            "created_at": "2026-07-27T16:20:06Z",
+            "created_at": "2026-08-24T16:12:18Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 8
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 12,
-            "created_at": "2026-08-03T16:15:22Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 8
           }
         ],
@@ -18406,7 +18136,7 @@
           }
         ],
         "summary": "246 Second Brain turns, 0 wiki article updates, and 1,240 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, hapa and worldbuilding, media pipelines, and software engineering, with 246 observed turns. Its strongest graph expansion is `browser` with 16 matches. Connections selected: 12.",
-        "updated_at": "2026-08-03T16:15:22Z"
+        "updated_at": "2026-08-24T16:12:18Z"
       },
       "evidence": {
         "counts": {
@@ -18992,17 +18722,17 @@
         "start": "2026-06-25",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:40Z",
+      "published_at": "2026-08-24T16:09:24Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:40Z",
+        "created_at": "2026-08-24T16:09:24Z",
         "graphify_match_count": 20,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 246,
           "wiki_articles": 0,
@@ -19345,27 +19075,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 12,
-            "created_at": "2026-07-27T16:20:10Z",
+            "created_at": "2026-08-24T16:12:23Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 8
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 12,
-            "created_at": "2026-08-03T16:15:28Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 8
           }
         ],
@@ -19458,7 +19178,7 @@
           }
         ],
         "summary": "18 Second Brain turns, 0 wiki article updates, and 1 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, hapa and worldbuilding, media pipelines, and design and aesthetics, with 18 observed turns. Its strongest graph expansion is `memory` with 6 matches. Connections selected: 12.",
-        "updated_at": "2026-08-03T16:15:28Z"
+        "updated_at": "2026-08-24T16:12:23Z"
       },
       "evidence": {
         "counts": {
@@ -19862,17 +19582,17 @@
         "start": "2026-07-02",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:44Z",
+      "published_at": "2026-08-24T16:09:28Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:44Z",
+        "created_at": "2026-08-24T16:09:28Z",
         "graphify_match_count": 10,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 18,
           "wiki_articles": 0,
@@ -20312,27 +20032,17 @@
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 12,
-            "created_at": "2026-07-27T16:20:14Z",
+            "created_at": "2026-08-24T16:12:28Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 8
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 12,
-            "created_at": "2026-08-03T16:15:34Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 8
           }
         ],
@@ -20425,7 +20135,7 @@
           }
         ],
         "summary": "3,919 Second Brain turns, 4 wiki article updates, and 140 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on hapa and worldbuilding, artificial intelligence, media pipelines, and design and aesthetics, with 3,919 observed turns. Its strongest graph expansion is `avatar` with 21 matches. Connections selected: 12.",
-        "updated_at": "2026-08-03T16:15:34Z"
+        "updated_at": "2026-08-24T16:12:28Z"
       },
       "evidence": {
         "counts": {
@@ -21064,17 +20774,17 @@
         "start": "2026-07-09",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:47Z",
+      "published_at": "2026-08-24T16:09:32Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:47Z",
+        "created_at": "2026-08-24T16:09:32Z",
         "graphify_match_count": 35,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 3919,
           "wiki_articles": 4,
@@ -21122,7 +20832,7 @@
             "kind": "next_entry",
             "label": "Week of 2026-07-23: Quiet Ledger",
             "shared_topics": [],
-            "target_entry_id": "hapa-narrative-week-2026-07-23-2026-07-27",
+            "target_entry_id": "hapa-narrative-week-2026-07-23-2026-07-29",
             "truth_status": "derived_or_inferred"
           },
           {
@@ -21234,7 +20944,7 @@
         ],
         "facts": [
           {
-            "detail": "1,084 Second Brain turns, 26 wiki article updates, and 46 wiki/doc file changes are in the selected period.",
+            "detail": "1,084 Second Brain turns, 25 wiki article updates, and 45 wiki/doc file changes are in the selected period.",
             "label": "Observed activity",
             "truth_status": "verified_source"
           },
@@ -21463,31 +21173,21 @@
             "track": "technical"
           },
           {
-            "text": "Lore lens: this card binds back to `hapa-narrative-week-2026-07-09-2026-07-15` and forward to `hapa-narrative-week-2026-07-23-2026-07-27`; its archive light is strongest around artificial intelligence, hapa and worldbuilding, software engineering, and knowledge systems, so any future retelling should treat those motifs as witnessed runes, not invented scenery.",
+            "text": "Lore lens: this card binds back to `hapa-narrative-week-2026-07-09-2026-07-15` and forward to `hapa-narrative-week-2026-07-23-2026-07-29`; its archive light is strongest around artificial intelligence, hapa and worldbuilding, software engineering, and knowledge systems, so any future retelling should treat those motifs as witnessed runes, not invented scenery.",
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
             "connection_count": 12,
-            "created_at": "2026-07-27T16:20:18Z",
+            "created_at": "2026-08-24T16:12:33Z",
             "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 8
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 12,
-            "created_at": "2026-08-03T16:15:40Z",
-            "fact_count": 5,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 8
           }
         ],
@@ -21579,14 +21279,14 @@
             "turn_type": "technical_architecture"
           }
         ],
-        "summary": "1,084 Second Brain turns, 26 wiki article updates, and 46 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, hapa and worldbuilding, software engineering, and knowledge systems, with 1,084 observed turns. Its strongest graph expansion is `desktop` with 21 matches. Connections selected: 12.",
-        "updated_at": "2026-08-03T16:15:40Z"
+        "summary": "1,084 Second Brain turns, 25 wiki article updates, and 45 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on artificial intelligence, hapa and worldbuilding, software engineering, and knowledge systems, with 1,084 observed turns. Its strongest graph expansion is `desktop` with 21 matches. Connections selected: 12.",
+        "updated_at": "2026-08-24T16:12:33Z"
       },
       "evidence": {
         "counts": {
           "turns": 1084,
-          "wiki_articles": 27,
-          "wiki_files": 48
+          "wiki_articles": 25,
+          "wiki_files": 45
         },
         "graphify_queries": [
           {
@@ -22255,21 +21955,21 @@
         "start": "2026-07-16",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:51Z",
+      "published_at": "2026-08-24T16:09:36Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:51Z",
+        "created_at": "2026-08-24T16:09:36Z",
         "graphify_match_count": 31,
         "graphify_query_count": 4,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 1084,
-          "wiki_articles": 27,
-          "wiki_files": 48
+          "wiki_articles": 25,
+          "wiki_files": 45
         }
       },
       "title": "Week of 2026-07-16: Create / Documentation",
@@ -22285,7 +21985,7 @@
         "technical": {
           "label": "Truthful Technical",
           "paragraphs": [
-            "From 2026-07-16 to 2026-07-22, Hapa canon records 1,084 turns, 27 Second Brain wiki article updates, and 48 wiki/doc file changes. The strongest themes were artificial intelligence, hapa and worldbuilding, software engineering, knowledge systems, and ai agents, and the main work modes were technical_architecture, code_debugging, design, and wiki_curation.",
+            "From 2026-07-16 to 2026-07-22, Hapa canon records 1,084 turns, 25 Second Brain wiki article updates, and 45 wiki/doc file changes. The strongest themes were artificial intelligence, hapa and worldbuilding, software engineering, knowledge systems, and ai agents, and the main work modes were technical_architecture, code_debugging, design, and wiki_curation.",
             "The week\u2019s source evidence points toward 2026-07-17 `code_debugging`: Automation: Daily Hapa Lineage Hardening Drain Automation ID: daily-hapa-lineage-hardening-drain-ee88b0ed62d8 Automation memory: $CODEX_HOME/automations/daily-hapa-lineage-hardeni\u2026 ; 2026-07-19 `music_media`: Count 2 that you rejected would have been ok with me FYI ; 2026-07-17 `technical_architecture`: # Response annotations: Each item contains text selected from an earlier Codex response and may include a user comment. Use every selection as context and address every comment in\u2026. Top extracted keywords were create, documentation, desktop, hapa-language, and requirements.",
             "This connects back to `hapa-narrative-week-2026-07-09-2026-07-15` through shared topics: ai agents, artificial intelligence, design and aesthetics, hapa and worldbuilding, knowledge systems. The weekly log keeps that continuity explicit while preserving this period\u2019s own evidence counts."
           ]
@@ -22300,6 +22000,13 @@
             "label": "Week of 2026-07-16: Create / Documentation",
             "shared_topics": [],
             "target_entry_id": "hapa-narrative-week-2026-07-16-2026-07-22",
+            "truth_status": "derived_or_inferred"
+          },
+          {
+            "kind": "next_entry",
+            "label": "Week of 2026-07-30: Quiet Ledger",
+            "shared_topics": [],
+            "target_entry_id": "hapa-narrative-week-2026-07-30-2026-08-05",
             "truth_status": "derived_or_inferred"
           },
           {
@@ -22359,7 +22066,7 @@
         ],
         "facts": [
           {
-            "detail": "0 Second Brain turns, 15 wiki article updates, and 1,162 wiki/doc file changes are in the selected period.",
+            "detail": "0 Second Brain turns, 14 wiki article updates, and 1,160 wiki/doc file changes are in the selected period.",
             "label": "Observed activity",
             "truth_status": "verified_source"
           },
@@ -22488,31 +22195,21 @@
             "track": "technical"
           },
           {
-            "text": "Lore lens: this card binds back to `hapa-narrative-week-2026-07-16-2026-07-22`; its archive light is strongest around no dominant labeled theme, so any future retelling should treat those motifs as witnessed runes, not invented scenery.",
+            "text": "Lore lens: this card binds back to `hapa-narrative-week-2026-07-16-2026-07-22` and forward to `hapa-narrative-week-2026-07-30-2026-08-05`; its archive light is strongest around no dominant labeled theme, so any future retelling should treat those motifs as witnessed runes, not invented scenery.",
             "track": "lore_card"
           }
         ],
-        "latest_pass_id": "hapa_narrative_enrichment_1785773439",
-        "pass_count": 2,
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
         "passes": [
           {
             "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 7,
-            "created_at": "2026-07-27T16:20:22Z",
+            "connection_count": 8,
+            "created_at": "2026-08-24T16:12:38Z",
             "fact_count": 3,
-            "pass_id": "hapa_narrative_enrichment_1785169074",
+            "pass_id": "hapa_narrative_enrichment_1787587787",
             "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785169074",
-            "source_card_count": 8
-          },
-          {
-            "agent_id": "hapa-narrative-enrichment",
-            "connection_count": 7,
-            "created_at": "2026-08-03T16:15:47Z",
-            "fact_count": 3,
-            "pass_id": "hapa_narrative_enrichment_1785773439",
-            "query_count": 5,
-            "run_id": "hapa_narrative_enrichment_1785773439",
+            "run_id": "hapa_narrative_enrichment_1787587787",
             "source_card_count": 8
           }
         ],
@@ -22593,8 +22290,8 @@
             "updated_at": "2026-07-26T20:25:25.461795Z"
           }
         ],
-        "summary": "0 Second Brain turns, 15 wiki article updates, and 1,162 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches. Connections selected: 7.",
-        "updated_at": "2026-08-03T16:15:47Z"
+        "summary": "0 Second Brain turns, 14 wiki article updates, and 1,160 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches. Connections selected: 8.",
+        "updated_at": "2026-08-24T16:12:38Z"
       },
       "evidence": {
         "counts": {
@@ -22916,33 +22613,33 @@
           }
         ]
       },
-      "id": "hapa-narrative-week-2026-07-23-2026-07-27",
+      "id": "hapa-narrative-week-2026-07-23-2026-07-29",
       "image": {
-        "fallback_svg": "images/hapa-narrative-week-2026-07-23-2026-07-27.svg",
+        "fallback_svg": "images/hapa-narrative-week-2026-07-23-2026-07-29.svg",
         "generator": "pillow-local-illustrator",
         "model": "gpt-image-1",
-        "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-07-23: Quiet Ledger. Period: 2026-07-23 to 2026-07-27. Themes: quiet Hapa archive week. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
+        "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-07-23: Quiet Ledger. Period: 2026-07-23 to 2026-07-29. Themes: quiet Hapa archive week. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
         "status": "generated_local_illustration",
-        "target_png": "images/hapa-narrative-week-2026-07-23-2026-07-27.png"
+        "target_png": "images/hapa-narrative-week-2026-07-23-2026-07-29.png"
       },
       "kind": "weekly",
       "period": {
-        "end": "2026-07-27",
-        "label": "2026-07-23 to 2026-07-27",
+        "end": "2026-07-29",
+        "label": "2026-07-23 to 2026-07-29",
         "start": "2026-07-23",
         "timezone": "UTC"
       },
-      "published_at": "2026-07-27T16:17:53Z",
+      "published_at": "2026-08-24T16:09:38Z",
       "telemetry": {
         "agent_id": "hapa-narrative-weekly",
-        "created_at": "2026-07-27T16:17:53Z",
+        "created_at": "2026-08-24T16:09:38Z",
         "graphify_match_count": 13,
         "graphify_query_count": 2,
         "paragraph_counts": {
           "lore_card": 3,
           "technical": 3
         },
-        "run_id": "hapa_narrative_1785168967",
+        "run_id": "hapa_narrative_1787587653",
         "source_counts": {
           "turns": 0,
           "wiki_articles": 14,
@@ -22954,7 +22651,7 @@
         "lore_card": {
           "label": "Hapa Lore Card",
           "paragraphs": [
-            "In the week marked 2026-07-23 to 2026-07-27, the Hapa Archive flared around no dominant labeled theme. 0 witnessed turns crossed the table, each one a small card pressed into the canon.",
+            "In the week marked 2026-07-23 to 2026-07-29, the Hapa Archive flared around no dominant labeled theme. 0 witnessed turns crossed the table, each one a small card pressed into the canon.",
             "The named sparks were no dominant labeled theme. They read like relics on a workbench: practical tools by daylight, mythic components once the system remembers why they matter.",
             "The prior card remains behind it like a lantern on another road: connected by the ledger, but carrying a different weather."
           ]
@@ -22962,18 +22659,1214 @@
         "technical": {
           "label": "Truthful Technical",
           "paragraphs": [
-            "From 2026-07-23 to 2026-07-27, Hapa canon records 0 turns, 14 Second Brain wiki article updates, and 1,160 wiki/doc file changes. The strongest themes were no dominant labeled theme, and the main work modes were no dominant labeled theme.",
+            "From 2026-07-23 to 2026-07-29, Hapa canon records 0 turns, 14 Second Brain wiki article updates, and 1,160 wiki/doc file changes. The strongest themes were no dominant labeled theme, and the main work modes were no dominant labeled theme.",
             "The week\u2019s source evidence points toward no single dominant turn in the sampled evidence. Top extracted keywords were no dominant labeled theme.",
             "This follows `hapa-narrative-week-2026-07-16-2026-07-22` but has different top topics, so the log records it as a continuity step rather than a repeated theme."
           ]
         }
       }
+    },
+    {
+      "enrichment": {
+        "connections": [
+          {
+            "kind": "previous_entry",
+            "label": "Week of 2026-07-23: Quiet Ledger",
+            "shared_topics": [],
+            "target_entry_id": "hapa-narrative-week-2026-07-23-2026-07-29",
+            "truth_status": "derived_or_inferred"
+          },
+          {
+            "kind": "next_entry",
+            "label": "Week of 2026-08-06: Quiet Ledger",
+            "shared_topics": [],
+            "target_entry_id": "hapa-narrative-week-2026-08-06-2026-08-12",
+            "truth_status": "derived_or_inferred"
+          },
+          {
+            "kind": "graphify_node",
+            "label": "Hapa Protocol / Worldbuilding",
+            "node_type": "wiki_article",
+            "query": "Hapa Protocol",
+            "source_id": "second-brain-live",
+            "target_node_id": "second-brain-live:knowledge-body:d940b60ad606c7ce",
+            "truth_status": "derived_or_inferred"
+          },
+          {
+            "kind": "graphify_node",
+            "label": "Hapa Protocol / Worldbuilding",
+            "node_type": "concept",
+            "query": "Hapa Protocol",
+            "source_id": "second-brain-live",
+            "target_node_id": "second-brain-live:body:6634181cb80100ee",
+            "truth_status": "derived_or_inferred"
+          }
+        ],
+        "facts": [
+          {
+            "detail": "0 Second Brain turns, 1 wiki article updates, and 2 wiki/doc file changes are in the selected period.",
+            "label": "Observed activity",
+            "truth_status": "verified_source"
+          },
+          {
+            "detail": "second-brain-wiki-article: Card Generation Rates Ledger",
+            "label": "Strong source card",
+            "link": "hapa://second-brain/wiki_articles/article:8dc657e0511e99e9",
+            "truth_status": "verified_source"
+          },
+          {
+            "detail": "`Hapa Protocol` returned 13 atlas matches.",
+            "label": "Graphify expansion",
+            "truth_status": "derived_or_inferred"
+          }
+        ],
+        "graphify_queries": [
+          {
+            "match_count": 0,
+            "ok": true,
+            "query": "Quiet Ledger",
+            "top_matches": []
+          },
+          {
+            "match_count": 13,
+            "ok": true,
+            "query": "Hapa Protocol",
+            "top_matches": [
+              {
+                "id": "second-brain-live:knowledge-body:d940b60ad606c7ce",
+                "label": "Hapa Protocol / Worldbuilding",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "derived_or_inferred",
+                "type": "wiki_article"
+              },
+              {
+                "id": "second-brain-live:body:6634181cb80100ee",
+                "label": "Hapa Protocol / Worldbuilding",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "derived_or_inferred",
+                "type": "concept"
+              },
+              {
+                "id": "second-brain-live:wiki-article:4d5b9c436226badb",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "verified_source",
+                "type": "wiki_article"
+              },
+              {
+                "id": "hapa-front-door-docs:markdown-page:10af1a1911148753",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "hapa-front-door-docs",
+                "truth_status": "verified_source",
+                "type": "protocol_card"
+              },
+              {
+                "id": "hapa-front-door-docs:markdown-heading:e9c57a738405de88",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "hapa-front-door-docs",
+                "truth_status": "verified_source",
+                "type": "protocol_card"
+              }
+            ]
+          },
+          {
+            "match_count": 0,
+            "ok": true,
+            "query": "Hapa canon",
+            "top_matches": []
+          }
+        ],
+        "insights": [
+          {
+            "text": "The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches.",
+            "track": "technical"
+          },
+          {
+            "text": "Lore lens: this card binds back to `hapa-narrative-week-2026-07-23-2026-07-29` and forward to `hapa-narrative-week-2026-08-06-2026-08-12`; its archive light is strongest around no dominant labeled theme, so any future retelling should treat those motifs as witnessed runes, not invented scenery.",
+            "track": "lore_card"
+          }
+        ],
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
+        "passes": [
+          {
+            "agent_id": "hapa-narrative-enrichment",
+            "connection_count": 4,
+            "created_at": "2026-08-24T16:12:40Z",
+            "fact_count": 3,
+            "pass_id": "hapa_narrative_enrichment_1787587787",
+            "query_count": 3,
+            "run_id": "hapa_narrative_enrichment_1787587787",
+            "source_card_count": 3
+          }
+        ],
+        "schema": "hapa.narrative.entry_enrichment.v1",
+        "selection": {
+          "reason": "Selected bounded week/context terms from topics, keywords, adjacent entries, and standing Hapa protocol terms.",
+          "terms": [
+            "Quiet Ledger",
+            "Hapa Protocol",
+            "Hapa canon"
+          ]
+        },
+        "source_cards": [
+          {
+            "detail": "Per-card generation rate ledger with prompt/provider/model/time/cost status for Hapa card outputs.",
+            "kind": "second-brain-wiki-article",
+            "label": "Card Generation Rates Ledger",
+            "link": "hapa://second-brain/wiki_articles/article:8dc657e0511e99e9",
+            "truth_status": "verified_source",
+            "updated_at": "2026-08-03T16:33:57+00:00"
+          },
+          {
+            "detail": "Operations/Card Generation Rates Ledger.md",
+            "kind": "wiki-file",
+            "label": "Card Generation Rates Ledger",
+            "link": "hapa://wiki/worldbuilding-wiki-full/Operations/Card Generation Rates Ledger.md",
+            "truth_status": "verified_source",
+            "updated_at": "2026-08-03T16:32:53.038031Z"
+          },
+          {
+            "detail": "Card Generation Rates Ledger.md",
+            "kind": "wiki-file",
+            "label": "Card Generation Rates Ledger",
+            "link": "hapa://wiki/worldbuilding-wiki-operations/Card Generation Rates Ledger.md",
+            "truth_status": "verified_source",
+            "updated_at": "2026-08-03T16:32:53.038031Z"
+          }
+        ],
+        "summary": "0 Second Brain turns, 1 wiki article updates, and 2 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches. Connections selected: 4.",
+        "updated_at": "2026-08-24T16:12:40Z"
+      },
+      "evidence": {
+        "counts": {
+          "turns": 0,
+          "wiki_articles": 1,
+          "wiki_files": 2
+        },
+        "graphify_queries": [
+          {
+            "match_count": 13,
+            "ok": true,
+            "query": "Hapa Protocol",
+            "top_matches": [
+              {
+                "id": "second-brain-live:knowledge-body:d940b60ad606c7ce",
+                "label": "Hapa Protocol / Worldbuilding",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "derived_or_inferred",
+                "type": "wiki_article"
+              },
+              {
+                "id": "second-brain-live:body:6634181cb80100ee",
+                "label": "Hapa Protocol / Worldbuilding",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "derived_or_inferred",
+                "type": "concept"
+              },
+              {
+                "id": "second-brain-live:wiki-article:4d5b9c436226badb",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "verified_source",
+                "type": "wiki_article"
+              },
+              {
+                "id": "hapa-front-door-docs:markdown-page:10af1a1911148753",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "hapa-front-door-docs",
+                "truth_status": "verified_source",
+                "type": "protocol_card"
+              }
+            ]
+          },
+          {
+            "match_count": 0,
+            "ok": true,
+            "query": "Quiet Ledger",
+            "top_matches": []
+          }
+        ],
+        "links": [
+          {
+            "href": "hapa://second-brain/wiki_articles/article:8dc657e0511e99e9",
+            "kind": "second-brain-wiki-article",
+            "label": "Card Generation Rates Ledger",
+            "privacy": "private-local",
+            "record_id": "article:8dc657e0511e99e9",
+            "source_id": "second-brain-live"
+          },
+          {
+            "href": "hapa://wiki/worldbuilding-wiki-full/Operations/Card Generation Rates Ledger.md",
+            "kind": "wiki-file",
+            "label": "Card Generation Rates Ledger",
+            "privacy": "private-local",
+            "record_id": "Operations/Card Generation Rates Ledger.md",
+            "source_id": "worldbuilding-wiki-full"
+          },
+          {
+            "href": "hapa://wiki/worldbuilding-wiki-operations/Card Generation Rates Ledger.md",
+            "kind": "wiki-file",
+            "label": "Card Generation Rates Ledger",
+            "privacy": "private-local",
+            "record_id": "Card Generation Rates Ledger.md",
+            "source_id": "worldbuilding-wiki-operations"
+          }
+        ],
+        "previous_entry_ids": [
+          "hapa-narrative-week-2026-07-23-2026-07-29"
+        ],
+        "shared_topics_with_previous": [],
+        "top_keywords": [],
+        "top_topics": [],
+        "top_turn_types": [],
+        "top_turns": [],
+        "wiki_articles": [
+          {
+            "article_type": "card_generation_rates",
+            "id": "article:8dc657e0511e99e9",
+            "link": "hapa://second-brain/wiki_articles/article:8dc657e0511e99e9",
+            "slug": "card-generation-rates-ledger",
+            "summary": "Per-card generation rate ledger with prompt/provider/model/time/cost status for Hapa card outputs.",
+            "title": "Card Generation Rates Ledger",
+            "updated_at": "2026-08-03T16:33:57+00:00"
+          }
+        ],
+        "wiki_files": [
+          {
+            "link": "hapa://wiki/worldbuilding-wiki-full/Operations/Card Generation Rates Ledger.md",
+            "modified_at": "2026-08-03T16:32:53.038031Z",
+            "relpath": "Operations/Card Generation Rates Ledger.md",
+            "source_id": "worldbuilding-wiki-full",
+            "title": "Card Generation Rates Ledger"
+          },
+          {
+            "link": "hapa://wiki/worldbuilding-wiki-operations/Card Generation Rates Ledger.md",
+            "modified_at": "2026-08-03T16:32:53.038031Z",
+            "relpath": "Card Generation Rates Ledger.md",
+            "source_id": "worldbuilding-wiki-operations",
+            "title": "Card Generation Rates Ledger"
+          }
+        ]
+      },
+      "id": "hapa-narrative-week-2026-07-30-2026-08-05",
+      "image": {
+        "fallback_svg": "images/hapa-narrative-week-2026-07-30-2026-08-05.svg",
+        "generator": "pillow-local-illustrator",
+        "model": "gpt-image-1",
+        "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-07-30: Quiet Ledger. Period: 2026-07-30 to 2026-08-05. Themes: quiet Hapa archive week. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
+        "status": "generated_local_illustration",
+        "target_png": "images/hapa-narrative-week-2026-07-30-2026-08-05.png"
+      },
+      "kind": "weekly",
+      "period": {
+        "end": "2026-08-05",
+        "label": "2026-07-30 to 2026-08-05",
+        "start": "2026-07-30",
+        "timezone": "UTC"
+      },
+      "published_at": "2026-08-24T16:09:40Z",
+      "telemetry": {
+        "agent_id": "hapa-narrative-weekly",
+        "created_at": "2026-08-24T16:09:40Z",
+        "graphify_match_count": 13,
+        "graphify_query_count": 2,
+        "paragraph_counts": {
+          "lore_card": 3,
+          "technical": 3
+        },
+        "run_id": "hapa_narrative_1787587653",
+        "source_counts": {
+          "turns": 0,
+          "wiki_articles": 1,
+          "wiki_files": 2
+        }
+      },
+      "title": "Week of 2026-07-30: Quiet Ledger",
+      "tracks": {
+        "lore_card": {
+          "label": "Hapa Lore Card",
+          "paragraphs": [
+            "In the week marked 2026-07-30 to 2026-08-05, the Hapa Archive flared around no dominant labeled theme. 0 witnessed turns crossed the table, each one a small card pressed into the canon.",
+            "The named sparks were no dominant labeled theme. They read like relics on a workbench: practical tools by daylight, mythic components once the system remembers why they matter.",
+            "The prior card remains behind it like a lantern on another road: connected by the ledger, but carrying a different weather."
+          ]
+        },
+        "technical": {
+          "label": "Truthful Technical",
+          "paragraphs": [
+            "From 2026-07-30 to 2026-08-05, Hapa canon records 0 turns, 1 Second Brain wiki article updates, and 2 wiki/doc file changes. The strongest themes were no dominant labeled theme, and the main work modes were no dominant labeled theme.",
+            "The week\u2019s source evidence points toward no single dominant turn in the sampled evidence. Top extracted keywords were no dominant labeled theme.",
+            "This follows `hapa-narrative-week-2026-07-23-2026-07-29` but has different top topics, so the log records it as a continuity step rather than a repeated theme."
+          ]
+        }
+      }
+    },
+    {
+      "enrichment": {
+        "connections": [
+          {
+            "kind": "previous_entry",
+            "label": "Week of 2026-07-30: Quiet Ledger",
+            "shared_topics": [],
+            "target_entry_id": "hapa-narrative-week-2026-07-30-2026-08-05",
+            "truth_status": "derived_or_inferred"
+          },
+          {
+            "kind": "next_entry",
+            "label": "Week of 2026-08-13: Quiet Ledger",
+            "shared_topics": [],
+            "target_entry_id": "hapa-narrative-week-2026-08-13-2026-08-19",
+            "truth_status": "derived_or_inferred"
+          },
+          {
+            "kind": "graphify_node",
+            "label": "Hapa Protocol / Worldbuilding",
+            "node_type": "wiki_article",
+            "query": "Hapa Protocol",
+            "source_id": "second-brain-live",
+            "target_node_id": "second-brain-live:knowledge-body:d940b60ad606c7ce",
+            "truth_status": "derived_or_inferred"
+          },
+          {
+            "kind": "graphify_node",
+            "label": "Hapa Protocol / Worldbuilding",
+            "node_type": "concept",
+            "query": "Hapa Protocol",
+            "source_id": "second-brain-live",
+            "target_node_id": "second-brain-live:body:6634181cb80100ee",
+            "truth_status": "derived_or_inferred"
+          }
+        ],
+        "facts": [
+          {
+            "detail": "0 Second Brain turns, 0 wiki article updates, and 1 wiki/doc file changes are in the selected period.",
+            "label": "Observed activity",
+            "truth_status": "verified_source"
+          },
+          {
+            "detail": "wiki-file: Hapa Node Map",
+            "label": "Strong source card",
+            "link": "hapa://wiki/hapa-front-door-docs/NODE_MAP.md",
+            "truth_status": "verified_source"
+          },
+          {
+            "detail": "`Hapa Protocol` returned 13 atlas matches.",
+            "label": "Graphify expansion",
+            "truth_status": "derived_or_inferred"
+          }
+        ],
+        "graphify_queries": [
+          {
+            "match_count": 0,
+            "ok": true,
+            "query": "Quiet Ledger",
+            "top_matches": []
+          },
+          {
+            "match_count": 13,
+            "ok": true,
+            "query": "Hapa Protocol",
+            "top_matches": [
+              {
+                "id": "second-brain-live:knowledge-body:d940b60ad606c7ce",
+                "label": "Hapa Protocol / Worldbuilding",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "derived_or_inferred",
+                "type": "wiki_article"
+              },
+              {
+                "id": "second-brain-live:body:6634181cb80100ee",
+                "label": "Hapa Protocol / Worldbuilding",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "derived_or_inferred",
+                "type": "concept"
+              },
+              {
+                "id": "second-brain-live:wiki-article:4d5b9c436226badb",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "verified_source",
+                "type": "wiki_article"
+              },
+              {
+                "id": "hapa-front-door-docs:markdown-page:10af1a1911148753",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "hapa-front-door-docs",
+                "truth_status": "verified_source",
+                "type": "protocol_card"
+              },
+              {
+                "id": "hapa-front-door-docs:markdown-heading:e9c57a738405de88",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "hapa-front-door-docs",
+                "truth_status": "verified_source",
+                "type": "protocol_card"
+              }
+            ]
+          },
+          {
+            "match_count": 0,
+            "ok": true,
+            "query": "Hapa canon",
+            "top_matches": []
+          }
+        ],
+        "insights": [
+          {
+            "text": "The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches.",
+            "track": "technical"
+          },
+          {
+            "text": "Lore lens: this card binds back to `hapa-narrative-week-2026-07-30-2026-08-05` and forward to `hapa-narrative-week-2026-08-13-2026-08-19`; its archive light is strongest around no dominant labeled theme, so any future retelling should treat those motifs as witnessed runes, not invented scenery.",
+            "track": "lore_card"
+          }
+        ],
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
+        "passes": [
+          {
+            "agent_id": "hapa-narrative-enrichment",
+            "connection_count": 4,
+            "created_at": "2026-08-24T16:12:43Z",
+            "fact_count": 3,
+            "pass_id": "hapa_narrative_enrichment_1787587787",
+            "query_count": 3,
+            "run_id": "hapa_narrative_enrichment_1787587787",
+            "source_card_count": 1
+          }
+        ],
+        "schema": "hapa.narrative.entry_enrichment.v1",
+        "selection": {
+          "reason": "Selected bounded week/context terms from topics, keywords, adjacent entries, and standing Hapa protocol terms.",
+          "terms": [
+            "Quiet Ledger",
+            "Hapa Protocol",
+            "Hapa canon"
+          ]
+        },
+        "source_cards": [
+          {
+            "detail": "NODE_MAP.md",
+            "kind": "wiki-file",
+            "label": "Hapa Node Map",
+            "link": "hapa://wiki/hapa-front-door-docs/NODE_MAP.md",
+            "truth_status": "verified_source",
+            "updated_at": "2026-08-08T15:45:44.879772Z"
+          }
+        ],
+        "summary": "0 Second Brain turns, 0 wiki article updates, and 1 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches. Connections selected: 4.",
+        "updated_at": "2026-08-24T16:12:43Z"
+      },
+      "evidence": {
+        "counts": {
+          "turns": 0,
+          "wiki_articles": 0,
+          "wiki_files": 1
+        },
+        "graphify_queries": [
+          {
+            "match_count": 13,
+            "ok": true,
+            "query": "Hapa Protocol",
+            "top_matches": [
+              {
+                "id": "second-brain-live:knowledge-body:d940b60ad606c7ce",
+                "label": "Hapa Protocol / Worldbuilding",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "derived_or_inferred",
+                "type": "wiki_article"
+              },
+              {
+                "id": "second-brain-live:body:6634181cb80100ee",
+                "label": "Hapa Protocol / Worldbuilding",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "derived_or_inferred",
+                "type": "concept"
+              },
+              {
+                "id": "second-brain-live:wiki-article:4d5b9c436226badb",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "verified_source",
+                "type": "wiki_article"
+              },
+              {
+                "id": "hapa-front-door-docs:markdown-page:10af1a1911148753",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "hapa-front-door-docs",
+                "truth_status": "verified_source",
+                "type": "protocol_card"
+              }
+            ]
+          },
+          {
+            "match_count": 0,
+            "ok": true,
+            "query": "Quiet Ledger",
+            "top_matches": []
+          }
+        ],
+        "links": [
+          {
+            "href": "hapa://wiki/hapa-front-door-docs/NODE_MAP.md",
+            "kind": "wiki-file",
+            "label": "Hapa Node Map",
+            "privacy": "private-local",
+            "record_id": "NODE_MAP.md",
+            "source_id": "hapa-front-door-docs"
+          }
+        ],
+        "previous_entry_ids": [
+          "hapa-narrative-week-2026-07-30-2026-08-05"
+        ],
+        "shared_topics_with_previous": [],
+        "top_keywords": [],
+        "top_topics": [],
+        "top_turn_types": [],
+        "top_turns": [],
+        "wiki_articles": [],
+        "wiki_files": [
+          {
+            "link": "hapa://wiki/hapa-front-door-docs/NODE_MAP.md",
+            "modified_at": "2026-08-08T15:45:44.879772Z",
+            "relpath": "NODE_MAP.md",
+            "source_id": "hapa-front-door-docs",
+            "title": "Hapa Node Map"
+          }
+        ]
+      },
+      "id": "hapa-narrative-week-2026-08-06-2026-08-12",
+      "image": {
+        "fallback_svg": "images/hapa-narrative-week-2026-08-06-2026-08-12.svg",
+        "generator": "pillow-local-illustrator",
+        "model": "gpt-image-1",
+        "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-08-06: Quiet Ledger. Period: 2026-08-06 to 2026-08-12. Themes: quiet Hapa archive week. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
+        "status": "generated_local_illustration",
+        "target_png": "images/hapa-narrative-week-2026-08-06-2026-08-12.png"
+      },
+      "kind": "weekly",
+      "period": {
+        "end": "2026-08-12",
+        "label": "2026-08-06 to 2026-08-12",
+        "start": "2026-08-06",
+        "timezone": "UTC"
+      },
+      "published_at": "2026-08-24T16:09:42Z",
+      "telemetry": {
+        "agent_id": "hapa-narrative-weekly",
+        "created_at": "2026-08-24T16:09:42Z",
+        "graphify_match_count": 13,
+        "graphify_query_count": 2,
+        "paragraph_counts": {
+          "lore_card": 3,
+          "technical": 3
+        },
+        "run_id": "hapa_narrative_1787587653",
+        "source_counts": {
+          "turns": 0,
+          "wiki_articles": 0,
+          "wiki_files": 1
+        }
+      },
+      "title": "Week of 2026-08-06: Quiet Ledger",
+      "tracks": {
+        "lore_card": {
+          "label": "Hapa Lore Card",
+          "paragraphs": [
+            "In the week marked 2026-08-06 to 2026-08-12, the Hapa Archive flared around no dominant labeled theme. 0 witnessed turns crossed the table, each one a small card pressed into the canon.",
+            "The named sparks were no dominant labeled theme. They read like relics on a workbench: practical tools by daylight, mythic components once the system remembers why they matter.",
+            "The prior card remains behind it like a lantern on another road: connected by the ledger, but carrying a different weather."
+          ]
+        },
+        "technical": {
+          "label": "Truthful Technical",
+          "paragraphs": [
+            "From 2026-08-06 to 2026-08-12, Hapa canon records 0 turns, 0 Second Brain wiki article updates, and 1 wiki/doc file changes. The strongest themes were no dominant labeled theme, and the main work modes were no dominant labeled theme.",
+            "The week\u2019s source evidence points toward no single dominant turn in the sampled evidence. Top extracted keywords were no dominant labeled theme.",
+            "This follows `hapa-narrative-week-2026-07-30-2026-08-05` but has different top topics, so the log records it as a continuity step rather than a repeated theme."
+          ]
+        }
+      }
+    },
+    {
+      "enrichment": {
+        "connections": [
+          {
+            "kind": "previous_entry",
+            "label": "Week of 2026-08-06: Quiet Ledger",
+            "shared_topics": [],
+            "target_entry_id": "hapa-narrative-week-2026-08-06-2026-08-12",
+            "truth_status": "derived_or_inferred"
+          },
+          {
+            "kind": "next_entry",
+            "label": "Week of 2026-08-20: Quiet Ledger",
+            "shared_topics": [],
+            "target_entry_id": "hapa-narrative-week-2026-08-20-2026-08-24",
+            "truth_status": "derived_or_inferred"
+          },
+          {
+            "kind": "graphify_node",
+            "label": "Hapa Protocol / Worldbuilding",
+            "node_type": "wiki_article",
+            "query": "Hapa Protocol",
+            "source_id": "second-brain-live",
+            "target_node_id": "second-brain-live:knowledge-body:d940b60ad606c7ce",
+            "truth_status": "derived_or_inferred"
+          },
+          {
+            "kind": "graphify_node",
+            "label": "Hapa Protocol / Worldbuilding",
+            "node_type": "concept",
+            "query": "Hapa Protocol",
+            "source_id": "second-brain-live",
+            "target_node_id": "second-brain-live:body:6634181cb80100ee",
+            "truth_status": "derived_or_inferred"
+          }
+        ],
+        "facts": [
+          {
+            "detail": "0 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period.",
+            "label": "Observed activity",
+            "truth_status": "verified_source"
+          },
+          {
+            "detail": "`Hapa Protocol` returned 13 atlas matches.",
+            "label": "Graphify expansion",
+            "truth_status": "derived_or_inferred"
+          }
+        ],
+        "graphify_queries": [
+          {
+            "match_count": 0,
+            "ok": true,
+            "query": "Quiet Ledger",
+            "top_matches": []
+          },
+          {
+            "match_count": 13,
+            "ok": true,
+            "query": "Hapa Protocol",
+            "top_matches": [
+              {
+                "id": "second-brain-live:knowledge-body:d940b60ad606c7ce",
+                "label": "Hapa Protocol / Worldbuilding",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "derived_or_inferred",
+                "type": "wiki_article"
+              },
+              {
+                "id": "second-brain-live:body:6634181cb80100ee",
+                "label": "Hapa Protocol / Worldbuilding",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "derived_or_inferred",
+                "type": "concept"
+              },
+              {
+                "id": "second-brain-live:wiki-article:4d5b9c436226badb",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "verified_source",
+                "type": "wiki_article"
+              },
+              {
+                "id": "hapa-front-door-docs:markdown-page:10af1a1911148753",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "hapa-front-door-docs",
+                "truth_status": "verified_source",
+                "type": "protocol_card"
+              },
+              {
+                "id": "hapa-front-door-docs:markdown-heading:e9c57a738405de88",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "hapa-front-door-docs",
+                "truth_status": "verified_source",
+                "type": "protocol_card"
+              }
+            ]
+          },
+          {
+            "match_count": 0,
+            "ok": true,
+            "query": "Hapa canon",
+            "top_matches": []
+          }
+        ],
+        "insights": [
+          {
+            "text": "The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches.",
+            "track": "technical"
+          },
+          {
+            "text": "Lore lens: this card binds back to `hapa-narrative-week-2026-08-06-2026-08-12` and forward to `hapa-narrative-week-2026-08-20-2026-08-24`; its archive light is strongest around no dominant labeled theme, so any future retelling should treat those motifs as witnessed runes, not invented scenery.",
+            "track": "lore_card"
+          }
+        ],
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
+        "passes": [
+          {
+            "agent_id": "hapa-narrative-enrichment",
+            "connection_count": 4,
+            "created_at": "2026-08-24T16:12:46Z",
+            "fact_count": 2,
+            "pass_id": "hapa_narrative_enrichment_1787587787",
+            "query_count": 3,
+            "run_id": "hapa_narrative_enrichment_1787587787",
+            "source_card_count": 0
+          }
+        ],
+        "schema": "hapa.narrative.entry_enrichment.v1",
+        "selection": {
+          "reason": "Selected bounded week/context terms from topics, keywords, adjacent entries, and standing Hapa protocol terms.",
+          "terms": [
+            "Quiet Ledger",
+            "Hapa Protocol",
+            "Hapa canon"
+          ]
+        },
+        "source_cards": [],
+        "summary": "0 Second Brain turns, 0 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches. Connections selected: 4.",
+        "updated_at": "2026-08-24T16:12:46Z"
+      },
+      "evidence": {
+        "counts": {
+          "turns": 0,
+          "wiki_articles": 0,
+          "wiki_files": 0
+        },
+        "graphify_queries": [
+          {
+            "match_count": 13,
+            "ok": true,
+            "query": "Hapa Protocol",
+            "top_matches": [
+              {
+                "id": "second-brain-live:knowledge-body:d940b60ad606c7ce",
+                "label": "Hapa Protocol / Worldbuilding",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "derived_or_inferred",
+                "type": "wiki_article"
+              },
+              {
+                "id": "second-brain-live:body:6634181cb80100ee",
+                "label": "Hapa Protocol / Worldbuilding",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "derived_or_inferred",
+                "type": "concept"
+              },
+              {
+                "id": "second-brain-live:wiki-article:4d5b9c436226badb",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "verified_source",
+                "type": "wiki_article"
+              },
+              {
+                "id": "hapa-front-door-docs:markdown-page:10af1a1911148753",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "hapa-front-door-docs",
+                "truth_status": "verified_source",
+                "type": "protocol_card"
+              }
+            ]
+          },
+          {
+            "match_count": 0,
+            "ok": true,
+            "query": "Quiet Ledger",
+            "top_matches": []
+          }
+        ],
+        "links": [],
+        "previous_entry_ids": [
+          "hapa-narrative-week-2026-08-06-2026-08-12"
+        ],
+        "shared_topics_with_previous": [],
+        "top_keywords": [],
+        "top_topics": [],
+        "top_turn_types": [],
+        "top_turns": [],
+        "wiki_articles": [],
+        "wiki_files": []
+      },
+      "id": "hapa-narrative-week-2026-08-13-2026-08-19",
+      "image": {
+        "fallback_svg": "images/hapa-narrative-week-2026-08-13-2026-08-19.svg",
+        "generator": "pillow-local-illustrator",
+        "model": "gpt-image-1",
+        "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-08-13: Quiet Ledger. Period: 2026-08-13 to 2026-08-19. Themes: quiet Hapa archive week. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
+        "status": "generated_local_illustration",
+        "target_png": "images/hapa-narrative-week-2026-08-13-2026-08-19.png"
+      },
+      "kind": "weekly",
+      "period": {
+        "end": "2026-08-19",
+        "label": "2026-08-13 to 2026-08-19",
+        "start": "2026-08-13",
+        "timezone": "UTC"
+      },
+      "published_at": "2026-08-24T16:09:45Z",
+      "telemetry": {
+        "agent_id": "hapa-narrative-weekly",
+        "created_at": "2026-08-24T16:09:45Z",
+        "graphify_match_count": 13,
+        "graphify_query_count": 2,
+        "paragraph_counts": {
+          "lore_card": 3,
+          "technical": 3
+        },
+        "run_id": "hapa_narrative_1787587653",
+        "source_counts": {
+          "turns": 0,
+          "wiki_articles": 0,
+          "wiki_files": 0
+        }
+      },
+      "title": "Week of 2026-08-13: Quiet Ledger",
+      "tracks": {
+        "lore_card": {
+          "label": "Hapa Lore Card",
+          "paragraphs": [
+            "The week of 2026-08-13 is a sealed room in the Archive: no fresh rune, no witnessed turn, no changed page in the indexed sources.",
+            "But a sealed room is still a room. The previous thread remains tied to it, waiting for a later ingest to light the dust and reveal whether anything moved.",
+            "The lore track marks silence without embellishment: no dragon slain, no node crowned, only the ledger refusing to forge a memory it did not see."
+          ]
+        },
+        "technical": {
+          "label": "Truthful Technical",
+          "paragraphs": [
+            "From 2026-08-13 to 2026-08-19, no timestamped Second Brain turns, wiki article updates, or tracked wiki/doc file changes were found in the configured Hapa datasets.",
+            "This should be read as a quiet or unindexed week rather than proof that no Hapa work happened. The previous entry was `hapa-narrative-week-2026-08-06-2026-08-12`. The narrative agent preserves the empty bucket so later ingestion can fill it without shifting the timeline.",
+            "Graphify queries still run against the standing atlas so the week remains connected to adjacent entries and durable Hapa concepts, but the truthful track does not invent events."
+          ]
+        }
+      }
+    },
+    {
+      "enrichment": {
+        "connections": [
+          {
+            "kind": "previous_entry",
+            "label": "Week of 2026-08-13: Quiet Ledger",
+            "shared_topics": [],
+            "target_entry_id": "hapa-narrative-week-2026-08-13-2026-08-19",
+            "truth_status": "derived_or_inferred"
+          },
+          {
+            "kind": "graphify_node",
+            "label": "Hapa Protocol / Worldbuilding",
+            "node_type": "wiki_article",
+            "query": "Hapa Protocol",
+            "source_id": "second-brain-live",
+            "target_node_id": "second-brain-live:knowledge-body:d940b60ad606c7ce",
+            "truth_status": "derived_or_inferred"
+          },
+          {
+            "kind": "graphify_node",
+            "label": "Hapa Protocol / Worldbuilding",
+            "node_type": "concept",
+            "query": "Hapa Protocol",
+            "source_id": "second-brain-live",
+            "target_node_id": "second-brain-live:body:6634181cb80100ee",
+            "truth_status": "derived_or_inferred"
+          }
+        ],
+        "facts": [
+          {
+            "detail": "0 Second Brain turns, 1 wiki article updates, and 0 wiki/doc file changes are in the selected period.",
+            "label": "Observed activity",
+            "truth_status": "verified_source"
+          },
+          {
+            "detail": "second-brain-wiki-article: Hapa Turn Mining Protocol",
+            "label": "Strong source card",
+            "link": "hapa://second-brain/wiki_articles/article:0b726cff5186365b",
+            "truth_status": "verified_source"
+          },
+          {
+            "detail": "`Hapa Protocol` returned 13 atlas matches.",
+            "label": "Graphify expansion",
+            "truth_status": "derived_or_inferred"
+          }
+        ],
+        "graphify_queries": [
+          {
+            "match_count": 0,
+            "ok": true,
+            "query": "Quiet Ledger",
+            "top_matches": []
+          },
+          {
+            "match_count": 13,
+            "ok": true,
+            "query": "Hapa Protocol",
+            "top_matches": [
+              {
+                "id": "second-brain-live:knowledge-body:d940b60ad606c7ce",
+                "label": "Hapa Protocol / Worldbuilding",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "derived_or_inferred",
+                "type": "wiki_article"
+              },
+              {
+                "id": "second-brain-live:body:6634181cb80100ee",
+                "label": "Hapa Protocol / Worldbuilding",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "derived_or_inferred",
+                "type": "concept"
+              },
+              {
+                "id": "second-brain-live:wiki-article:4d5b9c436226badb",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "verified_source",
+                "type": "wiki_article"
+              },
+              {
+                "id": "hapa-front-door-docs:markdown-page:10af1a1911148753",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "hapa-front-door-docs",
+                "truth_status": "verified_source",
+                "type": "protocol_card"
+              },
+              {
+                "id": "hapa-front-door-docs:markdown-heading:e9c57a738405de88",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "hapa-front-door-docs",
+                "truth_status": "verified_source",
+                "type": "protocol_card"
+              }
+            ]
+          },
+          {
+            "match_count": 0,
+            "ok": true,
+            "query": "Hapa canon",
+            "top_matches": []
+          }
+        ],
+        "insights": [
+          {
+            "text": "The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches.",
+            "track": "technical"
+          },
+          {
+            "text": "Lore lens: this card binds back to `hapa-narrative-week-2026-08-13-2026-08-19`; its archive light is strongest around no dominant labeled theme, so any future retelling should treat those motifs as witnessed runes, not invented scenery.",
+            "track": "lore_card"
+          }
+        ],
+        "latest_pass_id": "hapa_narrative_enrichment_1787587787",
+        "pass_count": 1,
+        "passes": [
+          {
+            "agent_id": "hapa-narrative-enrichment",
+            "connection_count": 3,
+            "created_at": "2026-08-24T16:12:49Z",
+            "fact_count": 3,
+            "pass_id": "hapa_narrative_enrichment_1787587787",
+            "query_count": 3,
+            "run_id": "hapa_narrative_enrichment_1787587787",
+            "source_card_count": 1
+          }
+        ],
+        "schema": "hapa.narrative.entry_enrichment.v1",
+        "selection": {
+          "reason": "Selected bounded week/context terms from topics, keywords, adjacent entries, and standing Hapa protocol terms.",
+          "terms": [
+            "Quiet Ledger",
+            "Hapa Protocol",
+            "Hapa canon"
+          ]
+        },
+        "source_cards": [
+          {
+            "detail": "How exported AI conversations become a timestamped Hapa Turn timeline, card scaffold, and agent-queryable memory layer.",
+            "kind": "second-brain-wiki-article",
+            "label": "Hapa Turn Mining Protocol",
+            "link": "hapa://second-brain/wiki_articles/article:0b726cff5186365b",
+            "truth_status": "verified_source",
+            "updated_at": "2026-08-24T16:04:49+00:00"
+          }
+        ],
+        "summary": "0 Second Brain turns, 1 wiki article updates, and 0 wiki/doc file changes are in the selected period. The enrichment pass reads this period as a cluster centered on no dominant labeled theme, with 0 observed turns. Its strongest graph expansion is `Hapa Protocol` with 13 matches. Connections selected: 3.",
+        "updated_at": "2026-08-24T16:12:49Z"
+      },
+      "evidence": {
+        "counts": {
+          "turns": 0,
+          "wiki_articles": 1,
+          "wiki_files": 0
+        },
+        "graphify_queries": [
+          {
+            "match_count": 13,
+            "ok": true,
+            "query": "Hapa Protocol",
+            "top_matches": [
+              {
+                "id": "second-brain-live:knowledge-body:d940b60ad606c7ce",
+                "label": "Hapa Protocol / Worldbuilding",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "derived_or_inferred",
+                "type": "wiki_article"
+              },
+              {
+                "id": "second-brain-live:body:6634181cb80100ee",
+                "label": "Hapa Protocol / Worldbuilding",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "derived_or_inferred",
+                "type": "concept"
+              },
+              {
+                "id": "second-brain-live:wiki-article:4d5b9c436226badb",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "second-brain-live",
+                "truth_status": "verified_source",
+                "type": "wiki_article"
+              },
+              {
+                "id": "hapa-front-door-docs:markdown-page:10af1a1911148753",
+                "label": "Hapa Protocol Cards",
+                "score": 2,
+                "source_id": "hapa-front-door-docs",
+                "truth_status": "verified_source",
+                "type": "protocol_card"
+              }
+            ]
+          },
+          {
+            "match_count": 0,
+            "ok": true,
+            "query": "Quiet Ledger",
+            "top_matches": []
+          }
+        ],
+        "links": [
+          {
+            "href": "hapa://second-brain/wiki_articles/article:0b726cff5186365b",
+            "kind": "second-brain-wiki-article",
+            "label": "Hapa Turn Mining Protocol",
+            "privacy": "private-local",
+            "record_id": "article:0b726cff5186365b",
+            "source_id": "second-brain-live"
+          }
+        ],
+        "previous_entry_ids": [
+          "hapa-narrative-week-2026-08-13-2026-08-19"
+        ],
+        "shared_topics_with_previous": [],
+        "top_keywords": [],
+        "top_topics": [],
+        "top_turn_types": [],
+        "top_turns": [],
+        "wiki_articles": [
+          {
+            "article_type": "architecture",
+            "id": "article:0b726cff5186365b",
+            "link": "hapa://second-brain/wiki_articles/article:0b726cff5186365b",
+            "slug": "hapa-turn-mining-protocol",
+            "summary": "How exported AI conversations become a timestamped Hapa Turn timeline, card scaffold, and agent-queryable memory layer.",
+            "title": "Hapa Turn Mining Protocol",
+            "updated_at": "2026-08-24T16:04:49+00:00"
+          }
+        ],
+        "wiki_files": []
+      },
+      "id": "hapa-narrative-week-2026-08-20-2026-08-24",
+      "image": {
+        "fallback_svg": "images/hapa-narrative-week-2026-08-20-2026-08-24.svg",
+        "generator": "pillow-local-illustrator",
+        "model": "gpt-image-1",
+        "prompt": "Create a square Hapa narrative post image, original fantasy science-fiction operator-card aesthetic, local-first knowledge graph archive, luminous dark interface, gold and cyan graph lines, human-agent canon ledger. Title: Week of 2026-08-20: Quiet Ledger. Period: 2026-08-20 to 2026-08-24. Themes: quiet Hapa archive week. No logos, no readable private file paths, no real person likeness, no copyrighted trading-card frame.",
+        "status": "generated_local_illustration",
+        "target_png": "images/hapa-narrative-week-2026-08-20-2026-08-24.png"
+      },
+      "kind": "weekly",
+      "period": {
+        "end": "2026-08-24",
+        "label": "2026-08-20 to 2026-08-24",
+        "start": "2026-08-20",
+        "timezone": "UTC"
+      },
+      "published_at": "2026-08-24T16:09:46Z",
+      "telemetry": {
+        "agent_id": "hapa-narrative-weekly",
+        "created_at": "2026-08-24T16:09:46Z",
+        "graphify_match_count": 13,
+        "graphify_query_count": 2,
+        "paragraph_counts": {
+          "lore_card": 3,
+          "technical": 3
+        },
+        "run_id": "hapa_narrative_1787587653",
+        "source_counts": {
+          "turns": 0,
+          "wiki_articles": 1,
+          "wiki_files": 0
+        }
+      },
+      "title": "Week of 2026-08-20: Quiet Ledger",
+      "tracks": {
+        "lore_card": {
+          "label": "Hapa Lore Card",
+          "paragraphs": [
+            "In the week marked 2026-08-20 to 2026-08-24, the Hapa Archive flared around no dominant labeled theme. 0 witnessed turns crossed the table, each one a small card pressed into the canon.",
+            "The named sparks were no dominant labeled theme. They read like relics on a workbench: practical tools by daylight, mythic components once the system remembers why they matter.",
+            "The prior card remains behind it like a lantern on another road: connected by the ledger, but carrying a different weather."
+          ]
+        },
+        "technical": {
+          "label": "Truthful Technical",
+          "paragraphs": [
+            "From 2026-08-20 to 2026-08-24, Hapa canon records 0 turns, 1 Second Brain wiki article updates, and 0 wiki/doc file changes. The strongest themes were no dominant labeled theme, and the main work modes were no dominant labeled theme.",
+            "The week\u2019s source evidence points toward no single dominant turn in the sampled evidence. Top extracted keywords were no dominant labeled theme.",
+            "This follows `hapa-narrative-week-2026-08-13-2026-08-19` but has different top topics, so the log records it as a continuity step rather than a repeated theme."
+          ]
+        }
+      }
     }
   ],
-  "entry_count": 31,
-  "generated_at": "2026-08-03T16:15:47Z",
+  "entry_count": 35,
+  "generated_at": "2026-08-24T16:12:49Z",
   "node_id": "hapa-narrative",
-  "run_id": "hapa_narrative_1785168967",
+  "run_id": "hapa_narrative_1787587653",
   "schema": "hapa.narrative.entries.v1",
   "tracks": [
     {
