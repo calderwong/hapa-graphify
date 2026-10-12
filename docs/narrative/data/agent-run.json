@@ -1,22 +1,22 @@
 {
-  "duration_ms": 144190,
-  "entry_count": 38,
-  "finished_at": "2026-09-14T16:09:20Z",
-  "image_event_count": 38,
+  "duration_ms": 140002,
+  "entry_count": 42,
+  "finished_at": "2026-10-12T16:10:00Z",
+  "image_event_count": 42,
   "image_queue": "docs/narrative/data/image-queue.ndjson",
   "ok": true,
   "output": "docs/narrative/data/entries.json",
-  "run_id": "hapa_narrative_1789402016",
+  "run_id": "hapa_narrative_1791821260",
   "schema": "hapa.narrative.run_event.v1",
   "source_counts": {
-    "bridges": 14706,
-    "hapa_nodes": 167,
+    "bridges": 14022,
+    "hapa_nodes": 170,
     "knowledge_bodies": 11,
     "skills": 55,
-    "turns": 12253,
-    "wiki_articles": 104,
-    "wiki_files_changed": 60600
+    "turns": 12329,
+    "wiki_articles": 388,
+    "wiki_files_changed": 60648
   },
-  "started_at": "2026-09-14T16:06:56Z",
+  "started_at": "2026-10-12T16:07:40Z",
   "warnings": []
 }
