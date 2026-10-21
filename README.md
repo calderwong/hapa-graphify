@@ -11,7 +11,22 @@ It is meant to answer questions like:
 
 For the authoritative list of currently public Hapa repositories, start with [Hapa Awesome](https://github.com/calderwong/hapa-awesome), the [human-readable catalog](https://github.com/calderwong/hapa-awesome/blob/main/docs/NODES.md), or the [machine-readable public registry](https://github.com/calderwong/hapa-awesome/blob/main/data/nodes.json). Graphify explains relationships; Hapa Awesome owns the public repository directory.
 
-Current local full-run evidence:
+## Status and limits
+
+This checkout is a prototype/scaffold graph compiler and explorer. Its
+[feature parity matrix](docs/FEATURE_PARITY.md) marks surfaces as partial and
+full ingest as planned/missing; the access-point list is not proof of complete
+parity or current availability. Preserve the upstream engine's ownership and
+pinned review revision.
+
+The graph totals below are retained local-run evidence from this checkout's
+history, not a fresh machine-wide census or proof that today's configured
+sources are present. Validate source roots and report timestamps before reusing
+those counts. Graph projections keep source owners and truth labels; local
+reports remain private unless the owning export path explicitly redacts them.
+This documentation clarification does not rerun ingestion or publish a demo.
+
+Retained local full-run evidence:
 
 - Combined atlas: `371,430` nodes and `582,209` edges.
 - Knowledge graph: `309,795` nodes and `422,384` edges.
