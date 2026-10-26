@@ -1,16 +1,16 @@
 {
   "agent_id": "hapa-narrative-enrichment",
   "dry_run": false,
-  "duration_ms": 196159,
-  "entries_enriched": 42,
-  "entries_seen": 42,
-  "finished_at": "2026-10-12T16:13:21Z",
-  "graphify_query_count": 190,
+  "duration_ms": 248985,
+  "entries_enriched": 44,
+  "entries_seen": 44,
+  "finished_at": "2026-10-26T16:12:52Z",
+  "graphify_query_count": 196,
   "ok": true,
   "output": "docs/narrative/data/entries.json",
-  "pass_id": "hapa_narrative_enrichment_1791821405",
+  "pass_id": "hapa_narrative_enrichment_1793030923",
   "pass_log": "docs/narrative/data/enrichment-log.ndjson",
-  "run_id": "hapa_narrative_enrichment_1791821405",
+  "run_id": "hapa_narrative_enrichment_1793030923",
   "schema": "hapa.narrative.enrichment_run.v1",
   "source_counts": {
     "bridges": 14022,
@@ -18,9 +18,9 @@
     "knowledge_bodies": 11,
     "skills": 55,
     "turns": 12329,
-    "wiki_articles": 388,
-    "wiki_files_changed": 60648
+    "wiki_articles": 432,
+    "wiki_files_changed": 60664
   },
-  "started_at": "2026-10-12T16:10:05Z",
+  "started_at": "2026-10-26T16:08:43Z",
   "warnings": []
 }
